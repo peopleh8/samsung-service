@@ -1,0 +1,136 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__btn {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $secColor;
+    position: relative;
+    @media (min-width: 1025px) {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 40%;
+        height: 1px;
+        background: $blackColor;
+        transform: translateX(-50%);
+        opacity: 0;
+        @media (min-width: 1025px) {
+          transition: width .22s ease, opacity .15s ease;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        width: 100%;
+        height: 15px;
+        background: transparent;
+      }
+
+      &:hover::after {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
+  &__prev {
+    margin-right: 40px;
+    @media (min-width: 1025px) {
+      &:hover {
+        .pagination__icon-prev {
+          transform: translateX(-5px);
+        }
+      }
+    }
+  }
+  &__next {
+    margin-left: 40px;
+    @media (min-width: 1025px) {
+      &:hover {
+        .pagination__icon-next {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+  &__icon {
+    width: 4px;
+    height: 8px;
+    transition: transform .2s ease;
+    svg {
+      stroke: $secColor;
+      width: 10px;
+      height: 8px;
+    }
+    &-next {
+      margin-left: 20px;
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+    &-prev {
+      margin-right: 20px;
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &-list {
+    display: flex;
+    &__item {
+      & + & {
+        margin-left: 20px;
+      }
+      width: 32px;
+      height: 32px;
+      & > * {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        font-weight: 500;
+        font-size: 14px;
+        justify-content: center;
+      }
+      &-current,
+      &-link {
+        align-items: center;
+      }
+      &-current {
+        background: $blackColor;
+        color: $whiteColor;
+        cursor: default;
+      }
+      &-link {
+        border: 1px solid $secColor;
+        color: $secColor;
+        @media (min-width: 1025px) {
+          transition: all .2s ease;
+          &:hover {
+            color: $blackColor;
+            border-color: $blackColor;
+          }
+        }
+        @media (max-width: 1025px) {
+          transition: all .1s ease;
+          &:active {
+            color: $blackColor;
+            border-color: $blackColor;
+          }
+        }
+      }
+      &-extend {
+        align-items: flex-end;
+        color: $secColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,218 @@
+.services {
+  padding: 80px 0 150px;
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__btn {
+    font-size: 14px;
+  }
+  &-scroll {
+    margin-top: 73px;
+    display: flex;
+    justify-content: center;
+    &__icon {
+      width: 23px;
+      height: 57px;
+      animation: servicesScroll 1.5s ease-in-out infinite alternate;
+      svg {
+        fill: $thirdColor;
+      }
+    }
+  }
+  &-content {
+    width: 560px;
+    padding-right: 110px;
+  }
+  &-list {
+    width: calc(100% - 560px);
+    max-height: 535px;
+  }
+  &-item {
+    border-bottom: 1px solid $thirdColor;
+    &:first-child {
+      border-top: 1px solid $thirdColor;
+    }
+    &__link {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      left: 60px;
+      z-index: 10px;
+      & ~ .services-item__btn {
+        .services-item__title {
+          font-weight: 600;
+        }
+      }
+      @media (min-width: 1025px) {
+        &:hover {
+          & + .services-item__overlay {
+            opacity: 1;
+          }
+          & ~ .services-item__btn {
+            .services-item__arrow-wrapper {
+              width: 55px;
+              border-color: $blackColor;
+              svg {
+                stroke: $blackColor;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__overlay {
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background: linear-gradient(90deg, rgba(241, 241, 243, 0.05) 0%, #F1F1F3 10.42%, #F1F1F3 90.87%, rgba(241, 241, 243, 0) 100%, rgba(245, 245, 245, 0.05) 100%);
+      opacity: 0;
+      @media (min-width: 1025px) {
+        transition: opacity .4s ease;
+      }
+    }
+    &__check {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      appearance: none;
+      position: absolute;
+      left: -999999em;
+      &:checked {
+        & + .services-item__btn {
+          .services-item__icon {
+            background: $blackColor;
+            svg {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    &__inner {
+      padding: 20px 0;
+      position: relative;
+      z-index: 2;
+    }
+    &__btn {
+      display: flex;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    &-content {
+      display: flex;
+      align-items: center;
+    }
+    &__icon {
+      background: $whiteColor;
+      border: 1px solid $blackColor;
+      border-radius: 2px;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background .2s ease;
+      &-inner {
+        width: 13px;
+        height: 9px;
+        svg {
+          stroke: $whiteColor;
+          opacity: 0;
+          transition: opacity .2s ease;
+        }
+      }
+    }
+    &__title {
+      display: block;
+      font-size: 20px;
+      line-height: 120%;
+      padding-left: 40px;
+      max-width: 600px;
+      margin-right: 16px;
+      user-select: none;
+    }
+    &__label {
+      background: #21B17D;
+      border-radius: 5px;
+      padding: 4px 12px 5px;
+      font-weight: 500;
+      font-size: 12px;
+      color: $whiteColor;
+      display: block;
+      margin-right: 16px;
+      line-height: 150%;
+      user-select: none;
+      pointer-events: none;
+    }
+    &__arrow-wrapper {
+      width: 24px;
+      height: 24px;
+      border: 1px solid $thirdColor;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      border-radius: 30px;
+      pointer-events: none;
+      @media (min-width: 1025px) {
+        transition: width .3s ease, border-color .2s ease;
+      }
+    }
+    &__arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      &-inner {
+        width: 10px;
+        height: 10px;
+        transform: rotate(-90deg);
+        svg {
+          stroke: $thirdColor;
+          @media (min-width: 1025px) {
+            transition: stroke .2s ease;
+          }
+        }
+      }
+    }
+    &-price {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      &__icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 4px;
+        svg {
+          stroke: #21B17D;
+        }
+        & + .services-item-price__text {
+          color: #21B17D;
+          font-weight: 500;
+        }
+      }
+      &__text {
+        font-size: 20px;
+        line-height: 120%;
+        text-transform: lowercase;
+        user-select: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.main-intro {
+  padding-top: calc(24px + 122px);
+  position: relative;
+  z-index: 102;
+  &__section {
+    position: relative;
+  }
+  &-slider {
+    overflow: visible;
+    &__slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: auto;
+      &.swiper-slide-active {
+        z-index: 100;
+      }
+    }
+  }
+  &-pagination {
+    position: absolute;
+    left: 50% !important;
+    bottom: 20px !important;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    transition: opacity .2s ease;
+    &.search-open {
+      opacity: .3;
+      pointer-events: none;
+    }
+    .swiper-pagination-bullet {
+      width: 100px;
+      height: 2px;
+      background: $decColor;
+      opacity: 1;
+      margin: 0 !important;
+      transition: background .2s ease;
+      border-radius: 0;
+      &:not(:first-child) {
+        margin-left: 20px !important;
+      }
+      &.swiper-pagination-bullet-active {
+        background: $blackColor;
+      }
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid $thirdColor;
+    z-index: 10;
+    cursor: pointer;
+    transition: opacity .2s ease;
+    &.search-open {
+      opacity: .3;
+      pointer-events: none;
+    }
+    @media (min-width: 1025px) {
+      transition: border-color .2s ease, opacity .2s ease;
+      &:hover {
+        border-color: $blackColor;
+      }
+    }
+    @media (max-width: 1024px) {
+      transition: border-color .1s ease, opacity .2s ease;
+      &:active {
+        border-color: $blackColor;
+      }
+    }
+    svg {
+      display: block;
+      width: 20%;
+      stroke: $blackColor;
+    }
+  }
+  &__prev {
+    left: 12px;
+  }
+  &__next {
+    right: 12px;
+    transform: translateY(-50%) rotateY(180deg);
+  }
+}

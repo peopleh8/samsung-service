@@ -1,0 +1,59 @@
+.faq {
+  &--phones,
+  &--tablet,
+  &--whatch,
+  &--tv,
+  &--household {
+    padding-top: 150px;
+  }
+  &--device,
+  &--repair {
+    padding-top: 150px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  &-accordion {
+    padding: 0 140px;
+    &__item {
+      & + & {
+        margin-top: 20px;
+      }
+      background: rgba(233, 228, 240, 0.4);
+      border-radius: 20px;
+      &.active {
+        .accordion__title-inner::after {
+          transform: scaleX(1);
+          transition-delay: .1s;
+        }
+      }
+    }
+    &__head {
+      padding: 31px 140px 31px 65px;
+    }
+    &__title {
+      padding-left: 80px;
+      &-inner {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -16px;
+          width: 100%;
+          height: 1px;
+          background: $decColor;
+          transform-origin: left center;
+          transform: scaleX(0);
+          transition: transform .3s ease-in-out 0s;
+        }
+      }
+    }
+    &__text {
+      padding-left: calc(65px + 38px + 80px);
+      padding-right: 140px;
+      padding-top: 16px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('html/head.html', {
+    "title": "404" 
+  })
+</head>
+<body>
+  <div class="wrapper">
+    @@include('html/header.html', {})
+    <main class="main">
+      <section class="err">
+        <div class="err__inner">
+          <div class="err__photo err-photo">
+            <img src="./img/err-5.png" alt="">
+          </div>
+          <div class="err__content err-content">
+            <div class="err-content__inner">
+              <h1 class="err-content__title title title--black">Упс! <br> Сторінку не знайдено :(</h1>
+              <p class="err-content__desc">Здається щось пішло не так, cторінка на яку ви намагалися перейти не існує. Можливо вона застаріла, була видалена або введено неправильну адресу в адресному рядку.</p>
+              <a class="err-content__btn btn btn--dark" href="#">на головну сторінку</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html', {})
+  </div>
+  @@include('html/scripts.html', {})
+</body>
+</html>

@@ -1,0 +1,15 @@
+.post-similar {
+  padding: 150px 0;
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  &-item {
+    width: 25%;
+    padding: 15px;
+  }
+}

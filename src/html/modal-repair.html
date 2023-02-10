@@ -1,0 +1,30 @@
+<div class="modal modal-repair" id="repair" style="display: none;">
+  <div class="modal-repair__title">Дізнайтесь статус ремонту свого приладу</div>
+  <form class="modal-repair__form">
+    <div class="modal-repair__inner">
+      <div class="modal-repair__inp-wrapper inp-wrapper inp-wrapper--black">
+        <input 
+          class="modal-repair__inp inp inp--black field"
+          id="modal-repair-phone"
+          type="tel"
+          name="phone"
+          autocomplete="off"
+        >
+        <label class="modal-repair__placeholder placeholder placeholder--black" for="modal-repair-phone">Введіть номер телефона</label>
+      </div>
+      <div class="modal-repair__inp-wrapper inp-wrapper inp-wrapper--black">
+        <input 
+          class="modal-repair__inp inp inp--black field" 
+          id="modal-repair-receipt"
+          type="text"
+          name="receipt"
+          autocomplete="off"
+        >
+        <label class="modal-repair__placeholder placeholder placeholder--black" for="modal-repair-receipt">Номер квитанції</label>
+      </div>
+    </div>
+    <div class="modal-repair__btn-wrapper">
+      <button class="modal-repair__btn btn btn--dark" type="submit">Дізнатись статус</button>
+    </div>
+  </form>
+</div>

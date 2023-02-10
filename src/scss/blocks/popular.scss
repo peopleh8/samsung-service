@@ -1,0 +1,101 @@
+.popular {
+  background: linear-gradient(103.96deg, #E2EBF0 11.49%, #CFD9DF 109.41%);
+  border-radius: 20px;
+  padding: 92px 89px 72px 89px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &-wrapper {
+    &--nonwarranty {
+      padding-top: 150px;
+    }
+  }
+  &-content {
+    max-width: 1124px;
+    margin: 0 auto 30px;
+    &__title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  &-search {
+    &__title {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    &__items-wrapper {
+      width: 100%;
+    }
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 897px;
+      margin: 0 auto;
+    }
+    &__item {
+      font-size: 14px;
+      line-height: 18px;
+      color: $secColor;
+      border: 1px solid $secColor;
+      margin: 0 16px 16px 0;
+      border-radius: 20px;
+      padding: 7px 25px;
+      &--dark {
+        @media (min-width: 1025px) {
+          transition: all .2s ease;
+          &:hover {
+            color: $blackColor;
+            border-color: $blackColor;
+          }
+        }
+        @media (max-width: 1024px) {
+          transition: all .1s ease;
+          &:active {
+            color: $blackColor;
+            border-color: $blackColor;
+          }
+        }
+      }
+      &--light {
+        @media (min-width: 1025px) {
+          transition: all .2s ease;
+          &:hover {
+            color: $whiteColor;
+            border-color: $whiteColor;
+          }
+        }
+        @media (max-width: 1024px) {
+          transition: all .1s ease;
+          &:active {
+            color: $whiteColor;
+            border-color: $whiteColor;
+          }
+        }
+      }
+    }
+  }
+  &-photos {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    &__item {
+      & + & {
+        margin-left: 30px;
+      }
+      &:nth-child(1) {
+        width: 398px;
+      }
+      &:nth-child(2) {
+        width: 501px;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}

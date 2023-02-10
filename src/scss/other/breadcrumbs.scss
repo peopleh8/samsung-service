@@ -1,0 +1,43 @@
+.breadcrumbs {
+  padding-top: 122px;
+  background: $lightWhiteMainColor;
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding: 7px 20px 8px;
+    margin: 0 -20px;
+    overflow: auto;
+  }
+  &__link,
+  &__current {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  &__link {
+    color: $thirdColor;
+    @media (min-width: 1025px) {
+      transition: color .2s ease;
+      &:hover {
+        color: $blackColor;
+      }
+    }
+    @media (max-width: 1024px) {
+      transition: color .1s ease;
+      &:active {
+        color: $blackColor;
+      }
+    }
+  }
+  &__current {
+    font-weight: 500;
+  }
+  &__separator {
+    width: 10px;
+    height: 8px;
+    margin: 0 12px;
+    svg {
+      transform: rotate(-90deg);
+      stroke: $thirdColor;
+    }
+  }
+}

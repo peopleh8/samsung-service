@@ -1,0 +1,54 @@
+.warranty-info {
+  padding: 150px 0;
+  background: #F4F2F0;
+  &__title {
+    max-width: 950px;
+    margin-bottom: 40px;
+  }
+  &__subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    max-width: 480px;
+    margin-bottom: 60px;
+  }
+  &__inner {
+    // display: flex;
+    // flex-wrap: wrap;
+    // margin: -30px -36px;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(5, auto);
+    // grid-auto-flow: column;
+    counter-reset: warrantyInfo;
+    columns: 3;
+    
+  }
+  &-item {
+    // width: calc(100% / 3);
+    padding: 30px 36px;
+    break-inside: avoid-column;
+    &__inner {
+      // height: 100%;
+      padding-left: 56px;
+      position: relative;
+      &::before {
+        counter-increment: warrantyInfo;
+        content: counter(warrantyInfo);
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $blackColor;
+        color: $blackColor;
+        font-weight: 500;
+        line-height: 1;
+        border-radius: 50%;
+      }
+    }
+  }
+}

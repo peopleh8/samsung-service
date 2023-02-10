@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  @@include('html/head.html', {
+    "title": "Contacts" 
+  })
+</head>
+<body>
+  <div class="wrapper">
+    @@include('html/header.html', {})
+    @@include('html/breadcrumbs.html', {})
+    <main class="main">
+      <section class="contacts-intro intro">
+        <div class="container">
+          <h1 class="contacts-intro__title title title--black">Чому обирають саме нас?</h1>
+          <div class="contacts-intro__section">
+            <div class="contacts-intro__photo">
+              <img src="./img/contacts-intro-photo.png" alt="">
+            </div>
+            <div class="contacts-intro__content contacts-intro-content">
+              <div class="contacts-intro-content__item">
+                <div class="contacts-intro-content__item-inner">
+                  <div class="contacts-intro-content__icon icon">
+                    <img src="./img/contacts-intro-1.svg" alt="">
+                  </div>
+                  <div class="contacts-intro-content__desc">Авторизований сервісний центр</div>
+                </div>
+              </div>
+              <div class="contacts-intro-content__item">
+                <div class="contacts-intro-content__item-inner">
+                  <div class="contacts-intro-content__icon icon">
+                    <img src="./img/contacts-intro-2.svg" alt="">
+                  </div>
+                  <div class="contacts-intro-content__desc">90 днів гарантії на замінену деталь та роботу </div>
+                </div>
+              </div>
+              <div class="contacts-intro-content__item">
+                <div class="contacts-intro-content__item-inner">
+                  <div class="contacts-intro-content__icon icon">
+                    <img src="./img/contacts-intro-3.svg" alt="">
+                  </div>
+                  <div class="contacts-intro-content__desc">Безкоштовна діагностика</div>
+                </div>
+              </div>
+              <div class="contacts-intro-content__item">
+                <div class="contacts-intro-content__item-inner">
+                  <div class="contacts-intro-content__icon icon">
+                    <img src="./img/contacts-intro-4.svg" alt="">
+                  </div>
+                  <div class="contacts-intro-content__desc">Не потребуємо передплати</div>
+                </div>
+              </div>
+              <div class="contacts-intro-content__item">
+                <div class="contacts-intro-content__item-inner">
+                  <div class="contacts-intro-content__icon icon">
+                    <img src="./img/contacts-intro-5.svg" alt="">
+                  </div>
+                  <div class="contacts-intro-content__desc">Оригінальні запчастини </div>
+                </div>
+              </div>
+              <div class="contacts-intro-content__item">
+                <div class="contacts-intro-content__item-inner">
+                  <div class="contacts-intro-content__icon icon">
+                    <img src="./img/contacts-intro-6.svg" alt="">
+                  </div>
+                  <div class="contacts-intro-content__desc">Швидкий та якісний сервіс</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contacts-info">
+        <div class="container">
+          <div class="contacts-info__title title title--black">Зверніться в один із наших сервісних ценрів</div>
+          <div class="contacts-info__map-wrapper">
+            <div class="contacts-info__map" id="map"></div>
+          </div>
+          <div class="contacts-info__list-wrapper">
+            <div class="contacts-info__list contacts-info-list">
+              <div class="contacts-info__item contacts-info-item active visible" id="card-1">
+                <div class="contacts-info-item__inner">
+                  <div class="contacts-info-item__photo">
+                    <img src="./img/address-1.jpg" alt="">
+                  </div>
+                  <div class="contacts-info-item__content contacts-info-content">
+                    <div class="contacts-info-content__item">
+                      <div class="contacts-info-item__visible header-elem">
+                        <div class="contacts-info-content__head">
+                          <div class="contacts-info-content__num">1</div>
+                          <div class="contacts-info-content__name">МТI-СЕРВІС</div>
+                        </div>
+                        <div class="contacts-info-content__address">
+                          <span class="contacts-info-content__address-icon icon">
+                            <svg><use href="./img/icons/sprite.svg#location"></use></svg>
+                          </span>
+                          м. Київ, вул. Білоруська, 26
+                        </div>
+                        <div class="contacts-info-content__more">
+                          <span class="contacts-info-content__more-text">більше інформації</span>
+                          <span class="contacts-info-content__more-icon icon">
+                            <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="contacts-info-item__hidden">
+                        <div class="contacts-info-content__phones">
+                          <a class="contacts-info-content__phone" href="tel:+380800330354">
+                            <span class="contacts-info-content__phone-icon icon">
+                              <svg><use href="./img/icons/sprite.svg#phone"></use></svg>
+                            </span>
+                            0 800 33 03 54
+                          </a>
+                          <a class="contacts-info-content__phone" href="tel:+380675507617">
+                            38 067 550 76 17
+                          </a>
+                          <a class="contacts-info-content__phone" href="tel:+380675507606">
+                            38 067 550 76 06
+                          </a>
+                        </div>
+                        <a class="contacts-info-content__email" href="mailto:servtel@mti-service.com.ua">
+                          <span class="contacts-info-content__email-icon icon">
+                            <svg><use href="./img/icons/sprite.svg#mail"></use></svg>
+                          </span>
+                          servtel@mti-service.com.ua
+                        </a>
+                        <div class="contacts-info-content__schedule">
+                          <div class="contacts-info-content__schedule-inner">
+                            <div class="contacts-info-content__schedule-side">
+                              <div class="contacts-info-content__schedule-text">пн-пт</div>
+                              <div class="contacts-info-content__schedule-text">сб-нд</div>
+                            </div>
+                            <div class="contacts-info-content__schedule-side">
+                              <div class="contacts-info-content__schedule-text">10:00 -18:00</div>
+                              <div class="contacts-info-content__schedule-text">вихідний</div>
+                            </div>
+                          </div>
+                          <p class="contacts-info-content__schedule-label">Можливі зміни у графіку роботи</p>
+                        </div>
+                        <a class="contacts-info-content__link" href="#">
+                          <span class="contacts-info-content__link-icon icon">
+                            <img src="./img/google-map-icon.png" alt="">
+                          </span>
+                          Відкити на Google Maps
+                        </a>
+                      </div>
+                    </div>
+                    <div class="contacts-info-content__item contacts-info-item__hidden">
+                      <div class="contacts-info-content__hidden-head">
+                        <div class="contacts-info-content__hidden-head-inner">
+                          <div class="contacts-info-content__hidden-head-title">До цього відділення можлива відправка * </div>
+                          <div class="contacts-info-content__hidden-head-logo">
+                            <img src="./img/np-logo.svg" alt="">
+                          </div>
+                        </div>
+                        <p class="contacts-info-content__hidden-head-label">* Відправка Новою Поштою дійсна лише для мобільних пристроїв (смартфони, планшети, носимі ґаджети)</p>
+                      </div>
+                      <div class="contacts-info-content__hidden-info">
+                        <div class="contacts-info-content__hidden-info-contact">
+                          <div class="contacts-info-content__hidden-info-contact-logo">
+                            <div class="contacts-info-content__hidden-info-contact-logo-inner">
+                              <img src="./img/np-box.svg" alt="">
+                            </div>
+                          </div>
+                          <div class="contacts-info-content__hidden-info-contact-inner contact">
+                            <div class="contacts-info-content__hidden-info-contact-item contact__item">
+                              <div class="contacts-info-content__hidden-info-contact-title contact__title">Одержувач</div>
+                              <div class="contacts-info-content__hidden-info-contact-desc contact__desc">
+                                <span class="contacts-info-content__hidden-info-contact-text contact__text">представник ТОВ МТІ-СЕРВІС </span>
+                              </div>
+                            </div>
+                            <div class="contacts-info-contenthiddennp-info-contact-item contact__item">
+                              <div class="contacts-info-content__hidden-info-contact-title contact__title">Контактний номер</div>
+                              <div class="contacts-info-content__hidden-info-contact-desc contact__desc">
+                                <a class="contacts-info-content__hidden-info-contact-text contact__text" href="#">38 067 550 76 17</a>
+                              </div>
+                            </div>
+                            <div class="contacts-info-content__hidden-info-contact-item contact__item">
+                              <div class="contacts-info-content__hidden-info-contact-title contact__title">Реєстраційний номер</div>
+                              <div class="contacts-info-content__hidden-info-contact-desc contact__desc">
+                                <span class="contacts-info-content__hidden-info-contact-text contact__text">39554115</span>
+                              </div>
+                            </div>
+                            <div class="contacts-info-content__hidden-info-contact-item contact__item">
+                              <div class="contacts-info-content__hidden-info-contact-title contact__title">Адреса одержувача</div>
+                              <div class="contacts-info-content__hidden-info-contact-desc contact__desc">
+                                <span class="contacts-info-content__hidden-info-contact-text contact__text">м. Київ, б-р Дружби Народів, 14-16</span>
+                                <span class="contacts-info-content__hidden-info-contact-subtext contact__subtext">(доставка кур'єром до дверей)</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="contacts-info-content__hidden-info-list">
+                          <div class="contacts-info-content__hidden-info-list-title">Вкладіть в посилку інформацію :</div>
+                          <ul class="contacts-info-content__hidden-info-list-inner">
+                            <li class="contacts-info-content__hidden-info-list-item">
+                              <span class="contacts-info-content__hidden-info-list-icon">
+                                <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                              </span>
+                              <p class="contacts-info-content__hidden-info-list-text">Опис заяленого недоліку</p>
+                            </li>
+                            <li class="contacts-info-content__hidden-info-list-item">
+                              <span class="contacts-info-content__hidden-info-list-icon">
+                                <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                              </span>
+                              <p class="contacts-info-content__hidden-info-list-text">Ваш ПІБ та контактний номер телефона</p>
+                            </li>
+                            <li class="contacts-info-content__hidden-info-list-item">
+                              <span class="contacts-info-content__hidden-info-list-icon">
+                                <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                              </span>
+                              <p class="contacts-info-content__hidden-info-list-text">Дата гарантійного ремонту - гарантійний талон виробника</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="contacts-info-content__hidden-label">
+                        <div class="contacts-info-content__hidden-label-warn warn-icon warn-icon--white">!</div>
+                        <p class="contacts-info-content__hidden-label-text">Вартість доставки для гарантійних випадків здійснюється за рахунок отримувача</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts-info__item contacts-info-item" id="card-2">
+                <div class="contacts-info-item__inner">
+                  <div class="contacts-info-item__photo">
+                    <img src="./img/address-1.jpg" alt="">
+                  </div>
+                  <div class="contacts-info-item__content contacts-info-content">
+                    <div class="contacts-info-content__item">
+                      <div class="contacts-info-item__visible header-elem">
+                        <div class="contacts-info-content__head">
+                          <div class="contacts-info-content__num">2</div>
+                          <div class="contacts-info-content__name">МТI-СЕРВІС</div>
+                        </div>
+                        <div class="contacts-info-content__address">
+                          <span class="contacts-info-content__address-icon icon">
+                            <svg><use href="./img/icons/sprite.svg#location"></use></svg>
+                          </span>
+                          м. Київ, вул. Білоруська, 26
+                        </div>
+                        <div class="contacts-info-content__more">
+                          <span class="contacts-info-content__more-text">більше інформації</span>
+                          <span class="contacts-info-content__more-icon icon">
+                            <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="contacts-info-item__hidden">
+                        <div class="contacts-info-content__phones">
+                          <a class="contacts-info-content__phone" href="tel:+380800330354">
+                            <span class="contacts-info-content__phone-icon icon">
+                              <svg><use href="./img/icons/sprite.svg#phone"></use></svg>
+                            </span>
+                            0 800 33 03 54
+                          </a>
+                          <a class="contacts-info-content__phone" href="tel:+380675507617">
+                            38 067 550 76 17
+                          </a>
+                          <a class="contacts-info-content__phone" href="tel:+380675507606">
+                            38 067 550 76 06
+                          </a>
+                        </div>
+                        <a class="contacts-info-content__email" href="mailto:servtel@mti-service.com.ua">
+                          <span class="contacts-info-content__email-icon icon">
+                            <svg><use href="./img/icons/sprite.svg#mail"></use></svg>
+                          </span>
+                          servtel@mti-service.com.ua
+                        </a>
+                        <div class="contacts-info-content__schedule">
+                          <div class="contacts-info-content__schedule-inner">
+                            <div class="contacts-info-content__schedule-side">
+                              <div class="contacts-info-content__schedule-text">пн-пт</div>
+                              <div class="contacts-info-content__schedule-text">сб-нд</div>
+                            </div>
+                            <div class="contacts-info-content__schedule-side">
+                              <div class="contacts-info-content__schedule-text">10:00 -18:00</div>
+                              <div class="contacts-info-content__schedule-text">вихідний</div>
+                            </div>
+                          </div>
+                          <p class="contacts-info-content__schedule-label">Можливі зміни у графіку роботи</p>
+                        </div>
+                        <a class="contacts-info-content__link" href="#">
+                          <span class="contacts-info-content__link-icon icon">
+                            <img src="./img/google-map-icon.png" alt="">
+                          </span>
+                          Відкити на Google Maps
+                        </a>
+                      </div>
+                    </div>
+                    <div class="contacts-info-content__item contacts-info-item__hidden">
+                      <div class="contacts-info-content__hidden-head">
+                        <div class="contacts-info-content__hidden-head-inner">
+                          <div class="contacts-info-content__hidden-head-title">До цього відділення можлива відправка * </div>
+                          <div class="contacts-info-content__hidden-head-logo">
+                            <img src="./img/np-logo.svg" alt="">
+                          </div>
+                        </div>
+                        <p class="contacts-info-content__hidden-head-label">* Відправка Новою Поштою дійсна лише для мобільних пристроїв (смартфони, планшети, носимі ґаджети)</p>
+                      </div>
+                      <div class="contacts-info-content__hidden-info">
+                        <div class="contacts-info-content__hidden-info-contact">
+                          <div class="contacts-info-content__hidden-info-contact-logo">
+                            <div class="contacts-info-content__hidden-info-contact-logo-inner">
+                              <img src="./img/np-box.svg" alt="">
+                            </div>
+                          </div>
+                          <div class="contacts-info-content__hidden-info-contact-inner contact">
+                            <div class="contacts-info-content__hidden-info-contact-item contact__item">
+                              <div class="contacts-info-content__hidden-info-contact-title contact__title">Одержувач</div>
+                              <div class="contacts-info-content__hidden-info-contact-desc contact__desc">
+                                <span class="contacts-info-content__hidden-info-contact-text contact__text">представник ТОВ МТІ-СЕРВІС </span>
+                              </div>
+                            </div>
+                            <div class="contacts-info-contenthiddennp-info-contact-item contact__item">
+                              <div class="contacts-info-content__hidden-info-contact-title contact__title">Контактний номер</div>
+                              <div class="contacts-info-content__hidden-info-contact-desc contact__desc">
+                                <a class="contacts-info-content__hidden-info-contact-text contact__text" href="#">38 067 550 76 17</a>
+                              </div>
+                            </div>
+                            <div class="contacts-info-content__hidden-info-contact-item contact__item">
+                              <div class="contacts-info-content__hidden-info-contact-title contact__title">Реєстраційний номер</div>
+                              <div class="contacts-info-content__hidden-info-contact-desc contact__desc">
+                                <span class="contacts-info-content__hidden-info-contact-text contact__text">39554115</span>
+                              </div>
+                            </div>
+                            <div class="contacts-info-content__hidden-info-contact-item contact__item">
+                              <div class="contacts-info-content__hidden-info-contact-title contact__title">Адреса одержувача</div>
+                              <div class="contacts-info-content__hidden-info-contact-desc contact__desc">
+                                <span class="contacts-info-content__hidden-info-contact-text contact__text">м. Київ, б-р Дружби Народів, 14-16</span>
+                                <span class="contacts-info-content__hidden-info-contact-subtext contact__subtext">(доставка кур'єром до дверей)</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="contacts-info-content__hidden-info-list">
+                          <div class="contacts-info-content__hidden-info-list-title">Вкладіть в посилку інформацію :</div>
+                          <ul class="contacts-info-content__hidden-info-list-inner">
+                            <li class="contacts-info-content__hidden-info-list-item">
+                              <span class="contacts-info-content__hidden-info-list-icon">
+                                <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                              </span>
+                              <p class="contacts-info-content__hidden-info-list-text">Опис заяленого недоліку</p>
+                            </li>
+                            <li class="contacts-info-content__hidden-info-list-item">
+                              <span class="contacts-info-content__hidden-info-list-icon">
+                                <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                              </span>
+                              <p class="contacts-info-content__hidden-info-list-text">Ваш ПІБ та контактний номер телефона</p>
+                            </li>
+                            <li class="contacts-info-content__hidden-info-list-item">
+                              <span class="contacts-info-content__hidden-info-list-icon">
+                                <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                              </span>
+                              <p class="contacts-info-content__hidden-info-list-text">Дата гарантійного ремонту - гарантійний талон виробника</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="contacts-info-content__hidden-label">
+                        <div class="contacts-info-content__hidden-label-warn warn-icon warn-icon--white">!</div>
+                        <p class="contacts-info-content__hidden-label-text">Вартість доставки для гарантійних випадків здійснюється за рахунок отримувача</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts-info__item contacts-info-item" id="card-3">
+                <div class="contacts-info-item__inner">
+                  <div class="contacts-info-item__photo">
+                    <img src="./img/address-1.jpg" alt="">
+                  </div>
+                  <div class="contacts-info-item__content contacts-info-content">
+                    <div class="contacts-info-content__item">
+                      <div class="contacts-info-item__visible header-elem">
+                        <div class="contacts-info-content__head">
+                          <div class="contacts-info-content__num">3</div>
+                          <div class="contacts-info-content__name">МТI-СЕРВІС</div>
+                        </div>
+                        <div class="contacts-info-content__address">
+                          <span class="contacts-info-content__address-icon icon">
+                            <svg><use href="./img/icons/sprite.svg#location"></use></svg>
+                          </span>
+                          м. Київ, вул. Білоруська, 26
+                        </div>
+                        <div class="contacts-info-content__more">
+                          <span class="contacts-info-content__more-text">більше інформації</span>
+                          <span class="contacts-info-content__more-icon icon">
+                            <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="contacts-info-item__hidden">
+                        <div class="contacts-info-content__phones">
+                          <a class="contacts-info-content__phone" href="tel:+380800330354">
+                            <span class="contacts-info-content__phone-icon icon">
+                              <svg><use href="./img/icons/sprite.svg#phone"></use></svg>
+                            </span>
+                            0 800 33 03 54
+                          </a>
+                          <a class="contacts-info-content__phone" href="tel:+380675507617">
+                            38 067 550 76 17
+                          </a>
+                          <a class="contacts-info-content__phone" href="tel:+380675507606">
+                            38 067 550 76 06
+                          </a>
+                        </div>
+                        <a class="contacts-info-content__email" href="mailto:servtel@mti-service.com.ua">
+                          <span class="contacts-info-content__email-icon icon">
+                            <svg><use href="./img/icons/sprite.svg#mail"></use></svg>
+                          </span>
+                          servtel@mti-service.com.ua
+                        </a>
+                        <div class="contacts-info-content__schedule">
+                          <div class="contacts-info-content__schedule-inner">
+                            <div class="contacts-info-content__schedule-side">
+                              <div class="contacts-info-content__schedule-text">пн-пт</div>
+                              <div class="contacts-info-content__schedule-text">сб-нд</div>
+                            </div>
+                            <div class="contacts-info-content__schedule-side">
+                              <div class="contacts-info-content__schedule-text">10:00 -18:00</div>
+                              <div class="contacts-info-content__schedule-text">вихідний</div>
+                            </div>
+                          </div>
+                          <p class="contacts-info-content__schedule-label">Можливі зміни у графіку роботи</p>
+                        </div>
+                        <a class="contacts-info-content__link" href="#">
+                          <span class="contacts-info-content__link-icon icon">
+                            <img src="./img/google-map-icon.png" alt="">
+                          </span>
+                          Відкити на Google Maps
+                        </a>
+                      </div>
+                    </div>
+                    <div class="contacts-info-content__item contacts-info-item__hidden">
+                      <div class="contacts-info-content__hidden-head">
+                        <div class="contacts-info-content__hidden-head-inner">
+                          <div class="contacts-info-content__hidden-head-title">До цього відділення можлива відправка * </div>
+                          <div class="contacts-info-content__hidden-head-logo">
+                            <img src="./img/np-logo.svg" alt="">
+                          </div>
+                        </div>
+                        <p class="contacts-info-content__hidden-head-label">* Відправка Новою Поштою дійсна лише для мобільних пристроїв (смартфони, планшети, носимі ґаджети)</p>
+                      </div>
+                      <div class="contacts-info-content__hidden-info">
+                        <div class="contacts-info-content__hidden-info-contact">
+                          <div class="contacts-info-content__hidden-info-contact-logo">
+                            <div class="contacts-info-content__hidden-info-contact-logo-inner">
+                              <img src="./img/np-box.svg" alt="">
+                            </div>
+                          </div>
+                          <div class="contacts-info-content__hidden-info-contact-inner contact">
+                            <div class="contacts-info-content__hidden-info-contact-item contact__item">
+                              <div class="contacts-info-content__hidden-info-contact-title contact__title">Одержувач</div>
+                              <div class="contacts-info-content__hidden-info-contact-desc contact__desc">
+                                <span class="contacts-info-content__hidden-info-contact-text contact__text">представник ТОВ МТІ-СЕРВІС </span>
+                              </div>
+                            </div>
+                            <div class="contacts-info-contenthiddennp-info-contact-item contact__item">
+                              <div class="contacts-info-content__hidden-info-contact-title contact__title">Контактний номер</div>
+                              <div class="contacts-info-content__hidden-info-contact-desc contact__desc">
+                                <a class="contacts-info-content__hidden-info-contact-text contact__text" href="#">38 067 550 76 17</a>
+                              </div>
+                            </div>
+                            <div class="contacts-info-content__hidden-info-contact-item contact__item">
+                              <div class="contacts-info-content__hidden-info-contact-title contact__title">Реєстраційний номер</div>
+                              <div class="contacts-info-content__hidden-info-contact-desc contact__desc">
+                                <span class="contacts-info-content__hidden-info-contact-text contact__text">39554115</span>
+                              </div>
+                            </div>
+                            <div class="contacts-info-content__hidden-info-contact-item contact__item">
+                              <div class="contacts-info-content__hidden-info-contact-title contact__title">Адреса одержувача</div>
+                              <div class="contacts-info-content__hidden-info-contact-desc contact__desc">
+                                <span class="contacts-info-content__hidden-info-contact-text contact__text">м. Київ, б-р Дружби Народів, 14-16</span>
+                                <span class="contacts-info-content__hidden-info-contact-subtext contact__subtext">(доставка кур'єром до дверей)</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="contacts-info-content__hidden-info-list">
+                          <div class="contacts-info-content__hidden-info-list-title">Вкладіть в посилку інформацію :</div>
+                          <ul class="contacts-info-content__hidden-info-list-inner">
+                            <li class="contacts-info-content__hidden-info-list-item">
+                              <span class="contacts-info-content__hidden-info-list-icon">
+                                <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                              </span>
+                              <p class="contacts-info-content__hidden-info-list-text">Опис заяленого недоліку</p>
+                            </li>
+                            <li class="contacts-info-content__hidden-info-list-item">
+                              <span class="contacts-info-content__hidden-info-list-icon">
+                                <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                              </span>
+                              <p class="contacts-info-content__hidden-info-list-text">Ваш ПІБ та контактний номер телефона</p>
+                            </li>
+                            <li class="contacts-info-content__hidden-info-list-item">
+                              <span class="contacts-info-content__hidden-info-list-icon">
+                                <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                              </span>
+                              <p class="contacts-info-content__hidden-info-list-text">Дата гарантійного ремонту - гарантійний талон виробника</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="contacts-info-content__hidden-label">
+                        <div class="contacts-info-content__hidden-label-warn warn-icon warn-icon--white">!</div>
+                        <p class="contacts-info-content__hidden-label-text">Вартість доставки для гарантійних випадків здійснюється за рахунок отримувача</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="callback callback--contacts">
+        <div class="container">
+          <div class="callback__section">
+            <div class="callback__content callback-content">
+              <div class="callback-content__title title title--white">Якщо у Вас залишились запитання просимо заповнити контакну форму</div>
+              <form class="callback-content__form callback-form">
+                <div class="callback-form__inp-wrapper inp-wrapper inp-wrapper--white">
+                  <input 
+                    class="callback-form__inp inp inp--white field"
+                    id="callback-name"
+                    type="text"
+                    name="name"
+                    autocomplete="off"
+                  >
+                  <label class="callback-form__placeholder placeholder placeholder--white" for="callback-name">Введіть ваше ім’я *</label>
+                </div>
+                <div class="callback-form__inp-wrapper inp-wrapper inp-wrapper--white">
+                  <input 
+                    class="callback-form__inp inp inp--white field" 
+                    id="callback-phone"
+                    type="tel"
+                    name="phone"
+                    autocomplete="off"
+                  >
+                  <label class="callback-form__placeholder placeholder placeholder--white" for="callback-phone">+38 (088) 888 88 88 *</label>
+                </div>
+                <div class="callback-form__inp-wrapper inp-wrapper inp-wrapper--white">
+                  <input 
+                    class="callback-form__inp inp inp--white field" 
+                    id="callback-email"
+                    type="text"
+                    name="email"
+                    autocomplete="off"
+                  >
+                  <label class="callback-form__placeholder placeholder placeholder--white" for="callback-email">mail @gmail.com</label>
+                </div>
+                <div class="callback-form__texarea-wrapper texarea-wrapper texarea-wrapper--white">
+                  <textarea class="callback-form__texarea texarea texarea--white field" id="callback-message" name="message" autocomplete="off"></textarea>
+                  <label class="callback-form__placeholder placeholder placeholder--white" for="callback-message">Напишіть, що вас цікавить ...</label>
+                </div>
+                <div class="callback-form__btn-wrapper">
+                  <button class="callback-form__btn btn btn--light" type="submit">зв'язатися з нами</button>
+                </div>
+                <p class="callback-form__label">* - поле обовязково до заповнення</p>
+              </form>
+            </div>
+            <div class="callback__photo callback-photo">
+              <img src="./img/callback.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html', {})
+  </div>
+  @@include('html/scripts.html', {})
+</body>
+</html>

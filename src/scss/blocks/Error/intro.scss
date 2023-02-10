@@ -1,0 +1,28 @@
+.err {
+  padding: 0 20px 0;
+  &__inner {
+    display: flex;
+  }
+  &-photo {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  &-content {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 232px 20px 200px;
+    &__inner {
+      max-width: 560px;
+    }
+    &__title {
+      margin-bottom: 33px;
+    }
+    &__desc {
+      margin-bottom: 29px;
+    }
+  }
+}

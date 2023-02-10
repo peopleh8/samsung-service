@@ -1,0 +1,88 @@
+// libs
+@import "libs";
+
+// global
+@import "vars";
+@import "basic";
+@import "global";
+@import "mixins";
+@import "fonts";
+@import "animation";
+
+// other
+@import "other/modal";
+@import "other/breadcrumbs";
+@import "other/pagination";
+@import "other/coockie";
+
+// blocks
+@import "blocks/header";
+@import "blocks/footer";
+
+// common
+@import "blocks/popular";
+@import "blocks/steps";
+@import "blocks/callback";
+@import "blocks/seo-block";
+@import "blocks/faq";
+@import "blocks/find";
+@import "blocks/category-intro";
+@import "blocks/subcategory-intro";
+@import "blocks/services";
+@import "blocks/addresses";
+@import "blocks/marquee";
+@import "blocks/general";
+@import "blocks/repair";
+
+// Main
+@import "blocks/Main/intro";
+@import "blocks/Main/calculate";
+@import "blocks/Main/trust";
+@import "blocks/Main/faq";
+
+// About
+@import "blocks/About/intro";
+@import "blocks/About/certificates";
+
+// Blog
+@import "blocks/Blog/intro";
+@import "blocks/Blog/last";
+
+// Contacts
+@import "blocks/Contacts/intro";
+@import "blocks/Contacts/info";
+
+// Phone
+@import "blocks/Phone/repair";
+
+// Tablet
+@import "blocks/Tablet/repair";
+
+// Tablet
+@import "blocks/Tv/repair";
+
+// Household
+@import "blocks/Household/repair";
+
+// Warranty
+@import "blocks/Warranty/intro";
+@import "blocks/Warranty/cover";
+@import "blocks/Warranty/info";
+
+// Nonwarranty
+@import "blocks/Nonwarranty/intro";
+@import "blocks/Nonwarranty/reason";
+
+// Single Repair
+@import "blocks/Repair/price";
+
+// Single Post
+@import "blocks/SinglePost/intro";
+@import "blocks/SinglePost/similar";
+@import "blocks/SinglePost/pagination";
+
+// Error
+@import "blocks/Error/intro";
+
+// media
+@import "media";

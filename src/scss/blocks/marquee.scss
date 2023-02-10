@@ -1,0 +1,33 @@
+.marquee {
+  overflow: hidden;
+  &--main {
+    padding: 150px 0;
+  }
+  &--repair {
+    padding: 110px 0;
+  }
+  &__wrapper {
+    width: 100%;
+  }
+  &__inner {
+    height: 100%;
+    width: fit-content;
+    align-items: center;
+    display: flex;
+    position: relative;
+    animation: marquee 25s linear infinite;
+    will-change: transform;
+  }
+  &__item {
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 104px;
+    text-transform: uppercase;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-font-smoothing: antialiased;
+  }
+}

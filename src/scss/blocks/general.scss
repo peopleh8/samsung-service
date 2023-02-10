@@ -1,0 +1,213 @@
+.general {
+  padding-bottom: 90px;
+  &__title {
+    margin-bottom: 60px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $decColor;
+  }
+  &__inner {
+    display: flex;
+  }
+  &-sidebar {
+    &__inner {
+      position: sticky;
+      top: 73px;
+      width: 340px;
+      max-height: calc(100vh - 40px - 73px);
+      overflow: auto;
+    }
+    &__item {
+      & + & {
+        margin-top: 24px;
+      }
+    }
+    &__anchor {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 150%;
+      color: $secColor;
+      position: relative;
+      padding-left: 20px;
+      transition: color .2s ease;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100%;
+        width: 1px;
+        background: $blackColor;
+        opacity: 0;
+        transition: opacity .2s ease;
+      }
+      &.active {
+        color: $blackColor;
+        &::before {
+          opacity: 1;
+        }
+      }
+      @media (min-width: 1025px) {
+        &:hover {
+          color: $blackColor;
+        }
+      }
+    }
+  }
+  &-content {
+    padding-left: 60px;
+    width: calc(100% - 340px);
+    &__title {
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 150%;
+      margin-bottom: 36px;
+    }
+    &__section {
+      margin-bottom: 60px;
+    }
+    &__item {
+      & + & {
+        margin-top: 24px;
+      }
+      display: flex;
+      align-items: flex-start;
+      &-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        width: 250px;
+      }
+      &-desc {  
+        font-size: 20px;
+        line-height: 150%;
+        width: calc(100% - 250px);
+        padding-left: 20px;
+      }
+    }
+    &__lists {
+      & > ol {
+        counter-reset: listFirst;
+        & > li {
+          &:not(:last-child) {
+            margin-bottom: 60px;
+          }
+          & > p {
+            display: flex;
+            &::before {
+              counter-increment: listFirst;
+              content: counter(listFirst) ". ";
+              font-weight: 500;
+              font-size: 36px;
+              line-height: 150%;
+              display: block;
+              margin-right: 10px;
+            }
+          }
+          & > ol {
+            counter-reset: listSecond;
+            & > li {
+              &:not(:last-child) {
+                margin-bottom: 24px;
+              }
+              & > p {
+                display: flex;
+                font-size: 20px;
+                line-height: 150%;
+                &::before {
+                  counter-increment: listSecond;
+                  content: counter(listFirst) "." counter(listSecond) ". ";
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 40px;
+                  font-weight: 500;
+                  line-height: 100%;
+                  margin-right: 24px;
+                  border: 1px solid $blackColor;
+                  border-radius: 50%;
+                  font-size: 16px;
+                  padding: 0 5px;
+                  max-width: 40px;
+                }
+              }
+              & > ol {
+                padding: 24px 0 0 64px;
+                counter-reset: listThird;
+                & > li {
+                  &:not(:last-child) {
+                    margin-bottom: 24px;
+                  }
+                  & > p {
+                    font-size: 20px;
+                    line-height: 150%;
+                    display: flex;
+                    &::before {
+                      counter-increment: listThird;
+                      content: counter(listFirst) "." counter(listSecond) "." counter(listThird) ". ";
+                      margin-right: 24px;
+                      font-weight: 500;
+                      font-size: 16px;
+                      line-height: 150%;
+                    }
+                  }
+                }
+              }
+              & > ul {
+                padding-top: 24px;
+                & > li {
+                  &:not(:last-child) {
+                    margin-bottom: 24px;
+                  }
+                  & > p,
+                  & > span {
+                    font-size: 20px;
+                    line-height: 150%;
+                  }
+                  & > p {
+                    display: flex;
+                    &::before {
+                      content: "";
+                      padding: 4px;
+                      height: 8px;
+                      border-radius: 50%;
+                      background: $blackColor;
+                      margin-right: 20px;
+                      position: relative;
+                      top: 12px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          & > ul {
+            & > li {
+              &:not(:last-child) {
+                margin-bottom: 24px;
+              }
+              & > p,
+              & > span {
+                font-size: 20px;
+                line-height: 150%;
+              }
+              & > p {
+                display: flex;
+                &::before {
+                  content: "";
+                  padding: 4px;
+                  height: 8px;
+                  border-radius: 50%;
+                  background: $blackColor;
+                  margin-right: 20px;
+                  position: relative;
+                  top: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

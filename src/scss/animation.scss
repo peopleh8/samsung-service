@@ -1,0 +1,37 @@
+@keyframes servicesScroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(30px);
+  }
+}
+
+@keyframes markerPulse {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    background: rgba($blackColor, .5);
+  }
+  to {
+    background: rgba($blackColor, 0);
+    transform: translate(-50%, -50%) scale(2.7);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

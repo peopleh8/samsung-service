@@ -1,0 +1,12 @@
+.post-pagination {
+  display: none;
+  padding-bottom: 110px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .pagination__btn {
+    margin: 0 !important;
+  }
+}
