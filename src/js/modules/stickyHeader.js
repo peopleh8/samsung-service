@@ -4,7 +4,11 @@ const header = document.querySelector('.header'),
 
 let headerTopHeight = headerBot.offsetTop
 
-const setStickyHeader = () => scrollY > headerTopHeight - 1 ? headerBot.classList.add('sticky', 'fixed-block') : headerBot.classList.remove('sticky', 'fixed-block') 
+const setStickyHeader = () => {
+  if (innerWidth <= 1160) return 
+  
+  scrollY > headerTopHeight - 1 ? headerBot.classList.add('sticky', 'fixed-block') : headerBot.classList.remove('sticky', 'fixed-block') 
+}
 
 window.addEventListener('scroll', setStickyHeader)
 window.addEventListener('load', setStickyHeader)

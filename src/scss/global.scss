@@ -5,6 +5,7 @@ html {
     position: fixed;
     overflow-y: scroll;
     width: 100%;
+    touch-action: none;
   }
 }
 
@@ -60,10 +61,10 @@ body {
   align-items: center;
   justify-content: center;
   width: fit-content;
-  @media (min-width: 1025px) {
+  @media (min-width: 1161px) {
     transition: all .2s ease;
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 1160px) {
     transition: all .1s ease;
   }
   svg {
@@ -72,10 +73,10 @@ body {
     width: 10px;
     height: 8px;
     transform: rotate(-90deg);
-    @media (min-width: 1025px) {
+    @media (min-width: 1161px) {
       transition: all .2s ease;
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1160px) {
       transition: stroke .1s ease;
     }
   }
@@ -86,7 +87,7 @@ body {
     svg {
       stroke: $blackColor;
     }
-    @media (min-width: 1025px) {
+    @media (min-width: 1161px) {
       &:hover {
         background: transparent;
         color: $blackColor;
@@ -96,7 +97,7 @@ body {
         }
       }
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1160px) {
       &:active {
         background: transparent;
         color: $blackColor;
@@ -113,7 +114,7 @@ body {
     svg {
       stroke: $whiteColor;
     }
-    @media (min-width: 1025px) {
+    @media (min-width: 1161px) {
       &:hover {
         background: $blackColor;
         color: $whiteColor;
@@ -123,7 +124,7 @@ body {
         }
       }
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1160px) {
       &:active {
         background: $blackColor;
         color: $whiteColor;
@@ -139,7 +140,7 @@ body {
     svg {
       stroke: $blackColor;
     }
-    @media (min-width: 1025px) {
+    @media (min-width: 1161px) {
       &:hover {
         background: $blackColor;
         color: $whiteColor;
@@ -149,7 +150,7 @@ body {
         }
       }
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1160px) {
       &:active {
         background: $blackColor;
         color: $whiteColor;
@@ -165,7 +166,7 @@ body {
     svg {
       stroke: $whiteColor;
     }
-    @media (min-width: 1025px) {
+    @media (min-width: 1161px) {
       &:hover {
         background: $whiteColor;
         color: $blackColor;
@@ -175,7 +176,7 @@ body {
         }
       }
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1160px) {
       &:active {
         background: $whiteColor;
         color: $blackColor;
@@ -266,216 +267,6 @@ body {
   }
 }
 
-.menu {
-  max-width: 1169px;
-  width: 100%;
-  margin-left: auto;
-  &-list {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    &__item {
-      @media (min-width: 1025px) {
-        &:hover >  {
-          .submenu {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-          }
-          .menu-list__link::after {
-            width: 100%;
-            opacity: 1;
-          }
-        }
-      }
-    }
-    &__link {
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 23px;
-      display: inline;
-      padding-bottom: 8px;
-      position: relative;
-      @media (min-width: 1025px) {
-        &::after {
-          content: "";
-          position: absolute;
-          left: 50%;
-          bottom: 0;
-          width: 40%;
-          height: 1px;
-          background: $blackColor;
-          transform: translateX(-50%);
-          opacity: 0;
-          @media (min-width: 1025px) {
-            transition: width .22s ease, opacity .15s ease;
-          }
-        }
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -15px;
-          width: 100%;
-          height: 15px;
-          background: transparent;
-        }
-      }
-    }
-  }
-}
-
-.submenu {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background: $whiteColor;
-  width: 100%;
-  padding: 40px 0 70px;
-  @media (min-width: 1025px) {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity .2s ease;
-  }
-  &__inner {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -8px;
-    @media (min-width: 1025px) {
-      &:hover .submenu-item__inner:not(:hover) {
-        opacity: .6;
-      }
-    }
-  }
-  &-item {
-    padding: 8px;
-    &--other {
-      width: calc(100% / 6);
-    }
-    &--phone {
-      width: calc(100% / 8);
-    }
-    &__inner {
-      height: 100%;
-      position: relative;
-      @media (min-width: 1025px) {
-      transition: opacity .2s ease;
-        &:hover {
-          .submenu-item__title::after {
-            width: 100%;
-            opacity: 1;
-          }
-        }
-      }
-      &.active {
-        opacity: 1 !important;
-        .submenu-item__title::after {
-          width: 100%;
-          opacity: 1;
-        }
-      }
-    }
-    &__link {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 10;
-    }
-    &__preview {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 20px;
-      overflow: hidden;
-      background: $lightWhiteMainColor;
-      height: 190px;
-      margin-bottom: 20px;
-    }
-    &__title-wrapper {
-      display: inline-flex;
-      align-items: center;
-    }
-    &__title {
-      font-weight: 500;
-      line-height: 21px;
-      padding-bottom: 8px;
-      display: inline;
-      position: relative;
-      @media (min-width: 1025px) {
-        &:hover::after {
-          width: 100%;
-          opacity: 1;
-        }
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        width: 40%;
-        height: 1px;
-        background: $blackColor;
-        transform: translateX(-50%);
-        opacity: 0;
-        @media (min-width: 1025px) {
-          transition: width .22s ease, opacity .15s ease;
-        }
-      }
-    }
-  }
-  &-slider {
-    padding-top: 74px;
-    &__inner {
-      display: flex;
-      flex-wrap: wrap;
-      margin: -12px;
-    }
-    &-item {
-      width: calc(100% / 6);
-      padding: 12px;
-      &__inner {
-        height: 100%;
-        display: flex;
-        position: relative;
-        padding: 5px 12px 4px 24px;
-        border-left: 1px solid $blackColor;
-        @media (min-width: 1025px) {
-          &:hover {
-            .submenu-slider-item__title {
-              background-size: 100% calc(100% - 0em);
-            }
-          }
-        }
-      }
-      &__link {
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 10;
-      }
-      &__title-wrapper {
-        padding: 6px 0 0 25px;
-        max-width: 157px;
-        flex: 1;
-      }
-      &__title {
-        @media (min-width: 1025px) {
-          background-image: linear-gradient(transparent calc(100% - 1px),$blackColor 0,$blackColor);
-          background-repeat: no-repeat;
-          background-size: 0 calc(100% - 0em);
-          transition: .3s ease;
-        }
-      }
-    }
-  }
-}
-
 .switcher {
   display: flex;
   align-items: center;
@@ -512,15 +303,15 @@ body {
     a.switcher__link {
       .switcher__link-text {
         color: $secColor;
-        @media (min-width: 1025px) {
+        @media (min-width: 1161px) {
           transition: color .2s ease;
           &:hover {
             color: $blackColor;
           }
         }
-        @media (max-width: 1024px) {
+        @media (max-width: 1160px) {
           transition: color .1s ease;
-          &:hover {
+          &:active {
             color: $blackColor;
           }
         }
@@ -534,15 +325,15 @@ body {
     a.switcher__link {
       .switcher__link-text {
         color: rgba($whiteColor, .4);
-        @media (min-width: 1025px) {
+        @media (min-width: 1161px) {
           transition: color .2s ease;
           &:hover {
             color: $whiteColor;
           }
         }
-        @media (max-width: 1024px) {
+        @media (max-width: 1160px) {
           transition: color .1s ease;
-          &:hover {
+          &:active {
             color: $whiteColor;
           }
         }
@@ -728,7 +519,7 @@ body {
       width: 40%;
       opacity: 0;
     }
-    @media (min-width: 1025px) {
+    @media (min-width: 1161px) {
       &:hover {
         .link-underline__icon {
           transform: translateX(5px);
@@ -823,7 +614,7 @@ body {
     width: 40%;
     opacity: 0;
   }
-  @media (min-width: 1025px) {
+  @media (min-width: 1161px) {
     &:hover {
       .link-underline__icon {
         transform: translateX(5px);
@@ -868,7 +659,7 @@ body {
     svg {
       transform: rotate(-90deg);
     }
-    @media (min-width: 1025px) {
+    @media (min-width: 1161px) {
       transition: transform .2s ease;
     }
   }
@@ -984,12 +775,12 @@ body {
       height: 8px;
       svg {
         stroke: $blackColor;
-        @media (min-width: 1025px) {
+        @media (min-width: 1161px) {
           transition: stroke .2s ease;
         }
       }
     }
-    @media (min-width: 1025px) {
+    @media (min-width: 1161px) {
       &:hover {
         background: $blackColor;
         svg {
@@ -1091,7 +882,7 @@ body {
     position: relative;    
     display: flex;
     align-items: center;
-    @media (min-width: 1025px) {
+    @media (min-width: 1161px) {
       &:hover {
         .search-dropdown__name-inner {
           background-size: 100% calc(100% - 0em);
@@ -1120,7 +911,7 @@ body {
     width: calc(100% - 32px);
     &-inner {
       line-height: 21px;
-      @media (min-width: 1025px) {
+      @media (min-width: 1161px) {
         background-image: linear-gradient(transparent calc(100% - 1px),$blackColor 0,$blackColor);
         background-repeat: no-repeat;
         background-size: 0 calc(100% - 0em);
@@ -1419,7 +1210,7 @@ body {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  @media (min-width: 1025px) {
+  @media (min-width: 1161px) {
     &:hover {
       .window-icon {
         transform: translateX(5px);
@@ -1432,7 +1223,7 @@ body {
   width: 10px;
   height: 7px;
   margin-left: 20px;
-  @media (min-width: 1025px) {
+  @media (min-width: 1161px) {
     transition: transform .2s ease;
   }
   svg {
@@ -1500,42 +1291,4 @@ iframe {
 
 .burger {
   display: none;
-  justify-content: center;
-  align-items: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background: $lightWhiteMainColor;
-  cursor: pointer;
-  transition: background .1s ease;
-  &:active {
-    background: $blackColor;
-    span {
-      background: $whiteColor;
-    }
-  }
-  &__inner {
-    position: relative;
-    width: 12px;
-    height: 8px;
-    span {
-      display: block;
-      background: $blackColor;
-      width: 100%;
-      height: 2px;
-      right: 0;
-      position: absolute;
-      transition: background .1s ease;
-      &:nth-child(1) {
-        top: 0;
-      }
-      &:nth-child(2) {
-        top:50%;
-        width: 70%;
-      }
-      &:nth-child(3) {
-        top: 100%;
-      }
-    }
-  }
 }

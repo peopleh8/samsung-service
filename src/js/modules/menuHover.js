@@ -3,6 +3,8 @@ const overlay = document.querySelector('.overlay--desktop-menu'),
 
 export const menuHover = () => {
   menuItems.forEach((item) => {
+    if (innerWidth <= 1160) return
+    
     item.addEventListener('mouseenter', () => {
       overlay.classList.add('visible')
     })

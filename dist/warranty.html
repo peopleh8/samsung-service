@@ -82,6 +82,24 @@
   </div>
   <div class="header__bot header-bot">
     <div class="container">
+      <div class="header-bot__mob-controls header-mob-controls">
+        <div class="header-mob-controls__item">
+          <button class="header-top__btn" data-fancybox data-src="#repair">Статус ремонту</button>
+        </div>
+        <div class="header-mob-controls__item">
+          <div class="header-top__switcher header-switcher switcher switcher--header">
+            <span class="switcher__link">
+              <span class="switcher__link-icon icon">
+                <svg><use href="./img/icons/sprite.svg#globus"></use></svg>
+              </span>
+              <span class="switcher__link-text">УКР</span>
+            </span>
+            <a class="switcher__link" href="#">
+              <span class="switcher__link-text">РУС</span>
+            </a>
+          </div>
+        </div>
+      </div>
       <div class="header-bot__inner">
         <div class="logo logo--header">
           <a class="logo__link" href="#">
@@ -91,7 +109,12 @@
         <nav class="menu">
           <ul class="menu__list menu-list">
             <li class="menu-list__item menu-list-item menu-list-item--has-children">
-              <a class="menu-list__link" href="#">Ремонт смартфонів</a>
+              <div class="menu-list__head">
+                <a class="menu-list__link" href="#">Ремонт смартфонів</a>
+                <span class="menu-list__arrow">
+                  <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                </span>
+              </div>
               <div class="menu-list-item__submenu submenu">
                 <div class="container">
                   <div class="submenu__inner">
@@ -762,7 +785,12 @@
               </div>
             </li>
             <li class="menu-list__item menu-list-item menu-list-item--has-children">
-              <a class="menu-list__link" href="#">Ремонт планшетів</a>
+              <div class="menu-list__head">
+                <a class="menu-list__link" href="#">Ремонт планшетів</a>
+                <span class="menu-list__arrow">
+                  <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                </span>
+              </div>
               <div class="menu-list-item__submenu submenu">
                 <div class="container">
                   <div class="submenu__inner">
@@ -797,7 +825,12 @@
               </div>
             </li>
             <li class="menu-list__item menu-list-item menu-list-item--has-children">
-              <a class="menu-list__link" href="#">Ремонт смарт-годинників</a>
+              <div class="menu-list__head">
+                <a class="menu-list__link" href="#">Ремонт смарт-годинників</a>
+                <span class="menu-list__arrow">
+                  <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                </span>
+              </div>
               <div class="menu-list-item__submenu submenu">
                 <div class="container">
                   <div class="submenu__inner">
@@ -858,7 +891,12 @@
               </div>
             </li>
             <li class="menu-list__item menu-list-item menu-list-item--has-children">
-              <a class="menu-list__link" href="#">Ремонт телевізорів</a>
+              <div class="menu-list__head">
+                <a class="menu-list__link" href="#">Ремонт телевізорів</a>
+                <span class="menu-list__arrow">
+                  <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                </span>
+              </div>
               <div class="menu-list-item__submenu submenu">
                 <div class="container">
                   <div class="submenu__inner">
@@ -945,10 +983,17 @@
               </div>
             </li>
             <li class="menu-list__item menu-list-item">
-              <a class="menu-list__link" href="#">Ремонт моніторів</a>
+              <div class="menu-list__head">
+                <a class="menu-list__link" href="#">Ремонт моніторів</a>
+              </div>
             </li>
             <li class="menu-list__item menu-list-item menu-list-item--has-children">
-              <a class="menu-list__link" href="#">Ремонт побутової техніки </a>
+              <div class="menu-list__head">
+                <a class="menu-list__link" href="#">Ремонт побутової техніки</a>
+                <span class="menu-list__arrow">
+                  <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                </span>
+              </div>
               <div class="menu-list-item__submenu submenu">
                 <div class="container">
                   <div class="submenu__inner">
@@ -1036,11 +1081,37 @@
             </li>
           </ul>
         </nav>
+        <nav class="menu-mob">
+          <ul class="menu-mob__list menu-mob-list">
+            <li class="menu-mob-list__item">
+              <a class="menu-mob-list__link" href="#">Гарантійний ремонт</a>
+            </li>
+            <li class="menu-mob-list__item">
+              <a class="menu-mob-list__link" href="#">Постгарантійний ремонт</a>
+            </li>
+            <li class="menu-mob-list__item">
+              <a class="menu-mob-list__link" href="#">Про команію</a>
+            </li>
+            <li class="menu-mob-list__item">
+              <a class="menu-mob-list__link" href="#">Блог</a>
+            </li>
+            <li class="menu-mob-list__item">
+              <a class="menu-mob-list__link" href="#">Контакти</a>
+            </li>
+            <li class="menu-mob-list__item">
+              <a class="menu-mob-list__link" href="#">Політика конфеденційності</a>
+            </li>
+            <li class="menu-mob-list__item">
+              <a class="menu-mob-list__link" href="#">Публічна оферта</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </div>
 </header>
 <div class="overlay overlay--desktop-menu"></div>
+<div class="overlay overlay--mobile-menu"></div>
     <div class="breadcrumbs" id="breadcrumbs">
   <div class="container">
     <div class="breadcrumbs__inner">
@@ -2153,69 +2224,88 @@
           <div class="warranty-info__title title title--black">Перегляньте інформацію про умови надання гарантійного обслуговування</div>
           <div class="warranty-info__subtitle">Виробник не несе гарантійні зобов’язання щодо виробу в наступних випадках:</div>
           <div class="warranty-info__inner">
-            <div class="warranty-info__item warranty-info-item">
-              <div class="warranty-info-item__inner">
-                <div class="warranty-info-item__desc">Якщо недоліки викликані отриманням, установкою та використанням несумісного контенту (мелодії, графічні, відео- та інші файли, додатки Java і подібні ним програми)</div>
+            <div class="warranty-info__column">
+              <div class="warranty-info__item warranty-info-item">
+                <div class="warranty-info-item__inner">
+                  <span class="warranty-info-item__num">1</span>
+                  <p class="warranty-info-item__desc">Якщо недоліки викликані отриманням, установкою та використанням несумісного контенту (мелодії, графічні, відео- та інші файли, додатки Java і подібні ним програми)</p>
+                </div>
+              </div>
+              <div class="warranty-info__item warranty-info-item">
+                <div class="warranty-info-item__inner">
+                  <span class="warranty-info-item__num">2</span>
+                  <p class="warranty-info-item__desc">Порушення правил і умов експлуатації, установки виробу, викладених в Інструкції користувача та іншій документації, що передається споживачеві в комплекті з виробом</p>
+                </div>
+              </div>
+              <div class="warranty-info__item warranty-info-item">
+                <div class="warranty-info-item__inner">
+                  <span class="warranty-info-item__num">3</span>
+                  <p class="warranty-info-item__desc">Якщо пошкодження(недоліки) викликані невідповідністю стандартам або технічним регламентам живлячих, кабельних, телекомунікаційних мереж, потужності радіосигналу, в тому числі через особливості рельефу та інші подібні зовнішні чинники, використання виробу на межі або поза зоною дії мережі, підключення до Виробу невідповідних обо несправних зовнішніх пристроїв</p>
+                </div>
+              </div>
+              <div class="warranty-info__item warranty-info-item">
+                <div class="warranty-info-item__inner">
+                  <span class="warranty-info-item__num">4</span>
+                  <p class="warranty-info-item__desc">Якщо дефект виник внаслідок природного зносу під час експлуатації виробу. При цьому під природним зносом розуміються наслідки експлуатації виробу, що викликали погіршення технічного стану і зовнішнього вигляду через тривале використання цього виробу</p>
+                </div>
               </div>
             </div>
-            <div class="warranty-info__item warranty-info-item">
-              <div class="warranty-info-item__inner">
-                <div class="warranty-info-item__desc">Порушення правил і умов експлуатації, установки виробу, викладених в Інструкції користувача та іншій документації, що передається споживачеві в комплекті з виробом</div>
+            <div class="warranty-info__column">
+              <div class="warranty-info__item warranty-info-item">
+                <div class="warranty-info-item__inner">
+                  <span class="warranty-info-item__num">5</span>
+                  <p class="warranty-info-item__desc">Якщо данні на маркувальних етикетках Виробу виправленні, стерті, а також у випадку відсутності маркувальних етикеток на виробі</p>
+                </div>
+              </div>
+              <div class="warranty-info__item warranty-info-item">
+                <div class="warranty-info-item__inner">
+                  <span class="warranty-info-item__num">6</span>
+                  <p class="warranty-info-item__desc">Якщо виріб має сліди спроб некваліфікованого ремонту (використання неоригінальних запасних частин, розбирання і ремонт виробів особами, що не уповноваженi Виробником)</p>
+                </div>
+              </div>
+              <div class="warranty-info__item warranty-info-item">
+                <div class="warranty-info-item__inner">
+                  <span class="warranty-info-item__num">7</span>
+                  <p class="warranty-info-item__desc">Якщо пошкодження викликані використанням нестандартних (неоригінальних) і / чи неякісних (пошкоджених) витратних матеріалів, приладдя, запасних частин, елементів живлення, носіїв інформації різних типів (включаючи, але, не обмежуючись аудіо / відеокасетами, CD, DVD-дисками, картами пам’яті, SIM-картами, картриджами)</p>
+                </div>
+              </div>
+              <div class="warranty-info__item warranty-info-item">
+                <div class="warranty-info-item__inner">
+                  <span class="warranty-info-item__num">8</span>
+                  <p class="warranty-info-item__desc">Якщо виявлені механічні пошкодження, що виникли після передачі виробу споживачеві; пошкодження, викликані дією вологи, високих або низьких температур, корозією, окисленням, потраплянням всередину виробу сторонніх предметів, речовин, рідин, комах або тварин</p>
+                </div>
               </div>
             </div>
-            <div class="warranty-info__item warranty-info-item">
-              <div class="warranty-info-item__inner">
-                <div class="warranty-info-item__desc">Якщо пошкодження(недоліки) викликані невідповідністю стандартам або технічним регламентам живлячих, кабельних, телекомунікаційних мереж, потужності радіосигналу, в тому числі через особливості рельефу та інші подібні зовнішні чинники, використання виробу на межі або поза зоною дії мережі, підключення до Виробу невідповідних обо несправних зовнішніх пристроїв</div>
+            <div class="warranty-info__column">
+              <div class="warranty-info__item warranty-info-item">
+                <div class="warranty-info-item__inner">
+                  <span class="warranty-info-item__num">9</span>
+                  <p class="warranty-info-item__desc">Якщо дефект викликаний дією непереборних сил, нещасними випадками, умисними або необережними діями споживача або третіх осіб</p>
+                </div>
               </div>
-            </div>
-            <div class="warranty-info__item warranty-info-item">
-              <div class="warranty-info-item__inner">
-                <div class="warranty-info-item__desc">Якщо дефект виник внаслідок природного зносу під час експлуатації виробу. При цьому під природним зносом розуміються наслідки експлуатації виробу, що викликали погіршення технічного стану і зовнішнього вигляду через тривале використання цього виробу</div>
+              <div class="warranty-info__item warranty-info-item">
+                <div class="warranty-info-item__inner">
+                  <span class="warranty-info-item__num">10</span>
+                  <p class="warranty-info-item__desc">Якщо виріб, призначений для особистих (побутових, сімейних) потреб, використовувався для здійснення підприємницької діяльності, а також в інших цілях, що не відповідають його прямому призначенню</p>
+                </div>
               </div>
-            </div>
-            <div class="warranty-info__item warranty-info-item">
-              <div class="warranty-info-item__inner">
-                <div class="warranty-info-item__desc">Якщо данні на маркувальних етикетках Виробу виправленні, стерті, а також у випадку відсутності маркувальних етикеток на виробі</div>
+              <div class="warranty-info__item warranty-info-item">
+                <div class="warranty-info-item__inner">
+                  <span class="warranty-info-item__num">11</span>
+                  <p class="warranty-info-item__desc">Якщо пошкодження (недоліки) викликані дією комп’ютерних вірусів і аналогічних ним програм; установкою, зміною або видаленням паролів (кодів) виробу, модифікацією і / чи перевстановленням попередньо встановленого ПЗ виробу, установкою і використанням ПЗ третіх виробників (неоригінального), форматуванням накопичувачів на жорстких магнітних дисках, застосуванням сервісних кодів</p>
+                </div>
               </div>
-            </div>
-            <div class="warranty-info__item warranty-info-item">
-              <div class="warranty-info-item__inner">
-                <div class="warranty-info-item__desc">Якщо виріб має сліди спроб некваліфікованого ремонту (використання неоригінальних запасних частин, розбирання і ремонт виробів особами, що не уповноваженi Виробником)</div>
+              <div class="warranty-info__item warranty-info-item">
+                <div class="warranty-info-item__inner">
+                  <span class="warranty-info-item__num">12</span>
+                  <p class="warranty-info-item__desc">Якщо дефект викликаний зміною конструкції або схеми виробу, підключенням зовнішніх пристроїв, не передбачених Виробником</p>
+                </div>
               </div>
-            </div>
-            <div class="warranty-info__item warranty-info-item">
-              <div class="warranty-info-item__inner">
-                <div class="warranty-info-item__desc">Якщо виріб, призначений для особистих (побутових, сімейних) потреб, використовувався для здійснення підприємницької діяльності, а також в інших цілях, що не відповідають його прямому призначенню</div>
-              </div>
-            </div>
-            <div class="warranty-info__item warranty-info-item">
-              <div class="warranty-info-item__inner">
-                <div class="warranty-info-item__desc">Якщо пошкодження викликані використанням нестандартних (неоригінальних) і / чи неякісних (пошкоджених) витратних матеріалів, приладдя, запасних частин, елементів живлення, носіїв інформації різних типів (включаючи, але, не обмежуючись аудіо / відеокасетами, CD, DVD-дисками, картами пам’яті, SIM-картами, картриджами)</div>
-              </div>
-            </div>
-            <div class="warranty-info__item warranty-info-item">
-              <div class="warranty-info-item__inner">
-                <div class="warranty-info-item__desc">Якщо виявлені механічні пошкодження, що виникли після передачі виробу споживачеві; пошкодження, викликані дією вологи, високих або низьких температур, корозією, окисленням, потраплянням всередину виробу сторонніх предметів, речовин, рідин, комах або тварин</div>
-              </div>
-            </div>
-            <div class="warranty-info__item warranty-info-item">
-              <div class="warranty-info-item__inner">
-                <div class="warranty-info-item__desc">Якщо дефект викликаний дією непереборних сил, нещасними випадками, умисними або необережними діями споживача або третіх осіб</div>
-              </div>
-            </div>
-            <div class="warranty-info__item warranty-info-item">
-              <div class="warranty-info-item__inner">
-                <div class="warranty-info-item__desc">Якщо пошкодження (недоліки) викликані дією комп’ютерних вірусів і аналогічних ним програм; установкою, зміною або видаленням паролів (кодів) виробу, модифікацією і / чи перевстановленням попередньо встановленого ПЗ виробу, установкою і використанням ПЗ третіх виробників (неоригінального), форматуванням накопичувачів на жорстких магнітних дисках, застосуванням сервісних кодів</div>
-              </div>
-            </div>
-            <div class="warranty-info__item warranty-info-item">
-              <div class="warranty-info-item__inner">
-                <div class="warranty-info-item__desc">Якщо дефект викликаний зміною конструкції або схеми виробу, підключенням зовнішніх пристроїв, не передбачених Виробником</div>
-              </div>
-            </div>
-            <div class="warranty-info__item warranty-info-item">
-              <div class="warranty-info-item__inner">
-                <div class="warranty-info-item__desc">Якщо вимагається чищення аудіо- чи відеоголівок, приводів для зчитування інформації з носіїв різних типів</div>
+              <div class="warranty-info__item warranty-info-item">
+                <div class="warranty-info-item__inner">
+                  <span class="warranty-info-item__num">13</span>
+                  <p class="warranty-info-item__desc">Якщо вимагається чищення аудіо- чи відеоголівок, приводів для зчитування інформації з носіїв різних типів</p>
+                </div>
               </div>
             </div>
           </div>

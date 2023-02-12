@@ -13,42 +13,40 @@
     margin-bottom: 60px;
   }
   &__inner {
-    // display: flex;
-    // flex-wrap: wrap;
-    // margin: -30px -36px;
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: repeat(5, auto);
-    // grid-auto-flow: column;
-    counter-reset: warrantyInfo;
-    columns: 3;
-    
+    display: flex;
+    align-items: flex-start;
+    margin: 0 -36px;
+  }
+  &__column {
+    width: calc(100% / 3);
+    padding: 0 36px;
+    & + & {
+      border-left: 1px solid $decColor;
+    }
   }
   &-item {
-    // width: calc(100% / 3);
-    padding: 30px 36px;
-    break-inside: avoid-column;
+    & + & {
+      margin-top: 60px;
+    }
     &__inner {
-      // height: 100%;
+      height: 100%;
       padding-left: 56px;
       position: relative;
-      &::before {
-        counter-increment: warrantyInfo;
-        content: counter(warrantyInfo);
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-        border: 1px solid $blackColor;
-        color: $blackColor;
-        font-weight: 500;
-        line-height: 1;
-        border-radius: 50%;
-      }
+    }
+    &__num {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid $blackColor;
+      color: $blackColor;
+      font-weight: 500;
+      line-height: 1;
+      border-radius: 50%;
     }
   }
 }
