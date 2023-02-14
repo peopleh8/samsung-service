@@ -3,6 +3,9 @@
   &__inner {
     display: flex;
     align-items: flex-start;
+    & > .services__btns {
+      display: none;
+    }
   }
   &__title {
     margin-bottom: 40px;
@@ -47,10 +50,15 @@
       bottom: 0;
       top: 0;
       left: 60px;
-      z-index: 10px;
+      z-index: 10;
       & ~ .services-item__btn {
         .services-item__title {
           font-weight: 600;
+        }
+        .services-item-price {
+          .services-item-price__text {
+            font-weight: 500;
+          }
         }
       }
       @media (min-width: 1025px) {
@@ -192,9 +200,15 @@
       }
     }
     &-price {
-      display: flex;
-      align-items: center;
       margin-left: auto;
+      .services-item__label {
+        display: none;
+      }
+      &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
       &__icon {
         width: 24px;
         height: 24px;
@@ -212,6 +226,7 @@
         line-height: 120%;
         text-transform: lowercase;
         user-select: none;
+        white-space: nowrap;
       }
     }
   }

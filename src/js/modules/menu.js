@@ -5,7 +5,7 @@ const burger = document.querySelector('.burger'),
       overlay = document.querySelector('.overlay--mobile-menu'),
       accHead = document.querySelectorAll('.menu-list-item--has-children .menu-list__head')
 
-export const openMenu = () => {
+export const toggleMenu = () => {
   burger.addEventListener('click', () => {
     burger.classList.toggle('open')
     overlay.classList.toggle('visible') 
@@ -16,15 +16,13 @@ export const openMenu = () => {
   })
 }
 
-const closeMenuHandler = () => {
-  burger.classList.remove('open')
-  overlay.classList.remove('visible') 
-  headerBot.classList.remove('open')
-  enableScrollbar()
-}
-
 export const closeMenuOverlay = () => {
-  overlay.addEventListener('click', closeMenuHandler)
+  overlay.addEventListener('click', () => {
+    burger.classList.remove('open')
+    overlay.classList.remove('visible') 
+    headerBot.classList.remove('open')
+    enableScrollbar()
+  })
 }
 
 export const menuAccordion = () => {
@@ -45,6 +43,6 @@ export const menuAccordion = () => {
   })
 }
 
-openMenu()
+toggleMenu()
 closeMenuOverlay()
 menuAccordion()

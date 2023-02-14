@@ -99,6 +99,9 @@
     .steps__section {
       background: transparent;
       position: initial !important;
+      & > img {
+        display: none;
+      }
     }
     &-dark {
       background: $blackColor;

@@ -3,6 +3,9 @@
   z-index: 1000;
   background: $whiteColor;
   width: 100%;
+  &.search-open {
+    z-index: 998;
+  }
   &-top {
     background: $whiteColor;
     position: relative;

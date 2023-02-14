@@ -94,6 +94,14 @@ export const findNav = new Swiper('.find-nav', {
   mousewheel: {
     invert: false,
   },
+  breakpoints: {
+    586: {
+      spaceBetween: 24,
+    },
+    0: {
+      spaceBetween: 16,
+    }
+  }
 })
 
 export const tabSlider = new Swiper('.tab-slider', {
@@ -225,3 +233,23 @@ document.querySelectorAll('.repair-item-slider').forEach((slider, index) => {
   })
 })
 
+export const warrantyInfoMob = innerWidth <= 1160 && new Swiper('.warranty-info-slider', {
+  modules: [Pagination],
+  slidesPerView: 1.5,
+  speed: 500,
+  spaceBetween: 40,
+  pagination: {
+    el: '.warranty-info__slider-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    586: {
+      slidesPerView: 1.5,
+      spaceBetween: 40,
+    },
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    }
+  }
+})

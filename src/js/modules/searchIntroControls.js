@@ -1,18 +1,40 @@
-const forms = document.querySelectorAll('.search')
+const forms = document.querySelectorAll('.search'),
+      header = document.querySelector('.header'),
+      overlay = document.querySelectorAll('.overlay--search')
 
 export const openIntroSearch = () => {
   forms.forEach(form => {
     form.addEventListener('submit', e => {
       e.preventDefault()
 
-      console.log(1)
+      let overlay = form.querySelector('.overlay--search'),
+          inpWrapper = form.querySelector('.search__inp-wrapper'),
+          dropdown = form.querySelector('.search-dropdown'),
+          closeIcons = form.querySelector('.search__times')
+
+      header.classList.add('search-open')
+      overlay.classList.add('visible')
+      inpWrapper.classList.add('search-open')
+      dropdown.classList.add('open')
+      closeIcons.classList.add('visible')
     })
   })
 }
 
 
 export const closeIntroSearch = () => {
-  console.log(2)
+  overlay.forEach(overlay => {
+    overlay.addEventListener('click', () => {
+      overlay.classList.remove('visible')
+      overlay.parentElement.querySelector('.search__times').classList.remove('visible')
+      overlay.parentElement.querySelector('.search-dropdown').classList.remove('open')
+
+      setTimeout(() => {
+        header.classList.remove('search-open')
+        overlay.nextElementSibling.classList.remove('search-open')
+      }, 350)
+    })
+  })
 }
 
 if (forms && forms.length !== 0) {

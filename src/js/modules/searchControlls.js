@@ -1,6 +1,7 @@
 const btnsOpen = document.querySelectorAll('.open-search'),
       btnsClose = document.querySelectorAll('.close-search'),
-      searchPanels = document.querySelectorAll('.search-dropdown')
+      searchPanels = document.querySelectorAll('.search-dropdown'),
+      header = document.querySelector('.header')
 
 export const searchOpen = () => {
   btnsOpen.forEach(btn => {
@@ -18,6 +19,12 @@ export const searchClose = () => {
       btn.classList.remove('visible')
       btn.nextElementSibling.classList.remove('hide')
       btn.nextElementSibling.nextElementSibling.classList.remove('open')
+      
+      btn.parentElement.previousElementSibling.classList.remove('visible')
+      setTimeout(() => {
+        header.classList.remove('search-open')
+        btn.parentElement.classList.remove('search-open')
+      }, 350)
     })
   })
 }

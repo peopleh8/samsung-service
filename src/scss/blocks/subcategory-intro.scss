@@ -5,6 +5,9 @@
     padding: 50px 38px 64px 60px;
     overflow: hidden;
     display: flex;
+    & > .subcategory-intro-content__link {
+      display: none;
+    }
   }
   &-content {
     width: calc(100% - 518px);

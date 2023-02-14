@@ -188,6 +188,19 @@ body {
   }
 }
 
+.collapse-content {
+  transition: height .4s ease;
+  &::after {
+    transition: all .2s ease;    
+  }
+  &.expand {
+    &::after {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
 .more {
   font-weight: 600;
   font-size: 14px;
@@ -196,6 +209,10 @@ body {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 5px;
+  transition: .15s ease;
+  &.fade {
+    color: transparent;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -218,6 +235,7 @@ body {
     color: $whiteColor;
   }
   &--small {
+    line-height: 120%;
     font-size: 34px;
   }
 }
@@ -741,7 +759,7 @@ body {
     font-size: 20px;
     line-height: 26px;
     font-style: italic;
-    padding: 12px 0 11px 24px;
+    padding: 12px 35px 11px 24px;
     width: 100%;
     position: relative;
     z-index: 101;
@@ -752,6 +770,8 @@ body {
   &__btn {
     width: 20px;
     height: 20px;
+    position: relative;
+    z-index: 11;
     svg {
       stroke: $blackColor;
     }
@@ -839,7 +859,7 @@ body {
 .search-dropdown {
   position: absolute;
   left: 0;
-  top: 100%;
+  top: 115%;
   width: 100%;
   background: $whiteColor;
   z-index: 10;
@@ -969,6 +989,7 @@ body {
 .warn-icon {
   width: 18px;
   height: 18px;
+  padding: 0 8px;
   border-radius: 50%;
   display: flex;
   justify-content: center;

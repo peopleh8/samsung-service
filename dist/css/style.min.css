@@ -2344,6 +2344,17 @@ body {
   }
 }
 
+.collapse-content {
+  transition: height 0.4s ease;
+}
+.collapse-content::after {
+  transition: all 0.2s ease;
+}
+.collapse-content.expand::after {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .more {
   font-weight: 600;
   font-size: 14px;
@@ -2352,6 +2363,10 @@ body {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 5px;
+  transition: 0.15s ease;
+}
+.more.fade {
+  color: transparent;
 }
 .more::after {
   content: "";
@@ -2375,6 +2390,7 @@ body {
   color: #fff;
 }
 .title--small {
+  line-height: 120%;
   font-size: 34px;
 }
 
@@ -2874,7 +2890,7 @@ body {
   font-size: 20px;
   line-height: 26px;
   font-style: italic;
-  padding: 12px 0 11px 24px;
+  padding: 12px 35px 11px 24px;
   width: 100%;
   position: relative;
   z-index: 101;
@@ -2885,6 +2901,8 @@ body {
 .search__btn {
   width: 20px;
   height: 20px;
+  position: relative;
+  z-index: 11;
 }
 .search__btn svg {
   stroke: #000;
@@ -2971,7 +2989,7 @@ body {
 .search-dropdown {
   position: absolute;
   left: 0;
-  top: 100%;
+  top: 115%;
   width: 100%;
   background: #fff;
   z-index: 10;
@@ -3104,6 +3122,7 @@ body {
 .warn-icon {
   width: 18px;
   height: 18px;
+  padding: 0 8px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -3614,6 +3633,11 @@ iframe ~ * {
   width: 100%;
   opacity: 1;
 }
+.submenu-item__inner.active .submenu-item__icon svg {
+  transition-delay: 0.1s;
+  opacity: 1;
+  transform: rotate(90deg);
+}
 .submenu-item__link {
   position: absolute;
   left: 0;
@@ -3640,7 +3664,8 @@ iframe ~ * {
   font-weight: 500;
   line-height: 21px;
   padding-bottom: 8px;
-  display: inline;
+  display: inline-flex;
+  align-items: center;
   position: relative;
 }
 @media (min-width: 1161px) {
@@ -3663,6 +3688,19 @@ iframe ~ * {
 @media (min-width: 1161px) {
   .submenu-item__title::after {
     transition: width 0.22s ease, opacity 0.15s ease;
+  }
+}
+.submenu-item__icon {
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+}
+.submenu-item__icon svg {
+  opacity: 0;
+}
+@media (min-width: 1160px) {
+  .submenu-item__icon svg {
+    transition: opacity 0.2s ease, transform 0.2s ease 0.2s;
   }
 }
 .submenu-slider {
@@ -4497,6 +4535,9 @@ iframe ~ * {
   background: #fff;
   width: 100%;
 }
+.header.search-open {
+  z-index: 998;
+}
 .header-top {
   background: #fff;
   position: relative;
@@ -5066,6 +5107,9 @@ iframe ~ * {
   background: transparent;
   position: initial !important;
 }
+.steps--fluid .steps__section > img {
+  display: none;
+}
 .steps--fluid-dark {
   background: #000;
 }
@@ -5489,7 +5533,7 @@ iframe ~ * {
 }
 .find__nav-wrapper::before, .find__nav-wrapper::after {
   content: "";
-  z-index: 10;
+  z-index: 2;
   position: absolute;
   top: 0;
   height: 100%;
@@ -5536,15 +5580,17 @@ iframe ~ * {
 .find-nav__slide-inner::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: 0;
-  width: 100%;
+  width: 40%;
   height: 1px;
   background: #000;
+  transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: width 0.22s ease, opacity 0.15s ease;
 }
 .find-nav__slide-inner.active::after {
+  width: 100%;
   opacity: 1;
 }
 .find-nav__slide-photo {
@@ -5593,6 +5639,7 @@ iframe ~ * {
 }
 .find-main__head-title {
   font-weight: 500;
+  width: fit-content;
 }
 .find-main__list {
   margin-top: 40px;
@@ -5644,8 +5691,8 @@ iframe ~ * {
   padding-top: 36px;
 }
 .category-intro--phones .category-intro__section > img {
-  right: -21px;
-  bottom: -25px;
+  right: 0;
+  bottom: 0;
 }
 .category-intro--tablet .category-intro__section > img, .category-intro--whatch .category-intro__section > img {
   right: 53px;
@@ -5661,21 +5708,22 @@ iframe ~ * {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
   position: relative;
-  z-index: 2;
 }
 .category-intro__section > img {
   pointer-events: none;
   user-select: none;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
 }
 .category-intro__title {
   margin-bottom: 36px;
+  text-align: center;
+  position: relative;
 }
 .category-intro-search__title {
   margin-bottom: 8px;
+  position: relative;
   font-size: 16px;
 }
 
@@ -5685,6 +5733,9 @@ iframe ~ * {
   padding: 50px 38px 64px 60px;
   overflow: hidden;
   display: flex;
+}
+.subcategory-intro__section > .subcategory-intro-content__link {
+  display: none;
 }
 .subcategory-intro-content {
   width: calc(100% - 518px);
@@ -5815,6 +5866,9 @@ iframe ~ * {
   display: flex;
   align-items: flex-start;
 }
+.services__inner > .services__btns {
+  display: none;
+}
 .services__title {
   margin-bottom: 40px;
 }
@@ -5859,10 +5913,13 @@ iframe ~ * {
   bottom: 0;
   top: 0;
   left: 60px;
-  z-index: 10px;
+  z-index: 10;
 }
 .services-item__link ~ .services-item__btn .services-item__title {
   font-weight: 600;
+}
+.services-item__link ~ .services-item__btn .services-item-price .services-item-price__text {
+  font-weight: 500;
 }
 @media (min-width: 1025px) {
   .services-item__link:hover + .services-item__overlay {
@@ -6000,9 +6057,15 @@ iframe ~ * {
   }
 }
 .services-item-price {
+  margin-left: auto;
+}
+.services-item-price .services-item__label {
+  display: none;
+}
+.services-item-price__inner {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  justify-content: flex-end;
 }
 .services-item-price__icon {
   width: 24px;
@@ -6021,6 +6084,7 @@ iframe ~ * {
   line-height: 120%;
   text-transform: lowercase;
   user-select: none;
+  white-space: nowrap;
 }
 
 .addresses--main {
@@ -6360,6 +6424,9 @@ iframe ~ * {
   position: relative;
   padding-bottom: 24px;
 }
+.addresses-info__item:not(:first-child) {
+  display: none;
+}
 .addresses-info__btn-icon {
   width: 15px;
   height: 16px;
@@ -6626,6 +6693,9 @@ iframe ~ * {
   line-height: 150%;
   margin-top: 16px;
 }
+.addresses-subaccordion {
+  display: none;
+}
 
 .contact__item {
   font-size: 14px;
@@ -6642,6 +6712,7 @@ iframe ~ * {
 }
 .contact__desc {
   width: 55%;
+  margin-left: 5px;
 }
 .contact__text {
   display: block;
@@ -7158,13 +7229,16 @@ iframe ~ * {
 .main-intro {
   padding-top: 146px;
   position: relative;
-  z-index: 102;
 }
 .main-intro__section {
   position: relative;
 }
 .main-intro-slider {
   overflow: visible;
+  z-index: unset;
+}
+.main-intro-slider .swiper-wrapper {
+  z-index: unset;
 }
 .main-intro-slider__slide {
   display: flex;
@@ -7172,23 +7246,15 @@ iframe ~ * {
   align-items: center;
   text-align: center;
   height: auto;
-}
-.main-intro-slider__slide.swiper-slide-active {
-  z-index: 100;
+  z-index: unset;
 }
 .main-intro-pagination {
   position: absolute;
   left: 50% !important;
   bottom: 20px !important;
   transform: translateX(-50%);
-  z-index: 10;
   display: flex;
   justify-content: center;
-  transition: opacity 0.2s ease;
-}
-.main-intro-pagination.search-open {
-  opacity: 0.3;
-  pointer-events: none;
 }
 .main-intro-pagination .swiper-pagination-bullet {
   width: 100px;
@@ -7216,27 +7282,13 @@ iframe ~ * {
   align-items: center;
   border-radius: 50%;
   border: 1px solid #999;
-  z-index: 10;
   cursor: pointer;
-  transition: opacity 0.2s ease;
 }
-.main-intro__btn.search-open {
-  opacity: 0.3;
-  pointer-events: none;
-}
-@media (min-width: 1025px) {
+@media (min-width: 1160px) {
   .main-intro__btn {
-    transition: border-color 0.2s ease, opacity 0.2s ease;
+    transition: border-color 0.2s ease;
   }
   .main-intro__btn:hover {
-    border-color: #000;
-  }
-}
-@media (max-width: 1024px) {
-  .main-intro__btn {
-    transition: border-color 0.1s ease, opacity 0.2s ease;
-  }
-  .main-intro__btn:active {
     border-color: #000;
   }
 }
@@ -8008,7 +8060,7 @@ iframe ~ * {
   display: flex;
   flex-wrap: wrap;
   padding-left: 87px;
-  width: calc(100% - 433px);
+  flex: 1;
   margin: -30px;
 }
 .contacts-intro-content__item {
@@ -8030,7 +8082,6 @@ iframe ~ * {
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
-  transform: translateY(3px);
 }
 
 .contacts-info {
@@ -8720,6 +8771,9 @@ iframe ~ * {
   align-items: flex-start;
   margin: 0 -36px;
 }
+.warranty-info__slider-wrapper {
+  display: none;
+}
 .warranty-info__column {
   width: 33.3333333333%;
   padding: 0 36px;
@@ -8945,6 +8999,9 @@ iframe ~ * {
 .repair-price {
   padding-top: 80px;
 }
+.repair-price .container > .repair-price-content__btns {
+  display: none;
+}
 .repair-price__title {
   margin-bottom: 40px;
 }
@@ -9024,6 +9081,7 @@ iframe ~ * {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 24px;
 }
 .repair-price-benefits__item-icon {
   width: 38px;
@@ -9128,8 +9186,86 @@ iframe ~ * {
   .main-intro {
     padding-top: 147px;
   }
+
+  .subcategory-intro-content {
+    width: calc(100% - 400px);
+    padding-right: 36px;
+  }
+  .subcategory-intro-content__link {
+    margin-bottom: 24px;
+  }
+  .subcategory-intro-content__title {
+    font-size: 36px;
+    line-height: 130%;
+  }
+  .subcategory-intro-photo {
+    padding-left: 36px;
+    width: 400px;
+  }
+  .subcategory-intro-photo__inner {
+    width: 70%;
+  }
+  .subcategory-intro-list__inner {
+    padding-top: 24px;
+  }
+  .subcategory-intro-list__item + .subcategory-intro-list__item {
+    margin-left: 5px;
+  }
+  .subcategory-intro-list__item-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .subcategory-intro-list__item-title {
+    font-size: 14px;
+    line-height: 150%;
+    padding-left: 8px;
+  }
 }
 @media (max-width: 1440px) {
+  .coockie__inner {
+    padding: 24px 60px 24px 40px;
+  }
+  .coockie__photo {
+    margin-right: 24px;
+  }
+  .coockie__desc {
+    font-size: 16px;
+  }
+  .coockie__btn-wrapper {
+    margin-left: 73px;
+  }
+
+  .subcategory-intro {
+    padding-top: 36px;
+  }
+  .subcategory-intro__section {
+    padding: 36px 48px 60px 48px;
+  }
+  .subcategory-intro-content {
+    width: calc(100% - 296px);
+  }
+  .subcategory-intro-photo {
+    width: 296px;
+  }
+
+  .category-intro--phones .category-intro__section > img {
+    max-width: 187px;
+  }
+  .category-intro--tablet .category-intro__section > img {
+    max-width: 206px;
+    right: 47px;
+  }
+  .category-intro--whatch .category-intro__section > img {
+    right: 76px;
+    max-width: 158px;
+  }
+  .category-intro__section {
+    padding: 66px 20px 77px;
+  }
+  .category-intro__title {
+    margin-bottom: 24px;
+  }
+
   .breadcrumbs {
     padding-top: 114px;
   }
@@ -9167,6 +9303,40 @@ iframe ~ * {
     line-height: 18px;
   }
 
+  .submenu {
+    padding: 16px 0 60px;
+  }
+  .submenu-item__preview {
+    height: 172px;
+    margin-bottom: 16px;
+  }
+  .submenu-item__title {
+    font-size: 14px;
+  }
+  .submenu-slider {
+    padding-top: 40px;
+  }
+  .submenu-slider-item {
+    width: 20%;
+  }
+  .submenu-slider-item:first-child {
+    display: none;
+  }
+  .submenu-slider-item__inner {
+    padding: 5px 0 5px 11px;
+  }
+  .submenu-slider-item__preview {
+    width: 52px;
+    height: 51px;
+  }
+  .submenu-slider-item__preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .submenu-slider-item__title-wrapper {
+    padding: 0 0 0 20px;
+  }
   .header-top__links:nth-of-type(3) .header-top__link:nth-child(n+3) {
     display: none;
   }
@@ -9178,37 +9348,33 @@ iframe ~ * {
     position: relative;
     margin-left: 12px;
   }
+}
+@media (max-width: 1440px) and (min-width: 1160px) {
+  .header-top-dropdown {
+    transition: color 0.2s ease;
+  }
+  .header-top-dropdown:hover .header-top-dropdown__btn {
+    color: #000;
+  }
+  .header-top-dropdown:hover .header-top-dropdown__btn svg {
+    stroke: #000;
+    transform: rotate(-180deg);
+  }
+  .header-top-dropdown:hover .header-top-dropdown__list {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+@media (max-width: 1440px) {
   .header-top-dropdown__btn {
     display: flex;
     align-items: center;
     font-size: 14px;
     line-height: 18px;
     color: #666;
+    position: relative;
   }
-}
-@media (max-width: 1440px) and (min-width: 1025px) {
-  .header-top-dropdown__btn {
-    transition: color 0.2s ease;
-  }
-  .header-top-dropdown__btn:hover {
-    color: #000;
-  }
-  .header-top-dropdown__btn:hover svg {
-    stroke: #000;
-  }
-}
-@media (max-width: 1440px) and (max-width: 1024px) {
-  .header-top-dropdown__btn {
-    transition: color 0.1s ease;
-  }
-  .header-top-dropdown__btn:active {
-    color: #000;
-  }
-  .header-top-dropdown__btn:active svg {
-    stroke: #000;
-  }
-}
-@media (max-width: 1440px) {
   .header-top-dropdown__btn-icon {
     margin-left: 8px;
     width: 10px;
@@ -9218,14 +9384,9 @@ iframe ~ * {
     stroke: #666;
   }
 }
-@media (max-width: 1440px) and (min-width: 1025px) {
+@media (max-width: 1440px) and (min-width: 1161px) {
   .header-top-dropdown__btn-icon svg {
-    transition: stroke 0.2s ease;
-  }
-}
-@media (max-width: 1440px) and (max-width: 1024px) {
-  .header-top-dropdown__btn-icon svg {
-    transition: stroke 0.1s ease;
+    transition: all 0.2s ease;
   }
 }
 @media (max-width: 1440px) {
@@ -9241,12 +9402,11 @@ iframe ~ * {
     border-radius: 20px;
     padding: 20px;
     width: max-content;
-    transition: all 0.2s ease;
   }
-  .header-top-dropdown__list.visible {
-    opacity: 1;
-    pointer-events: all;
-    visibility: visible;
+}
+@media (max-width: 1440px) and (min-width: 1161px) {
+  .header-top-dropdown__list {
+    transition: all 0.2s ease;
   }
 }
 @media (max-width: 1440px) {
@@ -9261,7 +9421,7 @@ iframe ~ * {
     color: #666;
   }
 }
-@media (max-width: 1440px) and (min-width: 1025px) {
+@media (max-width: 1440px) and (min-width: 1161px) {
   .header-top-dropdown__link {
     transition: color 0.2s ease;
   }
@@ -9269,7 +9429,7 @@ iframe ~ * {
     color: #000;
   }
 }
-@media (max-width: 1440px) and (max-width: 1024px) {
+@media (max-width: 1440px) and (max-width: 1160px) {
   .header-top-dropdown__link {
     transition: color 0.1s ease;
   }
@@ -9395,6 +9555,11 @@ iframe ~ * {
   }
 }
 @media (max-width: 1440px) {
+  .contact__item + .contact__item {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 1440px) {
   .addresses--about {
     padding: 150px 0;
   }
@@ -9441,6 +9606,57 @@ iframe ~ * {
   .addresses-accordion__num {
     top: 22px;
     left: 16px;
+  }
+  .addresses-info {
+    padding: 0 20px;
+  }
+  .addresses-info__head {
+    padding: 12px 0 8px;
+  }
+  .addresses-info__body-logo {
+    margin-right: 15px;
+  }
+  .addresses-info__body-inner {
+    margin: 0 -20px;
+  }
+  .addresses-info__body-contacts {
+    padding: 0 20px;
+  }
+  .addresses-info__body-contact {
+    width: calc(100% - 43px - 15px);
+  }
+  .addresses-info__body-list {
+    padding: 0 20px;
+  }
+  .addresses-info__body-list-item + .addresses-info__body-list-item {
+    margin-top: 5px;
+  }
+  .addresses-info__body-text {
+    margin-bottom: 10px;
+  }
+  .addresses-info__body-label {
+    margin-top: 10px;
+  }
+  .addresses-info__item {
+    padding-bottom: 15px;
+  }
+  .addresses-np {
+    padding: 15px 30px 15px 15px !important;
+  }
+  .addresses-np__title {
+    font-size: 18px;
+  }
+  .addresses-np__subtitle {
+    margin-bottom: 10px;
+  }
+  .addresses-np-head {
+    padding: 15px;
+  }
+  .addresses-np-head__title {
+    margin-bottom: 15px;
+  }
+  .addresses-np-label {
+    margin-top: 10px;
   }
 }
 @media (max-width: 1440px) {
@@ -9565,6 +9781,11 @@ iframe ~ * {
   }
 }
 @media (max-width: 1440px) {
+  .steps--fluid > img {
+    top: 140px;
+    right: 108px;
+    width: 20%;
+  }
   .steps__section {
     padding: 120px 0 90px;
   }
@@ -9634,6 +9855,9 @@ iframe ~ * {
   }
   .seo-block--main .seo-block-article__photo {
     padding-right: 24px;
+  }
+  .seo-block--other .seo-block-article__photo {
+    padding-left: 60px;
   }
   .seo-block-top {
     margin: 0 -12px 40px;
@@ -9752,6 +9976,233 @@ iframe ~ * {
     font-size: 16px;
   }
 }
+@media (max-width: 1440px) {
+  .find__title {
+    margin-bottom: 31px;
+  }
+  .find__subtitle {
+    margin-bottom: 40px;
+  }
+  .find__main-inner {
+    padding: 0;
+  }
+  .find-main__inner {
+    padding: 60px 80px 80px;
+  }
+  .find-main__head {
+    margin: -12px;
+  }
+  .find-main__head-item {
+    padding: 12px;
+  }
+  .find-main__list-item {
+    padding-bottom: 20px;
+  }
+  .find-main__list-item + .find-main__list-item {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1440px) {
+  .faq__title {
+    margin-bottom: 40px;
+  }
+  .faq-accordion {
+    padding: 0;
+  }
+}
+@media (max-width: 1440px) {
+  .general {
+    padding-bottom: 150px;
+  }
+  .general__title {
+    margin-bottom: 40px;
+  }
+  .general-sidebar__inner {
+    width: 288px;
+  }
+  .general-sidebar__anchor {
+    font-size: 16px;
+    line-height: 150%;
+    padding-left: 16px;
+  }
+  .general-content {
+    padding-left: 24px;
+    width: calc(100% - 288px);
+  }
+  .general-content__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  .general-content__item + .general-content__item {
+    margin-top: 16px;
+  }
+  .general-content__item-title {
+    font-size: 16px;
+    line-height: 150%;
+    width: 190px;
+  }
+  .general-content__item-desc {
+    font-size: 16px;
+    line-height: 150%;
+    padding-left: 24px;
+  }
+  .general-content__lists > ol > li:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .general-content__lists > ol > li > p {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .general-content__lists > ol > li > p::before {
+    font-size: 24px;
+  }
+  .general-content__lists > ol > li > ol > li > p {
+    font-size: 16px;
+  }
+  .general-content__lists > ol > li > ol > li > p::before {
+    height: 36px;
+    max-width: 36px;
+    font-size: 12px;
+    line-height: 100%;
+    padding: 0 10px;
+    transform: translateY(-5px);
+  }
+  .general-content__lists > ol > li > ol > li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .general-content__lists > ol > li > ol > li > ol > li > p {
+    font-size: 16px;
+  }
+  .general-content__lists > ol > li > ol > li > ol > li > p::before {
+    font-size: 12px;
+    line-height: 100%;
+    transform: translateY(5px);
+  }
+  .general-content__lists > ol > li > ul > li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .general-content__lists > ol > li > ul > li > p, .general-content__lists > ol > li > ul > li > span {
+    font-size: 16px;
+  }
+  .general-content__lists > ol > li > ol > li > ul > li > p, .general-content__lists > ol > li > ol > li > ul > li > span {
+    font-size: 16px;
+  }
+  .general-content__lists > ol > li > ol > li > ul > li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .general-content__lists > ol > li > ol > li > ul {
+    padding-top: 16px;
+  }
+  .general-content__lists > ol > li > ol > li > ul > li > p::before, .general-content__lists > ol > li > ul > li > p::before {
+    top: 9px;
+  }
+}
+@media (max-width: 1440px) {
+  .services-scroll {
+    display: none;
+  }
+  .services-content {
+    width: 416px;
+    padding-right: 24px;
+  }
+  .services-list {
+    width: calc(100% - 392px - 24px);
+  }
+  .services__btns {
+    flex-direction: column;
+    align-items: flex-start;
+    width: max-content;
+  }
+  .services__btn {
+    width: 100%;
+  }
+  .services__btn + .services__btn {
+    margin-top: 20px;
+  }
+  .services-item__inner {
+    padding: 24px 0 20px;
+  }
+  .services-item__link {
+    left: 40px;
+  }
+  .services-item__link ~ .services-item__btn .services-item-price .services-item-price__text {
+    font-weight: 600;
+  }
+  .services-item__title {
+    font-size: 16px;
+    max-width: 440px;
+    padding-left: 24px;
+  }
+  .services-item-price__text {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+@media (max-width: 1440px) {
+  .repair-price__title {
+    max-width: 350px;
+  }
+  .repair-price-content {
+    width: 416px;
+    padding-right: 24px;
+  }
+  .repair-price-info {
+    width: calc(100% - 392px - 24px);
+  }
+  .repair-price-content__btn {
+    margin-right: 40px;
+  }
+  .repair-price-item {
+    transform: translateY(45%);
+  }
+  .repair-price-item__title, .repair-price-item__price {
+    font-size: 20px;
+    line-height: 120%;
+  }
+  .repair-price-item__label {
+    margin-left: 16px;
+  }
+}
+@media (max-width: 1440px) {
+  .contacts-intro__section {
+    padding: 20px 142px 0 48px;
+  }
+  .contacts-intro__photo {
+    width: 389px;
+  }
+  .contacts-intro-content {
+    padding-left: 83px;
+  }
+  .contacts-intro-content__desc {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1440px) {
+  .warranty-info__title {
+    max-width: 703px;
+    margin-bottom: 16px;
+  }
+  .warranty-info__subtitle {
+    margin-bottom: 36px;
+  }
+  .warranty-info__inner {
+    margin: 0 -26px;
+  }
+  .warranty-info__column {
+    padding: 0 26px;
+  }
+  .warranty-info-item + .warranty-info-item {
+    margin-top: 36px;
+  }
+  .warranty-info-item__inner {
+    padding-left: 48px;
+  }
+  .warranty-info-item__num {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+}
 @media (max-width: 1200px) {
   .logo--header {
     margin-right: 5px;
@@ -9762,6 +10213,64 @@ iframe ~ * {
   }
 }
 @media (max-width: 1160px) {
+  .coockie__inner {
+    padding: 36px 24px 36px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .coockie__photo {
+    margin: 0 0 16px;
+    width: 56px;
+    height: 56px;
+  }
+  .coockie__photo img {
+    width: 27px;
+  }
+  .coockie__desc {
+    font-size: 14px;
+  }
+  .coockie__btn-wrapper {
+    margin: 16px 0 0;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .wrapper {
+    overflow: hidden !important;
+  }
+
+  .category-intro {
+    padding-top: 24px;
+  }
+  .category-intro--phones .category-intro__section > img {
+    max-width: 138px;
+  }
+  .category-intro--tablet .category-intro__section > img {
+    transform: translateY(0);
+    max-width: 141px;
+    right: 22px;
+    bottom: 23px;
+    top: auto;
+  }
+  .category-intro--whatch .category-intro__section > img {
+    transform: translateY(0);
+    top: auto;
+    right: 27px;
+    bottom: 25px;
+    max-width: 119px;
+  }
+  .category-intro__section {
+    padding: 60px 61px 86px;
+  }
+  .category-intro__title {
+    margin-bottom: 16px;
+  }
+  .category-intro-search__inp-wrapper {
+    max-width: 437px;
+  }
+
   .menu {
     max-width: 100%;
     height: 100%;
@@ -9901,6 +10410,9 @@ iframe ~ * {
   .submenu-item__title::after {
     display: none;
   }
+  .submenu-item__icon {
+    display: none;
+  }
   .submenu__slider-wrapper {
     display: none;
   }
@@ -10004,7 +10516,7 @@ iframe ~ * {
     position: fixed;
     overflow: hidden;
     padding-top: 71px;
-    left: -100%;
+    left: -100% !important;
     top: 0;
     max-width: 768px;
     width: 100%;
@@ -10021,7 +10533,7 @@ iframe ~ * {
     align-items: stretch;
   }
   .header-bot.open {
-    left: 0;
+    left: 0 !important;
   }
   .header-bot .logo--header {
     display: none;
@@ -10169,11 +10681,11 @@ iframe ~ * {
     bottom: 48px;
   }
 
-  .addresses--main {
-    padding-top: 130px;
-  }
   .addresses--about, .addresses--nonwarranty, .addresses--warranty {
     padding: 130px 0;
+  }
+  .addresses--device, .addresses--repair, .addresses--main {
+    padding-top: 130px;
   }
   .addresses__inner {
     flex-wrap: wrap;
@@ -10205,6 +10717,21 @@ iframe ~ * {
   }
   .addresses-accordion__num {
     left: 36px;
+  }
+  .addresses-info__head-title {
+    font-size: 14px;
+  }
+  .addresses-info__body-label, .addresses-info__body-logo {
+    display: none;
+  }
+  .addresses-info__body-contact {
+    width: 100%;
+  }
+  .addresses-info__body-inner {
+    margin: 0 -10px;
+  }
+  .addresses-info__body-contacts, .addresses-info__body-list {
+    padding: 0 10px;
   }
 
   .breadcrumbs {
@@ -10317,7 +10844,7 @@ iframe ~ * {
     margin-bottom: 67px;
   }
   .about-intro-content__article {
-    max-height: 255px;
+    height: 255px;
     overflow: hidden;
     position: relative;
   }
@@ -10364,11 +10891,14 @@ iframe ~ * {
     max-width: 140px;
   }
 
-  .callback--about {
+  .callback--about, .callback--contacts {
     padding: 0 0 130px;
   }
   .callback--nonwarranty {
     padding-bottom: 130px;
+  }
+  .callback--device, .callback--repair {
+    padding-top: 130px;
   }
   .callback-content {
     padding: 90px 0 60px 40px;
@@ -10377,10 +10907,14 @@ iframe ~ * {
     width: 50%;
   }
 
-  .marquee--main {
+  .marquee--main, .marquee--repair {
     display: none;
   }
 
+  .steps--fluid > img {
+    top: 170px;
+    left: 30px;
+  }
   .steps--main {
     padding: 130px 0;
   }
@@ -10389,6 +10923,9 @@ iframe ~ * {
   }
   .steps--nonwarranty .steps__btn-wrapper {
     margin-top: 8px;
+  }
+  .steps--repair {
+    padding-top: 130px;
   }
   .steps__section {
     padding: 110px 0;
@@ -10560,8 +11097,323 @@ iframe ~ * {
   .nonwarranty-reason-content__title {
     margin-bottom: 8px;
   }
+
+  .find--phones, .find--tablet, .find--whatch, .find--tv, .find--household {
+    padding-top: 130px;
+  }
+  .find__title {
+    margin-bottom: 24px;
+  }
+  .find__subtitle {
+    margin-bottom: 36px;
+  }
+  .find__nav-wrapper {
+    margin-bottom: 36px;
+  }
+  .find-main__inner {
+    padding: 40px 40px 60px;
+  }
+  .find-main__head {
+    margin: -8px;
+  }
+  .find-main__head-item {
+    padding: 8px;
+  }
+  .find-main__head-inner {
+    padding: 16px 39px 16px 43px;
+  }
+  .find-main__head-icon {
+    margin-right: 23px;
+  }
+  .find-main__list {
+    margin-top: 36px;
+  }
+  .find-main__list-desc {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .faq--phones, .faq--tablet, .faq--whatch, .faq--tv, .faq--household, .faq--device, .faq--repair {
+    padding-top: 130px;
+  }
+  .faq__title {
+    margin: 0 auto 24px;
+    max-width: 595px;
+  }
+  .faq-accordion__item + .faq-accordion__item {
+    margin-top: 16px;
+  }
+  .faq-accordion__head {
+    padding: 20px 40px;
+  }
+  .faq-accordion__title {
+    padding-left: 24px;
+    transform: translateY(5px);
+  }
+  .faq-accordion__text {
+    padding-top: 16px;
+    padding-right: 40px;
+    padding-left: 102px;
+  }
+
+  .general {
+    padding-bottom: 130px;
+  }
+  .general__title {
+    margin-bottom: 36px;
+  }
+  .general-sidebar {
+    display: none;
+  }
+  .general-content {
+    width: 100%;
+    padding-left: 0;
+  }
+  .general-content__item-title {
+    width: 165px;
+  }
+  .general-content__item-desc {
+    padding-left: 16px;
+  }
+
+  .subcategory-intro__section {
+    padding: 36px 36px 43px;
+  }
+  .subcategory-intro-content {
+    width: calc(100% - 200px);
+  }
+  .subcategory-intro-content__link {
+    margin-bottom: 36px;
+  }
+  .subcategory-intro-content__title {
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 8px;
+  }
+  .subcategory-intro-content__subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  .subcategory-intro-photo {
+    padding-top: 18px;
+    width: 200px;
+    align-items: flex-start;
+  }
+  .subcategory-intro-photo__inner {
+    width: 80%;
+  }
+  .subcategory-intro-list__inner {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 60px;
+    row-gap: 24px;
+  }
+  .subcategory-intro-list__item {
+    width: calc(50% - 30px);
+  }
+  .subcategory-intro-list__item + .subcategory-intro-list__item {
+    margin-left: 0;
+  }
+
+  .services {
+    padding: 70px 0 130px;
+  }
+  .services__title {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .services__inner {
+    flex-wrap: wrap;
+  }
+  .services__inner > .services__btns {
+    display: flex;
+    flex-direction: row;
+    margin-top: 48px;
+    width: 100%;
+    justify-content: center;
+  }
+  .services__inner > .services__btns .services__btn {
+    margin: 0;
+    width: fit-content;
+  }
+  .services__inner > .services__btns .services__btn:not(:last-child) {
+    margin-right: 60px;
+  }
+  .services-content {
+    width: 100%;
+    padding-right: 0;
+  }
+  .services-content .services__btns {
+    display: none;
+  }
+  .services-list {
+    width: 100%;
+    margin: 0 65px;
+  }
+  .services-item__inner {
+    padding: 20px 0;
+  }
+  .services-item__link {
+    left: 30px;
+  }
+  .services-item__label {
+    display: none;
+    margin-right: 0;
+  }
+  .services-item__title {
+    max-width: 340px;
+    padding-left: 16px;
+  }
+  .services-item-price {
+    flex-wrap: wrap;
+  }
+  .services-item-price .services-item__label {
+    display: block;
+    margin-top: 8px;
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  .repair-price {
+    padding-top: 70px;
+  }
+  .repair-price .container > .repair-price-content__btns {
+    display: flex;
+    margin-top: 48px;
+    justify-content: center;
+  }
+  .repair-price .container > .repair-price-content__btns .repair-price-content__btn {
+    margin-right: 60px;
+  }
+  .repair-price__title {
+    margin-bottom: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+  .repair-price__inner {
+    flex-wrap: wrap;
+  }
+  .repair-price-content {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+  .repair-price-content .repair-price-content__btns {
+    display: none;
+  }
+  .repair-price-info {
+    width: 100%;
+    margin: 0 65px;
+  }
+  .repair-price-item {
+    transform: translateY(0);
+  }
+  .repair-price-item__label {
+    display: none;
+  }
+  .repair-price-item__title {
+    font-weight: 500;
+  }
+  .repair-price-benefits__inner {
+    padding: 24px 24px 22px 24px;
+  }
+  .repair-price-benefits__item-inner {
+    align-items: flex-start;
+  }
+  .repair-price-benefits__item-icon {
+    margin-right: 16px;
+  }
+  .repair-price-benefits__item-title {
+    width: fit-content;
+    transform: translateY(5px);
+  }
+
+  .contacts-intro__title {
+    margin-bottom: 16px;
+  }
+  .contacts-intro__section {
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 82px 0;
+  }
+  .contacts-intro__photo {
+    order: 2;
+    width: 210px;
+    margin-top: 13px;
+  }
+  .contacts-intro-content {
+    width: 100%;
+    padding-left: 0;
+    margin: -12px -30px;
+  }
+  .contacts-intro-content__item {
+    padding: 12px 30px;
+  }
+
+  .warranty-info {
+    padding: 130px 0;
+  }
+  .warranty-info__subtitle {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+  .warranty-info__inner {
+    display: none;
+  }
+  .warranty-info__slider-wrapper {
+    display: block;
+  }
+  .warranty-info__slider-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 103px;
+  }
+  .warranty-info__slider-pagination .swiper-pagination-bullet {
+    margin: 0 !important;
+    opacity: 1;
+    background: transparent;
+    border: 1px solid #000;
+    width: 10px;
+    height: 10px;
+    transition: background 0.2s ease;
+  }
+  .warranty-info__slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #000;
+  }
+  .warranty-info__slider-pagination .swiper-pagination-bullet:not(:first-child) {
+    margin-left: 20px !important;
+  }
+  .warranty-info-item + .warranty-info-item {
+    margin-top: 60px;
+  }
+  .warranty-info-slider {
+    overflow: visible;
+  }
+  .warranty-info-slider__item {
+    height: auto;
+  }
+  .warranty-info-slider__item-inner {
+    height: 100%;
+    position: relative;
+  }
+  .warranty-info-slider__item-inner::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #ccc;
+  }
 }
 @media (max-width: 991px) {
+  .subcategory-intro-list__inner {
+    column-gap: 20px;
+  }
+  .subcategory-intro-list__item {
+    width: calc(50% - 10px);
+  }
+
   .about-certificates {
     padding-top: 130px;
   }
@@ -10598,6 +11450,9 @@ iframe ~ * {
   .seo-block {
     padding: 110px 0 130px;
     margin-top: 110px;
+  }
+  .seo-block--other .seo-block-head__photo {
+    order: 2;
   }
   .seo-block-top {
     margin: 0 -8px 36px;
@@ -10662,6 +11517,62 @@ iframe ~ * {
   }
 }
 @media (max-width: 690px) {
+  .subcategory-intro__section {
+    padding: 24px 16px 37px;
+    flex-wrap: wrap;
+  }
+  .subcategory-intro__section > .subcategory-intro-content__link {
+    display: flex;
+    order: -2;
+    margin-bottom: 16px;
+  }
+  .subcategory-intro-content {
+    width: 100%;
+    padding-right: 0;
+    border-right: none;
+  }
+  .subcategory-intro-content .subcategory-intro-content__link {
+    display: none;
+  }
+  .subcategory-intro-content__subtitle {
+    margin-bottom: 16px;
+  }
+  .subcategory-intro-photo {
+    padding: 0;
+    width: 100%;
+    order: -1;
+    margin-bottom: 31px;
+  }
+  .subcategory-intro-photo__inner {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+  }
+  .subcategory-intro-list {
+    margin-top: 24px;
+  }
+  .subcategory-intro-list__inner {
+    padding-top: 16px;
+    column-gap: 10px;
+    row-gap: 24px;
+  }
+  .subcategory-intro-list__item {
+    width: calc(50% - 5px);
+  }
+  .subcategory-intro-list__item-inner {
+    flex-direction: column;
+  }
+  .subcategory-intro-list__item-icon {
+    margin-bottom: 8px;
+    width: 40px;
+    height: 40px;
+  }
+  .subcategory-intro-list__item-title {
+    padding-left: 0;
+    font-size: 12px;
+    text-align: center;
+  }
+
   .logo--footer {
     margin-bottom: 24px;
     display: flex;
@@ -10784,8 +11695,11 @@ iframe ~ * {
     display: none;
   }
 
-  .callback--about {
+  .callback--about, .callback--contacts {
     padding: 0 0 110px;
+  }
+  .callback--device, .callback--repair {
+    padding-top: 110px;
   }
   .callback__section {
     flex-wrap: wrap;
@@ -10811,9 +11725,18 @@ iframe ~ * {
 .steps--light .steps-item::before {
     background: #000;
   }
+  .steps--dark {
+    margin: 0 -20px;
+  }
   .steps--dark .steps-item::before,
 .steps--dark .steps-item__num::before {
     background: #fff;
+  }
+  .steps--dark .steps-top {
+    padding: 0 40px;
+  }
+  .steps--dark .steps__inner {
+    padding: 0 36px;
   }
   .steps--main {
     padding: 110px 0;
@@ -10824,6 +11747,26 @@ iframe ~ * {
   .steps--nonwarranty .steps__btn-wrapper {
     margin-top: 60px;
   }
+  .steps--fluid {
+    border-radius: 15px 15px 0 0;
+    margin: 0;
+  }
+  .steps--fluid > img {
+    display: none;
+  }
+  .steps--fluid .steps__section > img {
+    display: block;
+    transform: translateX(20px);
+  }
+  .steps--fluid .steps-top {
+    padding: 0 32px 0 24px;
+  }
+  .steps--fluid .steps__inner {
+    padding: 0 16px;
+  }
+  .steps--repair {
+    padding-top: 110px;
+  }
   .steps__section {
     padding: 90px 0;
     display: flex;
@@ -10833,7 +11776,7 @@ iframe ~ * {
     position: static;
     order: 2;
     margin-bottom: 68px;
-    width: 80%;
+    width: 60%;
   }
   .steps-top {
     transform: translateX(0);
@@ -10914,6 +11857,9 @@ iframe ~ * {
     max-width: 183px;
     text-align: left;
   }
+  .steps-item__desc:first-child {
+    max-width: 100%;
+  }
   .steps-item__text {
     max-width: 183px;
     text-align: left;
@@ -10926,8 +11872,385 @@ iframe ~ * {
     order: 5;
     margin-top: 36px;
   }
+
+  .services {
+    padding: 60px 0 110px;
+  }
+  .services__title {
+    margin-bottom: 32px;
+  }
+  .services__inner .services__btns {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 36px;
+  }
+  .services__inner .services__btns .services__btn {
+    width: 220px;
+  }
+  .services__inner .services__btns .services__btn:not(:last-child) {
+    margin: 0 0 24px 0;
+  }
+  .services-list {
+    margin: 0;
+  }
+  .services-item__inner {
+    padding: 16px 0 17px;
+  }
+  .services-item-content {
+    align-items: flex-start;
+  }
+  .services-item__title {
+    font-size: 14px;
+    padding-left: 12px;
+    transform: translateY(2px);
+  }
+  .services-item__arrow-wrapper {
+    display: none;
+  }
+  .services-item-price__icon {
+    display: none;
+  }
+  .services-item-price__text {
+    font-size: 14px;
+  }
+
+  .repair-price {
+    padding-top: 60px;
+  }
+  .repair-price .container > .repair-price-content__btns {
+    margin-top: 36px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .repair-price .container > .repair-price-content__btns .repair-price-content__btn {
+    margin: 0 0 36px 0;
+  }
+  .repair-price__title {
+    text-align: left;
+  }
+  .repair-price-content {
+    margin-bottom: 24px;
+  }
+  .repair-price-info {
+    margin: 0;
+  }
+  .repair-price-item__inner {
+    align-items: flex-start;
+  }
+  .repair-price-item__title {
+    font-size: 14px;
+  }
+  .repair-price-item__price {
+    font-size: 14px;
+    margin-left: 16px;
+  }
+  .repair-price-item__line {
+    display: none;
+  }
+  .repair-price-benefits__inner {
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    background: transparent;
+  }
+  .repair-price-benefits__item {
+    width: 100%;
+  }
+  .repair-price-benefits__item + .repair-price-benefits__item {
+    border-left: none;
+    margin-top: 16px;
+  }
+  .repair-price-benefits__item-inner {
+    padding: 17px 32px;
+    border-radius: 10px;
+    background: #F4F4F4;
+  }
+  .repair-price-benefits__item-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+  .repair-price-benefits__item-title {
+    font-size: 14px;
+    transform: translateY(3px);
+  }
+
+  .contacts-intro__title {
+    margin-bottom: 24px;
+  }
+  .contacts-intro__section {
+    padding: 40px 36px 0;
+  }
+  .contacts-intro__photo {
+    margin-top: 24px;
+    width: 200px;
+  }
+  .contacts-intro-content {
+    margin: 0;
+  }
+  .contacts-intro-content__item {
+    width: 100%;
+    padding: 0;
+  }
+  .contacts-intro-content__item + .contacts-intro-content__item {
+    margin-top: 20px;
+  }
+  .contacts-intro-content__desc {
+    font-size: 14px;
+    transform: translateY(5px);
+  }
+
+  .addresses--main, .addresses--device, .addresses--repair {
+    padding-top: 110px;
+  }
+  .addresses--about, .addresses--nonwarranty, .addresses--warranty {
+    padding: 110px 0;
+  }
+  .addresses__title {
+    margin-bottom: 26px;
+  }
+  .addresses__inner {
+    padding: 0;
+  }
+  .addresses__map-section {
+    height: 260px;
+  }
+  .addresses-accordion__item + .addresses-accordion__item {
+    margin-top: 16px;
+  }
+  .addresses-accordion__photo-wrapper {
+    width: 52px;
+  }
+  .addresses-accordion__photo {
+    display: none;
+  }
+  .addresses-accordion__inner {
+    width: calc(100% - 52px);
+  }
+  .addresses-accordion__num {
+    left: 20px;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+    line-height: 150%;
+  }
+  .addresses-accordion__body {
+    margin-left: -52px;
+  }
+  .addresses-info {
+    display: none;
+  }
+  .addresses-subaccordion {
+    display: block;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #ccc;
+  }
+  .addresses-subaccordion.active .addresses-subaccordion__head-arrow {
+    transform: rotate(-180deg);
+  }
+  .addresses-subaccordion.active .addresses-subaccordion__body-inner {
+    opacity: 1;
+    transition-delay: 0.15s;
+  }
+  .addresses-subaccordion__head {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .addresses-subaccordion__head-title {
+    max-width: 246px;
+  }
+  .addresses-subaccordion__head-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+  }
+  .addresses-subaccordion__head-text::after {
+    content: "";
+    display: inline-block;
+    width: 129px;
+    height: 24px;
+    background: url(../img/np-logo.svg) center center no-repeat;
+    background-size: contain;
+    transform: translateY(25%);
+  }
+  .addresses-subaccordion__head-arrow {
+    width: 16px;
+    height: 9px;
+    margin-left: 15px;
+    transition: transform 0.2s ease;
+  }
+  .addresses-subaccordion__head-arrow svg {
+    stroke: #999;
+  }
+  .addresses-subaccordion__body {
+    display: none;
+  }
+  .addresses-subaccordion__body-inner {
+    opacity: 0;
+    padding: 16px 0 18px;
+    transition: opacity 0.2s ease 0s;
+  }
+  .addresses-subaccordion__body-label {
+    font-size: 12px;
+    line-height: 150%;
+    color: #666;
+    margin-bottom: 24px;
+  }
+  .addresses-subaccordion__body-info {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #ccc;
+  }
+  .addresses-subaccordion__body-item + .addresses-subaccordion__body-item {
+    margin-top: 16px;
+  }
+  .addresses-subaccordion__body-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 4px;
+  }
+  .addresses-subaccordion__body-value {
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+  }
+  .addresses-subaccordion__body-arrow {
+    width: 10px;
+    height: 8px;
+    margin-left: 8px;
+  }
+  .addresses-subaccordion__body-arrow svg {
+    stroke: #000;
+  }
+  .addresses-subaccordion__body-subvalue {
+    color: #666;
+  }
+  .addresses-subaccordion__body-list-title {
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .addresses-subaccordion__body-list-item {
+    display: flex;
+    align-items: flex-start;
+  }
+  .addresses-subaccordion__body-list-item + .addresses-subaccordion__body-list-item {
+    margin-top: 16px;
+  }
+  .addresses-subaccordion__body-list-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(3px);
+  }
+  .addresses-subaccordion__body-list-check {
+    width: 8px;
+    height: 8px;
+  }
+  .addresses-subaccordion__body-list-check svg {
+    stroke: #000;
+  }
+  .addresses-subaccordion__body-list-text {
+    font-size: 14px;
+    line-height: 150%;
+    padding-left: 10px;
+    width: calc(100% - 12px);
+  }
+  .addresses-np__title {
+    font-size: 16px;
+  }
+  .addresses-np-head__title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .addresses-np-head__inner {
+    flex-wrap: wrap;
+  }
+  .addresses-np-head__side {
+    width: 100%;
+  }
+  .addresses-np-head__side + .addresses-np-head__side {
+    margin: 15px 0 0;
+  }
+  .addresses-np-head__item + .addresses-np-head__item {
+    margin-top: 8px;
+  }
+  .addresses-np-contacts {
+    flex-wrap: wrap;
+    margin: 20px 0 0;
+  }
+  .addresses-np-contacts__item {
+    width: 100%;
+    padding: 0;
+  }
+  .addresses-np-contacts__item + .addresses-np-contacts__item {
+    margin-top: 20px;
+    border-left: none;
+  }
+  .addresses-np-item__title {
+    font-size: 14px;
+  }
+  .addresses-np-item__head {
+    margin-bottom: 10px;
+  }
 }
 @media (max-width: 585px) {
+  .coockie__inner {
+    padding: 16px 24px 24px;
+  }
+  .coockie__photo {
+    margin-bottom: 2px;
+  }
+  .coockie__btn-wrapper {
+    margin-top: 16px;
+  }
+
+  .category-intro {
+    padding-top: 30px;
+  }
+  .category-intro--phones .category-intro__section > img {
+    max-width: 108px;
+  }
+  .category-intro .category-intro__section > img {
+    width: 110px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .category-intro--whatch .category-intro__section > img {
+    width: 110px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .category-intro__section {
+    padding: 60px 24px 130px;
+  }
+  .category-intro__title {
+    margin-bottom: 24px;
+  }
+  .category-intro-search__title {
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .category-intro-search__inp-wrapper {
+    max-width: 264px;
+  }
+
+  .title--small {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
   .menu {
     overflow: visible;
     width: 100%;
@@ -11252,45 +12575,6 @@ iframe ~ * {
     margin-top: 24px;
   }
 
-  .addresses--main {
-    padding-top: 110px;
-  }
-  .addresses--about, .addresses--nonwarranty, .addresses--warranty {
-    padding: 110px 0;
-  }
-  .addresses__title {
-    margin-bottom: 26px;
-  }
-  .addresses__inner {
-    padding: 0;
-  }
-  .addresses__map-section {
-    height: 260px;
-  }
-  .addresses-accordion__item + .addresses-accordion__item {
-    margin-top: 16px;
-  }
-  .addresses-accordion__photo-wrapper {
-    width: 52px;
-  }
-  .addresses-accordion__photo {
-    display: none;
-  }
-  .addresses-accordion__inner {
-    width: calc(100% - 52px);
-  }
-  .addresses-accordion__num {
-    left: 20px;
-    top: 9px;
-    width: 24px;
-    height: 24px;
-    font-size: 10px;
-    line-height: 150%;
-  }
-  .addresses-accordion__body {
-    margin-left: -52px;
-  }
-
   .post-intro__date {
     margin-bottom: 24px;
   }
@@ -11465,7 +12749,7 @@ iframe ~ * {
     margin-bottom: 44px;
   }
   .about-intro-content__article {
-    max-height: 230px;
+    height: 230px;
   }
   .about-intro-info .about-intro-content__btns {
     margin-top: 60px;
@@ -11496,6 +12780,10 @@ iframe ~ * {
   }
   .about-intro-info__counter-title span {
     font-size: 50px;
+  }
+
+  .about-certificates__desc {
+    font-size: 16px;
   }
 
   .callback--nonwarranty {
@@ -11559,6 +12847,12 @@ iframe ~ * {
     padding: 44px 0 110px;
     margin-top: 110px;
   }
+  .seo-block--main .seo-block__overflow::after {
+    background: linear-gradient(0deg, #E7E8F0 30.81%, rgba(231, 232, 240, 0.630985) 74.33%, rgba(231, 232, 240, 0) 100%);
+  }
+  .seo-block--other .seo-block__overflow::after {
+    background: linear-gradient(0deg, #F4F4F4 30.81%, rgba(244, 244, 244, 0.630985) 74.33%, rgba(244, 244, 244, 0) 100%);
+  }
   .seo-block__more-wrapper {
     display: flex;
     justify-content: center;
@@ -11576,7 +12870,6 @@ iframe ~ * {
     bottom: 0;
     width: 100%;
     height: 90px;
-    background: linear-gradient(0deg, #E7E8F0 30.81%, rgba(231, 232, 240, 0.630985) 74.33%, rgba(231, 232, 240, 0) 100%);
   }
   .seo-block__subtitle {
     transform: translateY(0);
@@ -11801,5 +13094,203 @@ iframe ~ * {
   .nonwarranty-reason-benefits__item-title span {
     font-size: 50px;
     line-height: 100%;
+  }
+
+  .find--phones, .find--tablet, .find--whatch, .find--tv, .find--household {
+    padding-top: 110px;
+  }
+  .find__title {
+    margin-bottom: 16px;
+  }
+  .find__subtitle {
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 24px;
+  }
+  .find__nav-wrapper {
+    margin-bottom: 24px;
+  }
+  .find-nav__slide-inner {
+    padding-bottom: 8px;
+  }
+  .find-nav__slide-photo {
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+  }
+  .find-nav__slide-name {
+    font-size: 14px;
+    line-height: 150%;
+    width: calc(100% - 40px - 4px);
+  }
+  .find-main__inner {
+    padding: 36px 16px 48px;
+  }
+  .find-main__head {
+    margin: 0;
+  }
+  .find-main__head-item {
+    padding: 0;
+    width: 100%;
+  }
+  .find-main__head-item + .find-main__head-item {
+    margin-top: 16px;
+  }
+  .find-main__head-inner {
+    padding: 11px 16px;
+    justify-content: flex-start;
+  }
+  .find-main__head-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+  .find-main__head-title {
+    flex: 1;
+    font-size: 14px;
+    line-height: 150%;
+  }
+  .find-main__list-item {
+    padding-bottom: 16px;
+  }
+  .find-main__list-item + .find-main__list-item {
+    margin-top: 16px;
+  }
+  .find-main__list-title, .find-main__list-price {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  .find-main__list-content {
+    margin-right: 16px;
+  }
+  .find__btns-wrapper {
+    margin-top: 36px;
+  }
+  .find__btns-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .find__btn-wrapper + .find__btn-wrapper {
+    margin: 36px 0 0;
+  }
+
+  .faq--phones, .faq--tablet, .faq--whatch, .faq--tv, .faq--household, .faq--device, .faq--repair {
+    padding-top: 110px;
+  }
+  .faq-accordion__head {
+    padding: 12px 20px 12px 16px;
+  }
+  .faq-accordion__icon {
+    width: 30px;
+    height: 30px;
+  }
+  .faq-accordion__icon::before, .faq-accordion__icon::after {
+    width: 13px;
+  }
+  .faq-accordion__title {
+    width: calc(100% - 30px);
+    padding-left: 12px;
+    transform: translateY(4px);
+  }
+  .faq-accordion__title-inner::after {
+    bottom: -5px;
+  }
+  .faq-accordion__text {
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-left: 58px;
+  }
+
+  .general {
+    padding-bottom: 110px;
+  }
+  .general__title {
+    padding-bottom: 36px;
+    margin-bottom: 36px;
+  }
+  .general-content__section {
+    margin-bottom: 36px;
+  }
+  .general-content__title {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  .general-content__item {
+    flex-wrap: wrap;
+  }
+  .general-content__item + .general-content__item {
+    margin-top: 24px;
+  }
+  .general-content__item-title {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .general-content__item-desc {
+    width: 100%;
+    padding-left: 0;
+    font-size: 14px;
+  }
+  .general-content__lists > ol > li:not(:last-child) {
+    margin-bottom: 36px;
+  }
+  .general-content__lists > ol > li > p {
+    font-size: 16px;
+  }
+  .general-content__lists > ol > li > p::before {
+    font-size: 16px;
+  }
+  .general-content__lists > ol > li > ol > li > p {
+    font-size: 14px;
+    flex-direction: column;
+  }
+  .general-content__lists > ol > li > ol > li > p::before {
+    transform: translateY(0);
+    margin-bottom: 8px;
+  }
+  .general-content__lists > ol > li > ol > li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .general-content__lists > ol > li > ol > li > ol {
+    padding: 16px 0 0;
+  }
+  .general-content__lists > ol > li > ol > li > ol > li > p {
+    font-size: 14px;
+  }
+  .general-content__lists > ol > li > ol > li > ol > li > p::before {
+    margin-right: 8px;
+  }
+  .general-content__lists > ol > li > ul > li > p, .general-content__lists > ol > li > ul > li > span, .general-content__lists > ol > li > ol > li > ul > li > p, .general-content__lists > ol > li > ol > li > ul > li > span {
+    font-size: 14px;
+  }
+  .general-content__lists > ol > li > ul > li > p::before, .general-content__lists > ol > li > ul > li > span::before, .general-content__lists > ol > li > ol > li > ul > li > p::before, .general-content__lists > ol > li > ol > li > ul > li > span::before {
+    top: 7px;
+    margin-right: 16px;
+  }
+
+  .warranty-info {
+    padding: 90px 0;
+  }
+  .warranty-info-item + .warranty-info-item {
+    margin-top: 24px;
+  }
+  .warranty-info-item__inner {
+    padding-left: 0;
+  }
+  .warranty-info-item__num {
+    position: static;
+    margin-bottom: 8px;
+  }
+  .warranty-info__title {
+    margin-bottom: 24px;
+  }
+  .warranty-info__subtitle {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  .warranty-info__slider-pagination {
+    margin-top: 44px;
+  }
+  .warranty-info-slider__item-inner::before {
+    display: none;
   }
 }

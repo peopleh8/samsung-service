@@ -17,9 +17,9 @@ export const setTabs = () => {
     })
   } 
   
-  if (tabNavMenuItems && tabNavMenuItems.length !== 0) {
+  if (tabNavMenuItems && tabNavMenuItems.length !== 0 && innerWidth >= 1160) {
     tabNavMenuItems.forEach((item, index) => {
-      item.addEventListener('click', () => {
+      item.addEventListener('mouseenter', () => {
         let activeItem = document.querySelector('.menu-tab-nav-item.active')
         activeItem && activeItem.classList.remove('active')
         item.classList.add('active')

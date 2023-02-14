@@ -344,9 +344,13 @@
               <div class="popular-content__title title title--black">Дізнайся ціну ремонту свого пристрою Samsung</div>
               <form class="popular-content__search popular-search search">
                 <label class="popular-search__title search__title" for="intro-search">Введіть модель свого приладу, або оберіть з популярних</label>
+                <div class="overlay overlay--search"></div>
                 <div class="popular-search__inp-wrapper search__inp-wrapper">
                   <button class="popular-search__btn search__btn icon">
                     <svg><use href="./img/icons/sprite.svg#search"></use></svg>
+                  </button>
+                  <button class="category-intro-search__close search__times close-search" type="button">
+                    <span class="search__times-icon"></span>
                   </button>
                   <input 
                     class="popular-search__inp search__inp" 
@@ -355,6 +359,99 @@
                     placeholder="Наприклад Galaxy S21 ..." 
                     autocomplete="off"
                   />
+                  <div class="popular-search__dropdown search-dropdown">
+                    <div class="search-dropdown__title">Відповідно вашого запиту</div>
+                    <div class="search-dropdown__list repair-item__search-list scroll-section">
+                      <div class="search-dropdown__item">
+                        <div class="search-dropdown__inner">
+                          <a class="search-dropdown__link" href="#"></a>
+                          <div class="search-dropdown__photo">
+                            <img src="./img/phone-search-1.png" alt="">
+                          </div>
+                          <div class="search-dropdown__name">
+                            <span class="search-dropdown__name-inner">Galaxy Tab A8 WiFi 3/32 Galaxy Tab A8 WiFi 3/32 Galaxy Tab A8 WiFi 3/32</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="search-dropdown__item">
+                        <div class="search-dropdown__inner">
+                          <a class="search-dropdown__link" href="#"></a>
+                          <div class="search-dropdown__photo">
+                            <img src="./img/phone-search-2.png" alt="">
+                          </div>
+                          <div class="search-dropdown__name">
+                            <span class="search-dropdown__name-inner">Galaxy Tab A8 WiFi 3/32</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="search-dropdown__item">
+                        <div class="search-dropdown__inner">
+                          <a class="search-dropdown__link" href="#"></a>
+                          <div class="search-dropdown__photo">
+                            <img src="./img/phone-search-3.png" alt="">
+                          </div>
+                          <div class="search-dropdown__name">
+                            <span class="search-dropdown__name-inner">Galaxy Tab A8 WiFi 3/32</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="search-dropdown__item">
+                        <div class="search-dropdown__inner">
+                          <a class="search-dropdown__link" href="#"></a>
+                          <div class="search-dropdown__photo">
+                            <img src="./img/phone-search-4.png" alt="">
+                          </div>
+                          <div class="search-dropdown__name">
+                            <span class="search-dropdown__name-inner">Galaxy Tab A8 WiFi 3/32</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="search-dropdown__item">
+                        <div class="search-dropdown__inner">
+                          <a class="search-dropdown__link" href="#"></a>
+                          <div class="search-dropdown__photo">
+                            <img src="./img/phone-search-5.png" alt="">
+                          </div>
+                          <div class="search-dropdown__name">
+                            <span class="search-dropdown__name-inner">Galaxy Tab A8 WiFi 3/32</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="search-dropdown__item">
+                        <div class="search-dropdown__inner">
+                          <a class="search-dropdown__link" href="#"></a>
+                          <div class="search-dropdown__photo">
+                            <img src="./img/phone-search-6.png" alt="">
+                          </div>
+                          <div class="search-dropdown__name">
+                            <span class="search-dropdown__name-inner">Galaxy Tab A8 WiFi 3/32</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="search-dropdown__item">
+                        <div class="search-dropdown__inner">
+                          <a class="search-dropdown__link" href="#"></a>
+                          <div class="search-dropdown__photo">
+                            <img src="./img/phone-search-7.png" alt="">
+                          </div>
+                          <div class="search-dropdown__name">
+                            <span class="search-dropdown__name-inner">Galaxy Tab A8 WiFi 3/32</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="search-dropdown__item">
+                        <div class="search-dropdown__inner">
+                          <a class="search-dropdown__link" href="#"></a>
+                          <div class="search-dropdown__photo">
+                            <img src="./img/phone-moc-small-black.svg" alt="">
+                          </div>
+                          <div class="search-dropdown__name">
+                            <span class="search-dropdown__name-inner">Не знайшов своєї моделі</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="popular-search__items">
                   <button class="popular-search__item" type="button">Galaxy Tab S 8</button>
@@ -739,6 +836,74 @@
                           </span>
                           <span class="addresses-accordion__link-text">Відкити на Google Maps</span>
                         </a>
+                        <div class="addresses-subaccordion">
+                          <div class="addresses-subaccordion__head">
+                            <div class="addresses-subaccordion__head-title">
+                              <span class="addresses-subaccordion__head-text">До цього відділення можлива відправка</span>
+                            </div>
+                            <div class="addresses-subaccordion__head-arrow icon">
+                              <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                            </div>
+                          </div>
+                          <div class="addresses-subaccordion__body">
+                            <div class="addresses-subaccordion__body-inner">
+                              <p class="addresses-subaccordion__body-label">Відправка Новою Поштою дійсна лише для мобільних пристроїв (смартфони, планшети, носимі ґаджети)</p>
+                              <div class="addresses-subaccordion__body-info">
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Одержувач</div>
+                                  <div class="addresses-subaccordion__body-value">представник ТОВ МТІ-СЕРВІС</div>
+                                </div>
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Контактний номер</div>
+                                  <a class="addresses-subaccordion__body-value" href="tel:+380675507617">
+                                    38 067 550 76 17
+                                    <span class="addresses-subaccordion__body-arrow icon">
+                                      <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                                    </span>
+                                  </a>
+                                </div>
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Реєстраційний номер</div>
+                                  <div class="addresses-subaccordion__body-value">39554115</div>
+                                </div>
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Адреса одержувача</div>
+                                  <div class="addresses-subaccordion__body-value">м. Київ, вул. Білоруська, 26</div>
+                                  <div class="addresses-subaccordion__body-subvalue">(доставка кур'єром до дверей)</div>
+                                </div>
+                              </div>
+                              <div class="addresses-subaccordion__body-list-wrapper">
+                                <div class="addresses-subaccordion__body-list-title">Вкладіть в посилку інформацію :</div>
+                                <ul class="addresses-subaccordion__body-list">
+                                  <li class="addresses-subaccordion__body-list-item">
+                                    <div class="addresses-subaccordion__body-list-icon">
+                                      <span class="addresses-subaccordion__body-list-check icon">
+                                        <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                                      </span>
+                                    </div>
+                                    <div class="addresses-subaccordion__body-list-text">Опис заяленого недоліку</div>
+                                  </li>
+                                  <li class="addresses-subaccordion__body-list-item">
+                                    <div class="addresses-subaccordion__body-list-icon">
+                                      <span class="addresses-subaccordion__body-list-check icon">
+                                        <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                                      </span>
+                                    </div>
+                                    <div class="addresses-subaccordion__body-list-text">Ваш ПІБ та контактний номер телефона</div>
+                                  </li>
+                                  <li class="addresses-subaccordion__body-list-item">
+                                    <div class="addresses-subaccordion__body-list-icon">
+                                      <span class="addresses-subaccordion__body-list-check icon">
+                                        <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                                      </span>
+                                    </div>
+                                    <div class="addresses-subaccordion__body-list-text">Дата гарантійного ремонту -гарантійний талон виробника</div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -863,6 +1028,74 @@
                           </span>
                           <span class="addresses-accordion__link-text">Відкити на Google Maps</span>
                         </a>
+                        <div class="addresses-subaccordion">
+                          <div class="addresses-subaccordion__head">
+                            <div class="addresses-subaccordion__head-title">
+                              <span class="addresses-subaccordion__head-text">До цього відділення можлива відправка</span>
+                            </div>
+                            <div class="addresses-subaccordion__head-arrow icon">
+                              <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                            </div>
+                          </div>
+                          <div class="addresses-subaccordion__body">
+                            <div class="addresses-subaccordion__body-inner">
+                              <p class="addresses-subaccordion__body-label">Відправка Новою Поштою дійсна лише для мобільних пристроїв (смартфони, планшети, носимі ґаджети)</p>
+                              <div class="addresses-subaccordion__body-info">
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Одержувач</div>
+                                  <div class="addresses-subaccordion__body-value">представник ТОВ МТІ-СЕРВІС</div>
+                                </div>
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Контактний номер</div>
+                                  <a class="addresses-subaccordion__body-value" href="tel:+380675507617">
+                                    38 067 550 76 17
+                                    <span class="addresses-subaccordion__body-arrow icon">
+                                      <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                                    </span>
+                                  </a>
+                                </div>
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Реєстраційний номер</div>
+                                  <div class="addresses-subaccordion__body-value">39554115</div>
+                                </div>
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Адреса одержувача</div>
+                                  <div class="addresses-subaccordion__body-value">м. Київ, вул. Білоруська, 26</div>
+                                  <div class="addresses-subaccordion__body-subvalue">(доставка кур'єром до дверей)</div>
+                                </div>
+                              </div>
+                              <div class="addresses-subaccordion__body-list-wrapper">
+                                <div class="addresses-subaccordion__body-list-title">Вкладіть в посилку інформацію :</div>
+                                <ul class="addresses-subaccordion__body-list">
+                                  <li class="addresses-subaccordion__body-list-item">
+                                    <div class="addresses-subaccordion__body-list-icon">
+                                      <span class="addresses-subaccordion__body-list-check icon">
+                                        <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                                      </span>
+                                    </div>
+                                    <div class="addresses-subaccordion__body-list-text">Опис заяленого недоліку</div>
+                                  </li>
+                                  <li class="addresses-subaccordion__body-list-item">
+                                    <div class="addresses-subaccordion__body-list-icon">
+                                      <span class="addresses-subaccordion__body-list-check icon">
+                                        <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                                      </span>
+                                    </div>
+                                    <div class="addresses-subaccordion__body-list-text">Ваш ПІБ та контактний номер телефона</div>
+                                  </li>
+                                  <li class="addresses-subaccordion__body-list-item">
+                                    <div class="addresses-subaccordion__body-list-icon">
+                                      <span class="addresses-subaccordion__body-list-check icon">
+                                        <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                                      </span>
+                                    </div>
+                                    <div class="addresses-subaccordion__body-list-text">Дата гарантійного ремонту -гарантійний талон виробника</div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

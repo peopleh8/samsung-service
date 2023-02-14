@@ -354,6 +354,9 @@
     &__item {
       position: relative;
       padding-bottom: 24px;
+      &:not(:first-child) {
+        display: none;
+      }
     }
     &__btn {
       &-icon {
@@ -595,9 +598,6 @@
         font-weight: 500;
       }
     }
-    &-data {
-
-    }
     &-info {
       &__item {
         & + & {
@@ -633,6 +633,9 @@
       }
     }
   }
+  &-subaccordion {
+    display: none;
+  }
 }
 
 .contact {
@@ -651,6 +654,7 @@
   }
   &__desc {
     width: 55%;
+    margin-left: 5px;
   }
   &__text {
     display: block;

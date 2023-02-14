@@ -33,12 +33,12 @@ export const showTooltip = () => {
   if (innerWidth <= 585) {
     tooltipSectionHeads.forEach((btn, index) => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('.tooltip-section__body').forEach((item, itemIndex) => {
-          if (itemIndex !== index) {
-            slideUp(item, 300)
-            item.parentElement.classList.remove('active')
-          }
-        })
+        // document.querySelectorAll('.tooltip-section__body').forEach((item, itemIndex) => {
+        //   if (itemIndex !== index) {
+        //     slideUp(item, 300)
+        //     item.parentElement.classList.remove('active')
+        //   }
+        // })
         
         slideToggle(btn.nextElementSibling, 300, 'block')
         btn.parentElement.classList.toggle('active')

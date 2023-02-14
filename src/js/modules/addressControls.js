@@ -7,7 +7,8 @@ const accItemsHead = document.querySelectorAll('.addresses-accordion__head:not(.
       npBtn = document.querySelector('.addresses-accordion__photo--single')?.parentElement?.nextElementSibling,
       mapSection = document.querySelector('.addresses__map-section'),
       npSection = document.querySelector('.addresses-np'),
-      openInfoBtn = document.querySelector('.addresses-info__btn')
+      openInfoBtn = document.querySelector('.addresses-info__btn'),
+      subAccItemsHead = document.querySelectorAll('.addresses-subaccordion__head')
 
 export const setAddressAccrordion = () => {
   accItemsHead.forEach((item, index) => {
@@ -93,6 +94,15 @@ export const setAddressAccrordion = () => {
   })
 }
 
+export const setAddressSubAccordion = () => {
+  subAccItemsHead.forEach(item => {
+    item.addEventListener('click', () => {
+      slideToggle(item.nextElementSibling, 300, 'block')
+      item.parentElement.classList.toggle('active')
+    })
+  })
+}
+
 export const toggleNpInfo = () => {
   npBtn.addEventListener('click', e => {
     let npSectionHeight = npSection.clientHeight,
@@ -131,5 +141,6 @@ export const toggleAddressInfo = () => {
 }
 
 accItemsHead && accItemsHead.length !== 0 && setAddressAccrordion()
+subAccItemsHead && subAccItemsHead.length !== 0 && setAddressSubAccordion()
 npBtn && toggleNpInfo()
 openInfoBtn && toggleAddressInfo()

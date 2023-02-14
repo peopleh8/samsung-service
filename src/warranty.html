@@ -603,7 +603,7 @@
                 <div class="addresses__map-section">
                   <div class="addresses__map-inner">
                     <div class="addresses__map addresses-map" id="map"></div>
-                    <div class="addresses__info addresses-info">
+                    <div class="addresses__info addresses-info visible">
                       <button class="addresses-info__btn">
                         <span class="addresses-info__btn-icon icon">
                           <svg><use href="./img/icons/sprite.svg#double-arrow"></use></svg>
@@ -895,7 +895,7 @@
             </div>
             <div class="addresses__accordion-wrapper">
               <div class="addresses__accordion addresses-accordion">
-                <div class="addresses-accordion__item" data-href="uniq-1">
+                <div class="addresses-accordion__item active" id="card-1" data-href="uniq-1">
                   <div class="addresses-accordion__photo-wrapper">
                     <span class="addresses-accordion__num">1</span>
                     <div class="addresses-accordion__photo">
@@ -903,7 +903,7 @@
                     </div>
                   </div>
                   <div class="addresses-accordion__inner">
-                    <div class="addresses-accordion__head">
+                    <div class="addresses-accordion__head header-elem">
                       <div class="addresses-accordion__content">
                         <div class="addresses-accordion__title">МТI-СЕРВІС</div>
                         <div class="addresses-accordion__subtitle">м. Київ, вул. Білоруська, 26</div>
@@ -953,11 +953,79 @@
                           </span>
                           <span class="addresses-accordion__link-text">Відкити на Google Maps</span>
                         </a>
+                        <div class="addresses-subaccordion">
+                          <div class="addresses-subaccordion__head">
+                            <div class="addresses-subaccordion__head-title">
+                              <span class="addresses-subaccordion__head-text">До цього відділення можлива відправка</span>
+                            </div>
+                            <div class="addresses-subaccordion__head-arrow icon">
+                              <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                            </div>
+                          </div>
+                          <div class="addresses-subaccordion__body">
+                            <div class="addresses-subaccordion__body-inner">
+                              <p class="addresses-subaccordion__body-label">Відправка Новою Поштою дійсна лише для мобільних пристроїв (смартфони, планшети, носимі ґаджети)</p>
+                              <div class="addresses-subaccordion__body-info">
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Одержувач</div>
+                                  <div class="addresses-subaccordion__body-value">представник ТОВ МТІ-СЕРВІС</div>
+                                </div>
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Контактний номер</div>
+                                  <a class="addresses-subaccordion__body-value" href="tel:+380675507617">
+                                    38 067 550 76 17
+                                    <span class="addresses-subaccordion__body-arrow icon">
+                                      <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                                    </span>
+                                  </a>
+                                </div>
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Реєстраційний номер</div>
+                                  <div class="addresses-subaccordion__body-value">39554115</div>
+                                </div>
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Адреса одержувача</div>
+                                  <div class="addresses-subaccordion__body-value">м. Київ, вул. Білоруська, 26</div>
+                                  <div class="addresses-subaccordion__body-subvalue">(доставка кур'єром до дверей)</div>
+                                </div>
+                              </div>
+                              <div class="addresses-subaccordion__body-list-wrapper">
+                                <div class="addresses-subaccordion__body-list-title">Вкладіть в посилку інформацію :</div>
+                                <ul class="addresses-subaccordion__body-list">
+                                  <li class="addresses-subaccordion__body-list-item">
+                                    <div class="addresses-subaccordion__body-list-icon">
+                                      <span class="addresses-subaccordion__body-list-check icon">
+                                        <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                                      </span>
+                                    </div>
+                                    <div class="addresses-subaccordion__body-list-text">Опис заяленого недоліку</div>
+                                  </li>
+                                  <li class="addresses-subaccordion__body-list-item">
+                                    <div class="addresses-subaccordion__body-list-icon">
+                                      <span class="addresses-subaccordion__body-list-check icon">
+                                        <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                                      </span>
+                                    </div>
+                                    <div class="addresses-subaccordion__body-list-text">Ваш ПІБ та контактний номер телефона</div>
+                                  </li>
+                                  <li class="addresses-subaccordion__body-list-item">
+                                    <div class="addresses-subaccordion__body-list-icon">
+                                      <span class="addresses-subaccordion__body-list-check icon">
+                                        <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                                      </span>
+                                    </div>
+                                    <div class="addresses-subaccordion__body-list-text">Дата гарантійного ремонту -гарантійний талон виробника</div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="addresses-accordion__item" data-href="uniq-2">
+                <div class="addresses-accordion__item" id="card-2" data-href="uniq-2">
                   <div class="addresses-accordion__photo-wrapper">
                     <span class="addresses-accordion__num">2</span>
                     <div class="addresses-accordion__photo">
@@ -965,7 +1033,7 @@
                     </div>
                   </div>
                   <div class="addresses-accordion__inner">
-                    <div class="addresses-accordion__head">
+                    <div class="addresses-accordion__head header-elem">
                       <div class="addresses-accordion__content">
                         <div class="addresses-accordion__title">МТI-СЕРВІС</div>
                         <div class="addresses-accordion__subtitle">м. Київ, просп. Степана Бандери, 21</div>
@@ -1019,7 +1087,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="addresses-accordion__item" data-href="uniq-3">
+                <div class="addresses-accordion__item" id="card-3" data-href="uniq-3">
                   <div class="addresses-accordion__photo-wrapper">
                     <span class="addresses-accordion__num">3</span>
                     <div class="addresses-accordion__photo">
@@ -1027,7 +1095,7 @@
                     </div>
                   </div>
                   <div class="addresses-accordion__inner">
-                    <div class="addresses-accordion__head">
+                    <div class="addresses-accordion__head header-elem">
                       <div class="addresses-accordion__content">
                         <div class="addresses-accordion__title">МТI-СЕРВІС PLAZA</div>
                         <div class="addresses-accordion__subtitle">м. Київ, б-р Дружби Народів, 14-16</div>
@@ -1077,6 +1145,74 @@
                           </span>
                           <span class="addresses-accordion__link-text">Відкити на Google Maps</span>
                         </a>
+                        <div class="addresses-subaccordion">
+                          <div class="addresses-subaccordion__head">
+                            <div class="addresses-subaccordion__head-title">
+                              <span class="addresses-subaccordion__head-text">До цього відділення можлива відправка</span>
+                            </div>
+                            <div class="addresses-subaccordion__head-arrow icon">
+                              <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                            </div>
+                          </div>
+                          <div class="addresses-subaccordion__body">
+                            <div class="addresses-subaccordion__body-inner">
+                              <p class="addresses-subaccordion__body-label">Відправка Новою Поштою дійсна лише для мобільних пристроїв (смартфони, планшети, носимі ґаджети)</p>
+                              <div class="addresses-subaccordion__body-info">
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Одержувач</div>
+                                  <div class="addresses-subaccordion__body-value">представник ТОВ МТІ-СЕРВІС</div>
+                                </div>
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Контактний номер</div>
+                                  <a class="addresses-subaccordion__body-value" href="tel:+380675507617">
+                                    38 067 550 76 17
+                                    <span class="addresses-subaccordion__body-arrow icon">
+                                      <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                                    </span>
+                                  </a>
+                                </div>
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Реєстраційний номер</div>
+                                  <div class="addresses-subaccordion__body-value">39554115</div>
+                                </div>
+                                <div class="addresses-subaccordion__body-item">
+                                  <div class="addresses-subaccordion__body-title">Адреса одержувача</div>
+                                  <div class="addresses-subaccordion__body-value">м. Київ, вул. Білоруська, 26</div>
+                                  <div class="addresses-subaccordion__body-subvalue">(доставка кур'єром до дверей)</div>
+                                </div>
+                              </div>
+                              <div class="addresses-subaccordion__body-list-wrapper">
+                                <div class="addresses-subaccordion__body-list-title">Вкладіть в посилку інформацію :</div>
+                                <ul class="addresses-subaccordion__body-list">
+                                  <li class="addresses-subaccordion__body-list-item">
+                                    <div class="addresses-subaccordion__body-list-icon">
+                                      <span class="addresses-subaccordion__body-list-check icon">
+                                        <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                                      </span>
+                                    </div>
+                                    <div class="addresses-subaccordion__body-list-text">Опис заяленого недоліку</div>
+                                  </li>
+                                  <li class="addresses-subaccordion__body-list-item">
+                                    <div class="addresses-subaccordion__body-list-icon">
+                                      <span class="addresses-subaccordion__body-list-check icon">
+                                        <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                                      </span>
+                                    </div>
+                                    <div class="addresses-subaccordion__body-list-text">Ваш ПІБ та контактний номер телефона</div>
+                                  </li>
+                                  <li class="addresses-subaccordion__body-list-item">
+                                    <div class="addresses-subaccordion__body-list-icon">
+                                      <span class="addresses-subaccordion__body-list-check icon">
+                                        <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                                      </span>
+                                    </div>
+                                    <div class="addresses-subaccordion__body-list-text">Дата гарантійного ремонту -гарантійний талон виробника</div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1194,6 +1330,97 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="warranty-info__slider-wrapper">
+            <div class="warranty-info__slider warranty-info-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="warranty-info-slider__item swiper-slide">
+                  <div class="warranty-info-slider__item-inner">
+                    <div class="warranty-info__item warranty-info-item">
+                      <div class="warranty-info-item__inner">
+                        <span class="warranty-info-item__num">1</span>
+                        <p class="warranty-info-item__desc">Якщо недоліки викликані отриманням, установкою та використанням несумісного контенту (мелодії, графічні, відео- та інші файли, додатки Java і подібні ним програми)</p>
+                      </div>
+                    </div>
+                    <div class="warranty-info__item warranty-info-item">
+                      <div class="warranty-info-item__inner">
+                        <span class="warranty-info-item__num">2</span>
+                        <p class="warranty-info-item__desc">Порушення правил і умов експлуатації, установки виробу, викладених в Інструкції користувача та іншій документації, що передається споживачеві в комплекті з виробом</p>
+                      </div>
+                    </div>
+                    <div class="warranty-info__item warranty-info-item">
+                      <div class="warranty-info-item__inner">
+                        <span class="warranty-info-item__num">3</span>
+                        <p class="warranty-info-item__desc">Якщо пошкодження(недоліки) викликані невідповідністю стандартам або технічним регламентам живлячих, кабельних, телекомунікаційних мереж, потужності радіосигналу, в тому числі через особливості рельефу та інші подібні зовнішні чинники, використання виробу на межі або поза зоною дії мережі, підключення до Виробу невідповідних обо несправних зовнішніх пристроїв</p>
+                      </div>
+                    </div>
+                    <div class="warranty-info__item warranty-info-item">
+                      <div class="warranty-info-item__inner">
+                        <span class="warranty-info-item__num">4</span>
+                        <p class="warranty-info-item__desc">Якщо дефект виник внаслідок природного зносу під час експлуатації виробу. При цьому під природним зносом розуміються наслідки експлуатації виробу, що викликали погіршення технічного стану і зовнішнього вигляду через тривале використання цього виробу</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="warranty-info-slider__item swiper-slide">
+                  <div class="warranty-info-slider__item-inner">
+                    <div class="warranty-info__item warranty-info-item">
+                      <div class="warranty-info-item__inner">
+                        <span class="warranty-info-item__num">1</span>
+                        <p class="warranty-info-item__desc">Якщо недоліки викликані отриманням, установкою та використанням несумісного контенту (мелодії, графічні, відео- та інші файли, додатки Java і подібні ним програми)</p>
+                      </div>
+                    </div>
+                    <div class="warranty-info__item warranty-info-item">
+                      <div class="warranty-info-item__inner">
+                        <span class="warranty-info-item__num">2</span>
+                        <p class="warranty-info-item__desc">Порушення правил і умов експлуатації, установки виробу, викладених в Інструкції користувача та іншій документації, що передається споживачеві в комплекті з виробом</p>
+                      </div>
+                    </div>
+                    <div class="warranty-info__item warranty-info-item">
+                      <div class="warranty-info-item__inner">
+                        <span class="warranty-info-item__num">3</span>
+                        <p class="warranty-info-item__desc">Якщо пошкодження(недоліки) викликані невідповідністю стандартам або технічним регламентам живлячих, кабельних, телекомунікаційних мереж, потужності радіосигналу, в тому числі через особливості рельефу та інші подібні зовнішні чинники, використання виробу на межі або поза зоною дії мережі, підключення до Виробу невідповідних обо несправних зовнішніх пристроїв</p>
+                      </div>
+                    </div>
+                    <div class="warranty-info__item warranty-info-item">
+                      <div class="warranty-info-item__inner">
+                        <span class="warranty-info-item__num">4</span>
+                        <p class="warranty-info-item__desc">Якщо дефект виник внаслідок природного зносу під час експлуатації виробу. При цьому під природним зносом розуміються наслідки експлуатації виробу, що викликали погіршення технічного стану і зовнішнього вигляду через тривале використання цього виробу</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="warranty-info-slider__item swiper-slide">
+                  <div class="warranty-info-slider__item-inner">
+                    <div class="warranty-info__item warranty-info-item">
+                      <div class="warranty-info-item__inner">
+                        <span class="warranty-info-item__num">1</span>
+                        <p class="warranty-info-item__desc">Якщо недоліки викликані отриманням, установкою та використанням несумісного контенту (мелодії, графічні, відео- та інші файли, додатки Java і подібні ним програми)</p>
+                      </div>
+                    </div>
+                    <div class="warranty-info__item warranty-info-item">
+                      <div class="warranty-info-item__inner">
+                        <span class="warranty-info-item__num">2</span>
+                        <p class="warranty-info-item__desc">Порушення правил і умов експлуатації, установки виробу, викладених в Інструкції користувача та іншій документації, що передається споживачеві в комплекті з виробом</p>
+                      </div>
+                    </div>
+                    <div class="warranty-info__item warranty-info-item">
+                      <div class="warranty-info-item__inner">
+                        <span class="warranty-info-item__num">3</span>
+                        <p class="warranty-info-item__desc">Якщо пошкодження(недоліки) викликані невідповідністю стандартам або технічним регламентам живлячих, кабельних, телекомунікаційних мереж, потужності радіосигналу, в тому числі через особливості рельефу та інші подібні зовнішні чинники, використання виробу на межі або поза зоною дії мережі, підключення до Виробу невідповідних обо несправних зовнішніх пристроїв</p>
+                      </div>
+                    </div>
+                    <div class="warranty-info__item warranty-info-item">
+                      <div class="warranty-info-item__inner">
+                        <span class="warranty-info-item__num">4</span>
+                        <p class="warranty-info-item__desc">Якщо дефект виник внаслідок природного зносу під час експлуатації виробу. При цьому під природним зносом розуміються наслідки експлуатації виробу, що викликали погіршення технічного стану і зовнішнього вигляду через тривале використання цього виробу</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="warranty-info__slider-pagination"></div>
           </div>
         </div>
       </section>

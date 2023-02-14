@@ -9,7 +9,7 @@
     justify-content: space-between;
     &__item {
       @media (min-width: 1161px) {
-        &:hover >  {
+        &:hover > {
           .submenu {
             opacity: 1;
             visibility: visible;
@@ -110,6 +110,11 @@
           width: 100%;
           opacity: 1;
         }
+        .submenu-item__icon svg {
+          transition-delay: .1s;
+          opacity: 1;
+          transform: rotate(90deg);
+        }
       }
     }
     &__link {
@@ -138,7 +143,8 @@
       font-weight: 500;
       line-height: 21px;
       padding-bottom: 8px;
-      display: inline;
+      display: inline-flex;
+      align-items: center;
       position: relative;
       @media (min-width: 1161px) {
         &:hover::after {
@@ -158,6 +164,17 @@
         opacity: 0;
         @media (min-width: 1161px) {
           transition: width .22s ease, opacity .15s ease;
+        }
+      }
+    }
+    &__icon {
+      width: 12px;
+      height: 12px;
+      margin-left: 8px;
+      svg {
+        opacity: 0;
+        @media (min-width: 1160px) {
+          transition: opacity .2s ease, transform .2s ease .2s;
         }
       }
     }

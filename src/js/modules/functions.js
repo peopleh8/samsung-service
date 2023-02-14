@@ -93,6 +93,10 @@ export const slideDown = (target, duration, propery) => {
   setTimeout(() => {
     target.style.height = targetHeight;
   }, 10);
+
+  setTimeout(() => {
+    target.style.height = '';
+  }, duration);
 }
 
 /* Аналог slideUp */
