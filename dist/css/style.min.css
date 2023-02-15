@@ -8115,6 +8115,17 @@ iframe ~ * {
 .contacts-info-item.visible .contacts-info-item__hidden {
   opacity: 1;
 }
+.contacts-info-item--big {
+  width: 34%;
+}
+@media (min-width: 1161px) {
+  .contacts-info-item--big:not(.active) .contacts-info-item__inner:hover .contacts-info-item__photo {
+    background: #fff;
+  }
+}
+.contacts-info-item--big .contacts-info-item__photo img {
+  filter: grayscale(0);
+}
 .contacts-info-item.active {
   width: 100%;
   height: auto;
@@ -8239,7 +8250,19 @@ iframe ~ * {
   font-weight: 500;
   font-size: 20px;
   line-height: 150%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   transition: all 0.2s ease;
+}
+.contacts-info-content__desc {
+  margin-bottom: 24px;
+  line-height: 24px;
+}
+.contacts-info-content__desc span {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
 }
 .contacts-info-content__address {
   margin-bottom: 24px;
@@ -8455,7 +8478,15 @@ iframe ~ * {
   font-size: 14px;
   line-height: 150%;
 }
+.contacts-info-content__hidden-info-list-label {
+  font-size: 12px;
+  line-height: 150%;
+  margin-top: 8px;
+}
 
+.warranty-intro .container > .warranty-intro-content__title, .warranty-intro .container > .warranty-intro-content__desc {
+  display: none;
+}
 .warranty-intro__inner {
   display: flex;
 }
@@ -8470,6 +8501,7 @@ iframe ~ * {
   margin-bottom: 59px;
   max-width: 670px;
   width: 100%;
+  line-height: 150%;
 }
 .warranty-intro-content__photo {
   max-width: 666px;
@@ -8498,34 +8530,30 @@ iframe ~ * {
 .warranty-intro__list-wrapper {
   width: calc(100% - 810px + 30px);
   padding-left: 30px;
-  margin: -15px;
 }
 .warranty-intro-list {
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
+  height: calc(100% + 30px);
+  margin: -15px;
   counter-reset: warrantyList;
 }
 .warranty-intro-list__item {
   width: 50%;
+  height: 50%;
   padding: 15px;
 }
-.warranty-intro-list__item-inner {
-  height: 100%;
+.warranty-intro-list__item-head {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+}
+.warranty-intro-list__item-inner {
+  height: 100%;
   background: #F4F4F4;
   border-radius: 20px;
-  padding: 36px;
+  padding: 99px 36px 36px;
   position: relative;
-  z-index: 2;
-}
-@media (min-width: 1025px) {
-  .warranty-intro-list__item-inner:hover {
-    z-index: 3;
-  }
 }
 .warranty-intro-list__item-inner::before {
   counter-increment: warrantyList;
@@ -8533,7 +8561,6 @@ iframe ~ * {
   position: absolute;
   left: 24px;
   top: 0;
-  z-index: -1;
   font-family: "Mont";
   font-weight: 700;
   font-size: 100px;
@@ -8544,6 +8571,9 @@ iframe ~ * {
   width: 110px;
   height: 110px;
   margin-bottom: 61px;
+}
+.warranty-intro-list__item-btn {
+  display: none;
 }
 .warranty-intro-list__item-content {
   position: relative;
@@ -8569,6 +8599,7 @@ iframe ~ * {
 }
 .warranty-intro-list__item-desc {
   margin-top: 16px;
+  line-height: 150%;
 }
 .warranty-intro-tooltip {
   padding: 24px 40px;
@@ -8602,6 +8633,23 @@ iframe ~ * {
   position: relative;
   z-index: 5;
 }
+.warranty-cover::before, .warranty-cover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 24px;
+  z-index: 3;
+  pointer-events: none;
+}
+.warranty-cover::before {
+  left: 0;
+  background: linear-gradient(-270deg, #FFFFFF 13.33%, rgba(255, 255, 255, 0) 100%, #FFFFFF 100%);
+}
+.warranty-cover::after {
+  right: 0;
+  background: linear-gradient(270deg, #FFFFFF 13.33%, rgba(255, 255, 255, 0) 100%, #FFFFFF 100%);
+}
 .warranty-cover__title {
   text-align: center;
   margin-bottom: 8px;
@@ -8628,6 +8676,8 @@ iframe ~ * {
 .warranty-cover__nav-wrapper {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 10;
 }
 .warranty-cover-nav {
   display: flex;
@@ -8654,21 +8704,33 @@ iframe ~ * {
   color: #fff;
   background: #000;
 }
-.warranty-cover-slide__inner {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
+.warranty-cover-slide .swiper-wrapper {
+  align-items: stretch;
 }
-.warranty-cover-item {
-  width: 33.3333333333%;
-  padding: 15px;
+.warranty-cover-slide.swiper-slide-active {
+  position: relative;
+  z-index: 100;
+}
+.warranty-cover-slide .swiper-slide {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+.warranty-cover-slide__inner {
+  overflow: visible;
+}
+@media (min-width: 1161px) {
+  .warranty-cover-item:hover {
+    z-index: 1;
+  }
+}
+.warranty-cover-item.swiper-slide-active {
+  z-index: 1;
 }
 .warranty-cover-item__inner {
   height: 100%;
   background: #F4F4F4;
   border-radius: 27.7014px;
   padding: 40px 63px 111px 60px;
-  position: relative;
 }
 .warranty-cover-head {
   display: flex;
@@ -9147,7 +9209,7 @@ iframe ~ * {
 }
 
 .err {
-  padding: 0 20px 0;
+  padding: 122px 20px 0;
 }
 .err__inner {
   display: flex;
@@ -9220,8 +9282,43 @@ iframe ~ * {
     line-height: 150%;
     padding-left: 8px;
   }
+
+  .warranty-intro-list__item-inner {
+    padding: 40px;
+  }
+  .warranty-intro-list__item-icon {
+    margin-bottom: 40px;
+  }
+  .warranty-intro-list__item-title {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  .warranty-intro-list__item-desc {
+    font-size: 14px;
+  }
 }
 @media (max-width: 1440px) {
+  .modal-contact {
+    padding: 60px;
+  }
+
+  .err {
+    padding-top: 114px;
+  }
+  .err-photo img {
+    max-width: 377px;
+  }
+  .err-content {
+    padding: 150px 20px 126px;
+  }
+  .err-content__title {
+    margin-bottom: 24px;
+  }
+  .err-content__desc {
+    max-width: 496px;
+    margin-bottom: 48px;
+  }
+
   .coockie__inner {
     padding: 24px 60px 24px 40px;
   }
@@ -9337,6 +9434,7 @@ iframe ~ * {
   .submenu-slider-item__title-wrapper {
     padding: 0 0 0 20px;
   }
+
   .header-top__links:nth-of-type(3) .header-top__link:nth-child(n+3) {
     display: none;
   }
@@ -9786,6 +9884,15 @@ iframe ~ * {
     right: 108px;
     width: 20%;
   }
+  .steps--warranty .steps__section {
+    padding: 120px 0 50px;
+  }
+  .steps--warranty .steps__section > img {
+    display: none;
+  }
+  .steps--warranty .steps__title {
+    max-width: 100%;
+  }
   .steps__section {
     padding: 120px 0 90px;
   }
@@ -10203,6 +10310,63 @@ iframe ~ * {
     font-size: 12px;
   }
 }
+@media (max-width: 1440px) {
+  .warranty-intro-content {
+    width: 600px;
+  }
+  .warranty-intro-content__title {
+    margin-bottom: 16px;
+  }
+  .warranty-intro-content__desc {
+    margin-bottom: 40px;
+    max-width: 496px;
+  }
+  .warranty-intro-content__photo {
+    width: 496px;
+  }
+  .warranty-intro-content__photo-info {
+    padding: 76px 40px 20px 40px;
+  }
+  .warranty-intro-content__photo-title {
+    margin-bottom: 24px;
+  }
+  .warranty-intro__list-wrapper {
+    padding-left: 0;
+    width: calc(100% - 600px);
+  }
+  .warranty-intro-list {
+    margin: -12px;
+    height: calc(100% + 24px);
+  }
+  .warranty-intro-list__item {
+    padding: 12px;
+  }
+  .warranty-intro-list__item-inner::before {
+    font-size: 80px;
+    line-height: 150%;
+    left: 20px;
+  }
+}
+@media (max-width: 1440px) {
+  .warranty-cover__title {
+    margin-bottom: 16px;
+  }
+  .warranty-cover__subtitle-wrapper {
+    margin-bottom: 36px;
+  }
+  .warranty-cover__title-small {
+    margin-bottom: 36px;
+  }
+  .warranty-cover-nav {
+    margin-bottom: 24px;
+  }
+  .warranty-cover-nav__item-inner {
+    padding: 13px 80px;
+  }
+  .warranty-cover-item__inner {
+    padding: 40px 40px 111px;
+  }
+}
 @media (max-width: 1200px) {
   .logo--header {
     margin-right: 5px;
@@ -10213,6 +10377,73 @@ iframe ~ * {
   }
 }
 @media (max-width: 1160px) {
+  .modal__title {
+    font-size: 24px;
+    line-height: 150%;
+  }
+
+  .modal-contact {
+    max-width: 640px;
+    padding: 40px 125px 21px;
+  }
+  .modal-contact__title {
+    margin-bottom: 16px;
+  }
+  .modal-contact__inner {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .modal-contact__side {
+    width: 100%;
+    padding: 0;
+  }
+  .modal-contact__side + .modal-contact__side {
+    margin-top: 16px;
+  }
+  .modal-contact__texarea-wrapper {
+    height: 164px;
+  }
+  .modal-contact__btn-wrapper {
+    margin: 24px 0 18px;
+  }
+
+  .err {
+    padding-top: 71px;
+  }
+  .err__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 130px 0;
+  }
+  .err-photo {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  .err-content {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .err-content__inner {
+    max-width: 598px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .err-content__title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .err-content__desc {
+    max-width: 100%;
+    margin-bottom: 36px;
+  }
+
   .coockie__inner {
     padding: 36px 24px 36px;
     flex-direction: column;
@@ -10924,6 +11155,18 @@ iframe ~ * {
   .steps--nonwarranty .steps__btn-wrapper {
     margin-top: 8px;
   }
+  .steps--warranty .steps__section {
+    padding: 140px 0 80px;
+  }
+  .steps--warranty .steps__section > img {
+    display: block;
+    height: auto;
+    width: 30%;
+    top: 0;
+  }
+  .steps--warranty .steps__title {
+    padding: 0 60px;
+  }
   .steps--repair {
     padding-top: 130px;
   }
@@ -11405,6 +11648,85 @@ iframe ~ * {
     width: 1px;
     background: #ccc;
   }
+
+  .warranty-intro .container > .warranty-intro-content__title, .warranty-intro .container > .warranty-intro-content__desc {
+    display: block;
+  }
+  .warranty-intro .container > .warranty-intro-content__desc {
+    max-width: 100%;
+    margin-bottom: 36px;
+  }
+  .warranty-intro__inner {
+    flex-wrap: wrap;
+  }
+  .warranty-intro-content {
+    width: 100%;
+    order: 2;
+    padding: 0 65px;
+  }
+  .warranty-intro-content .warranty-intro-content__title,
+.warranty-intro-content .warranty-intro-content__desc {
+    display: none;
+  }
+  .warranty-intro-content__photo {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 3/2;
+  }
+  .warranty-intro-content__photo-info {
+    padding: 60px 40px 20px;
+  }
+  .warranty-intro-content__photo-title {
+    max-width: 500px;
+  }
+  .warranty-intro__list-wrapper {
+    width: 100%;
+    margin: 0 65px 24px;
+  }
+  .warranty-intro-list {
+    height: auto;
+    margin: -8px;
+  }
+  .warranty-intro-list__item {
+    height: auto;
+    padding: 8px;
+  }
+  .warranty-intro-list__item:nth-child(odd) .warranty-intro-list__item-tooltip-panel {
+    left: -30px;
+  }
+  .warranty-intro-list__item:nth-child(even) .warranty-intro-list__item-tooltip-panel {
+    right: -30px;
+  }
+  .warranty-intro-list__item-tooltip-icon {
+    right: 20px;
+  }
+  .warranty-intro-list__item-tooltip-icon::before {
+    top: 100%;
+    right: 50%;
+    transform: translate(50%, 50%) rotate(-90deg);
+  }
+  .warranty-intro-list__item-tooltip-panel {
+    top: 40px;
+  }
+
+  .warranty-cover {
+    padding-top: 130px;
+  }
+  .warranty-cover-nav__item-inner {
+    padding: 16px 35px;
+    font-size: 16px;
+  }
+  .warranty-cover-chars__tooltip-icon::before {
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 50%) rotate(90deg);
+  }
+  .warranty-cover-chars__tooltip-panel {
+    top: 50px;
+    left: -30px;
+    padding: 15px 20px;
+    max-width: 300px;
+  }
 }
 @media (max-width: 991px) {
   .subcategory-intro-list__inner {
@@ -11746,6 +12068,19 @@ iframe ~ * {
   }
   .steps--nonwarranty .steps__btn-wrapper {
     margin-top: 60px;
+  }
+  .steps--warranty .steps__section {
+    padding: 90px 0 38px;
+  }
+  .steps--warranty .steps__section > img {
+    width: 60%;
+    transform: rotateY(0);
+  }
+  .steps--warranty .steps__title {
+    padding: 0 24px;
+  }
+  .steps--warranty .steps__inner {
+    padding: 0 24px 0 16px;
   }
   .steps--fluid {
     border-radius: 15px 15px 0 0;
@@ -12202,8 +12537,347 @@ iframe ~ * {
   .addresses-np-item__head {
     margin-bottom: 10px;
   }
+
+  .warranty-intro .container > .warranty-intro-content__desc {
+    font-size: 16px;
+  }
+  .warranty-intro__list-wrapper {
+    margin: 0 0 36px;
+  }
+  .warranty-intro-list {
+    margin: 0;
+  }
+  .warranty-intro-list__item {
+    padding: 0;
+    width: 100%;
+  }
+  .warranty-intro-list__item + .warranty-intro-list__item {
+    margin-top: 16px;
+  }
+  .warranty-intro-list__item-inner {
+    padding: 24px;
+  }
+  .warranty-intro-list__item-inner.active .warranty-intro-list__item-body > * {
+    opacity: 1;
+    transition-delay: 0.15s;
+  }
+  .warranty-intro-list__item-inner.active .warranty-intro-list__item-collapse {
+    opacity: 0;
+    transition-delay: 0s;
+  }
+  .warranty-intro-list__item-inner.active .warranty-intro-list__item-expand {
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+  .warranty-intro-list__item-inner::before {
+    font-size: 30px;
+    line-height: 110%;
+    top: 8px;
+    left: 16px;
+  }
+  .warranty-intro-list__item-head {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .warranty-intro-list__item-content {
+    width: calc(100% - 60px - 24px);
+  }
+  .warranty-intro-list__item-icon {
+    margin: 0 24px 0 0;
+    width: 60px;
+    height: 60px;
+  }
+  .warranty-intro-list__item-title {
+    margin-bottom: 0;
+  }
+  .warranty-intro-list__item-desc {
+    margin-top: 4px;
+  }
+  .warranty-intro-list__item-btn {
+    display: block;
+    margin-top: 16px;
+    position: relative;
+    line-height: 1;
+  }
+  .warranty-intro-list__item-collapse {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 4px;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    transition: opacity 0.2s ease 0.2s;
+  }
+  .warranty-intro-list__item-expand {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #999;
+    transition: opacity 0.2s ease 0s;
+  }
+  .warranty-intro-list__item-arrow {
+    width: 10px;
+    height: 8px;
+    margin-left: 4px;
+    transform: rotateX(180deg);
+  }
+  .warranty-intro-list__item-arrow svg {
+    stroke: #999;
+  }
+  .warranty-intro-list__item-tooltip-section {
+    display: none;
+  }
+  .warranty-intro-list__item-photos {
+    display: flex;
+    margin: 24px 0 16px;
+  }
+  .warranty-intro-list__item-photo {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .warranty-intro-list__item-photo:nth-child(1) {
+    width: 70%;
+  }
+  .warranty-intro-list__item-photo:nth-child(2) {
+    width: 30%;
+  }
+  .warranty-intro-list__item-photo + .warranty-intro-list__item-photo {
+    margin-left: 7px;
+  }
+  .warranty-intro-list__item-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .warranty-intro-content {
+    padding: 0;
+  }
+  .warranty-intro-content__photo {
+    aspect-ratio: 1/1;
+  }
+  .warranty-intro-content__photo-info {
+    padding: 60px 36px 36px;
+  }
+  .warranty-intro-content__photo-title {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .nonwarranty-reason {
+    padding-top: 110px;
+  }
+  .nonwarranty-reason__title {
+    margin-bottom: 32px;
+  }
+  .nonwarranty-reason__list {
+    margin: 0;
+  }
+  .nonwarranty-reason-item {
+    width: 100%;
+    padding: 0;
+  }
+  .nonwarranty-reason-item__inner {
+    cursor: default;
+    padding: 0 20px 0 16px;
+    flex-wrap: wrap;
+  }
+  .nonwarranty-reason-item__head {
+    width: 100%;
+    padding: 8px 0 15px;
+  }
+  .nonwarranty-reason-item__body {
+    width: 100%;
+  }
+  .nonwarranty-reason-item__body-article {
+    padding: 8px 0 5px;
+  }
+  .nonwarranty-reason-item__tooltip-icon {
+    display: none;
+  }
+  .nonwarranty-reason-item__arrow {
+    margin-left: 19px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+  }
+  .nonwarranty-reason-item__arrow svg {
+    stroke: #000;
+    width: 10px;
+    height: 8px;
+  }
+  .nonwarranty-reason-item + .nonwarranty-reason-item {
+    margin-top: 16px;
+  }
+  .nonwarranty-reason-item__tooltip-panel {
+    display: none;
+  }
+  .nonwarranty-reason-item__title {
+    max-width: 100%;
+    flex: 1;
+  }
+  .nonwarranty-reason-content {
+    width: 100%;
+  }
+  .nonwarranty-reason-content__title {
+    font-size: 16px;
+    line-height: 130%;
+  }
+  .nonwarranty-reason-content__desc {
+    width: 100%;
+    font-size: 14px;
+  }
+  .nonwarranty-reason-benefits {
+    margin-top: 36px;
+    padding: 40px;
+  }
+  .nonwarranty-reason-benefits__inner {
+    margin: 0;
+    flex-wrap: wrap;
+  }
+  .nonwarranty-reason-benefits__item {
+    width: 100%;
+    padding: 0;
+  }
+  .nonwarranty-reason-benefits__item + .nonwarranty-reason-benefits__item {
+    margin-top: 36px;
+  }
+  .nonwarranty-reason-benefits__item-title {
+    font-size: 16px;
+    padding-bottom: 8px;
+  }
+  .nonwarranty-reason-benefits__item-title span {
+    font-size: 50px;
+    line-height: 100%;
+  }
+
+  .tooltip-section__head {
+    cursor: pointer;
+  }
+
+  .tooltip-panel__article p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .warranty-cover {
+    padding-top: 110px;
+  }
+  .warranty-cover__title {
+    text-align: left;
+  }
+  .warranty-cover__subtitle-wrapper {
+    margin-bottom: 24px;
+    justify-content: flex-start;
+  }
+  .warranty-cover__subtitle {
+    text-align: left;
+    font-size: 14px;
+    line-height: 150%;
+  }
+  .warranty-cover__title-small {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  .warranty-cover-nav {
+    flex-wrap: wrap;
+    border: none;
+    width: 100%;
+  }
+  .warranty-cover-nav__item {
+    width: 50%;
+    font-size: 14px;
+  }
+  .warranty-cover-nav__item-inner {
+    padding: 12px 16px;
+    border-radius: 10px;
+  }
+  .warranty-cover-item__inner {
+    padding: 24px 16px 40px;
+  }
+  .warranty-cover-head {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 38px;
+  }
+  .warranty-cover-head__name {
+    margin: 0 0 18px 0;
+    font-size: 16px;
+  }
+  .warranty-cover-warr {
+    margin-bottom: 16px;
+    padding-bottom: 24px;
+  }
+  .warranty-cover-warr__title {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .warranty-cover-warr__count {
+    font-size: 14px;
+  }
+  .warranty-cover-warr__count span {
+    font-size: 50px;
+    margin-right: 4px;
+  }
+  .warranty-cover-chars__item + .warranty-cover-chars__item {
+    margin-top: 16px;
+  }
+  .warranty-cover-chars__title {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .warranty-cover-chars__code {
+    font-size: 14px;
+  }
+  .warranty-cover-chars__list-item {
+    font-size: 14px;
+  }
 }
 @media (max-width: 585px) {
+  .btn {
+    padding: 10px 30px;
+  }
+
+  .err {
+    padding-top: 58px;
+  }
+  .err__inner {
+    padding: 60px 0 120px;
+  }
+  .err-photo {
+    margin-bottom: 60px;
+  }
+  .err-photo img {
+    max-width: 180px;
+  }
+  .err-content {
+    align-items: flex-start;
+  }
+  .err-content__inner {
+    text-align: left;
+  }
+  .err-content__title {
+    align-self: flex-start;
+    max-width: 100%;
+    text-align: left;
+  }
+  .err-content__desc {
+    max-width: 100%;
+  }
+
   .coockie__inner {
     padding: 16px 24px 24px;
   }
@@ -12996,106 +13670,6 @@ iframe ~ * {
     line-height: 150%;
   }
 
-  .tooltip-section__head {
-    cursor: pointer;
-  }
-
-  .tooltip-panel__article p {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  .nonwarranty-reason {
-    padding-top: 110px;
-  }
-  .nonwarranty-reason__title {
-    margin-bottom: 32px;
-  }
-  .nonwarranty-reason__list {
-    margin: 0;
-  }
-  .nonwarranty-reason-item {
-    width: 100%;
-    padding: 0;
-  }
-  .nonwarranty-reason-item__inner {
-    cursor: default;
-    padding: 0 20px 0 16px;
-    flex-wrap: wrap;
-  }
-  .nonwarranty-reason-item__head {
-    width: 100%;
-    padding: 8px 0 15px;
-  }
-  .nonwarranty-reason-item__body {
-    width: 100%;
-  }
-  .nonwarranty-reason-item__body-article {
-    padding: 8px 0 5px;
-  }
-  .nonwarranty-reason-item__tooltip-icon {
-    display: none;
-  }
-  .nonwarranty-reason-item__arrow {
-    margin-left: 19px;
-    width: 28px;
-    height: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid #000;
-  }
-  .nonwarranty-reason-item__arrow svg {
-    stroke: #000;
-    width: 10px;
-    height: 8px;
-  }
-  .nonwarranty-reason-item + .nonwarranty-reason-item {
-    margin-top: 16px;
-  }
-  .nonwarranty-reason-item__tooltip-panel {
-    display: none;
-  }
-  .nonwarranty-reason-item__title {
-    max-width: 100%;
-    flex: 1;
-  }
-  .nonwarranty-reason-content {
-    width: 100%;
-  }
-  .nonwarranty-reason-content__title {
-    font-size: 16px;
-    line-height: 130%;
-  }
-  .nonwarranty-reason-content__desc {
-    width: 100%;
-    font-size: 14px;
-  }
-  .nonwarranty-reason-benefits {
-    margin-top: 36px;
-    padding: 40px;
-  }
-  .nonwarranty-reason-benefits__inner {
-    margin: 0;
-    flex-wrap: wrap;
-  }
-  .nonwarranty-reason-benefits__item {
-    width: 100%;
-    padding: 0;
-  }
-  .nonwarranty-reason-benefits__item + .nonwarranty-reason-benefits__item {
-    margin-top: 36px;
-  }
-  .nonwarranty-reason-benefits__item-title {
-    font-size: 16px;
-    padding-bottom: 8px;
-  }
-  .nonwarranty-reason-benefits__item-title span {
-    font-size: 50px;
-    line-height: 100%;
-  }
-
   .find--phones, .find--tablet, .find--whatch, .find--tv, .find--household {
     padding-top: 110px;
   }
@@ -13292,5 +13866,16 @@ iframe ~ * {
   }
   .warranty-info-slider__item-inner::before {
     display: none;
+  }
+
+  .warranty-cover__nav-wrapper {
+    justify-content: flex-start;
+  }
+  .warranty-cover-nav {
+    width: max-content;
+    flex-direction: column;
+  }
+  .warranty-cover-nav__item {
+    width: fit-content;
   }
 }

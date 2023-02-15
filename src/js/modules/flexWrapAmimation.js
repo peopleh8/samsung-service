@@ -18,7 +18,7 @@ intfoItems.forEach((item, index) => {
         item.classList.remove('visible')
       }
     })
-    
+
     item.parentElement.parentElement.parentElement.parentElement.classList.toggle("active")
 
     setTimeout(() => {
@@ -30,6 +30,7 @@ intfoItems.forEach((item, index) => {
 
     const flip = Flip.from(state, {
       absolute: true,
+      nested: true,
       duration: 0.4, 
       ease: "power1.inOut"
     })

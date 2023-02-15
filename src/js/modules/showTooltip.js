@@ -19,27 +19,23 @@ export const showTooltip = () => {
     })
   }
 
-  if (innerWidth <= 1160 && innerWidth > 586) {
-    tooltipOpenBtn.forEach(btn => {
+  if (innerWidth <= 1160) {
+    tooltipOpenBtn.forEach((btn, index) => {
       btn.addEventListener('click', () => {
-        let activeEl = document.querySelector('.tooltip-section.visible')
+        document.querySelectorAll('.tooltip-section').forEach((section, sectionIndex) => {
+          if (sectionIndex !== index) {
+            section.classList.remove('visible')
+          }
+        })
 
-        activeEl && activeEl.classList.remove('visible')
-        btn.parentElement.classList.add('visible')
+        btn.parentElement.classList.toggle('visible')
       })
     })
   }
 
-  if (innerWidth <= 585) {
-    tooltipSectionHeads.forEach((btn, index) => {
+  if (innerWidth <= 690) {
+    tooltipSectionHeads.forEach(btn => {
       btn.addEventListener('click', () => {
-        // document.querySelectorAll('.tooltip-section__body').forEach((item, itemIndex) => {
-        //   if (itemIndex !== index) {
-        //     slideUp(item, 300)
-        //     item.parentElement.classList.remove('active')
-        //   }
-        // })
-        
         slideToggle(btn.nextElementSibling, 300, 'block')
         btn.parentElement.classList.toggle('active')
       })
@@ -48,7 +44,7 @@ export const showTooltip = () => {
 }
 
 export const closeTooltip = () => {
-  if (innerWidth <= 1160 && innerWidth > 589) {
+  if (innerWidth <= 1160) {
     tooltipCloseBtn.forEach(btn => {
       btn.addEventListener('click', () => {
 
@@ -58,7 +54,20 @@ export const closeTooltip = () => {
   }
 }
 
+export const clickTooltipOutside = () => {
+  window.addEventListener('click', e => {
+    if (innerWidth > 1160) return
+
+    let tooltipSections = document.querySelectorAll('.tooltip-section')
+
+    if ([...tooltipSections].some(section => section.classList.contains('visible')) && !e.target.closest('.tooltip-section')) {
+      tooltipSections.forEach(item => item.classList.remove('visible'))
+    }
+  })
+}
+
 if (tooltipSections && tooltipSections.length !== 0 ) {
   showTooltip()
   closeTooltip()
+  clickTooltipOutside()
 }

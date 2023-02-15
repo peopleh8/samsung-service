@@ -1,7 +1,7 @@
 import { Fancybox } from '@fancyapps/ui'
 import { getScrollbarWidth } from './functions.js'
 
-Fancybox.bind('[data-fancybox="gallery"]', {
+Fancybox.bind('.gallery__item', {
   groupAll : true,
   showClass: 'fancybox-fadeIn',
   hideClass: 'fancybox-fadeOut',

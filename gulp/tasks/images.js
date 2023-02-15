@@ -13,12 +13,6 @@ export const images = () => {
     .pipe(
       app.plugins.if(
         app.isBuild,
-        webp()
-      )
-    )
-    .pipe(
-      app.plugins.if(
-        app.isBuild,
         app.gulp.dest(app.path.build.images)
       )
     )

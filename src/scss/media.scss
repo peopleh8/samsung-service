@@ -47,9 +47,49 @@
       }
     }
   }
+  .warranty-intro {
+    &-list {
+      &__item {
+        &-inner {
+          padding: 40px;
+        }
+        &-icon {
+          margin-bottom: 40px;
+        }
+        &-title {
+          font-size: 16px;
+          margin-bottom: 6px;
+        }
+        &-desc {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1440px) {
+  .modal-contact {
+    padding: 60px;
+  }
+  .err {
+    padding-top: 114px;
+    &-photo {
+      img {
+        max-width: 377px;
+      }
+    }
+    &-content {
+      padding: 150px 20px 126px;
+      &__title {
+        margin-bottom: 24px;
+      }
+      &__desc {
+        max-width: 496px;
+        margin-bottom: 48px;
+      }
+    }
+  }
   .coockie {
     &__inner {
       padding: 24px 60px 24px 40px;
@@ -176,8 +216,6 @@
         }
         &__title-wrapper {
           padding: 0 0 0 20px;
-        }
-        &__title {
         }
       }
     }
@@ -647,6 +685,17 @@
         width: 20%;
       }
     }
+    &--warranty {
+      .steps__section {
+        padding: 120px 0 50px;
+        & > img {
+          display: none;
+        }
+      }
+      .steps__title {
+        max-width: 100%;
+      }
+    }
     &__section {
       padding: 120px 0 90px;
     }
@@ -1106,6 +1155,69 @@
       }
     }
   }
+  .warranty-intro {
+    &-content {
+      width: 600px;
+      &__title {
+        margin-bottom: 16px;
+      }
+      &__desc {
+        margin-bottom: 40px;
+        max-width: 496px;
+      }
+      &__photo {
+        width: 496px;
+        &-info {
+          padding: 76px 40px 20px 40px;
+        }
+        &-title {
+          margin-bottom: 24px;
+        }
+      }
+    }
+    &__list-wrapper {
+      padding-left: 0;
+      width: calc(100% - 600px);
+    }
+    &-list {
+      margin: -12px;
+      height: calc(100% + 24px);
+      &__item {
+        padding: 12px;
+        &-inner {
+          &::before {
+            font-size: 80px;
+            line-height: 150%;
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
+  .warranty-cover {
+    &__title {
+      margin-bottom: 16px;
+    }
+    &__subtitle-wrapper {
+      margin-bottom: 36px;
+    }
+    &__title-small {
+      margin-bottom: 36px;
+    }
+    &-nav {
+      margin-bottom: 24px;
+      &__item {
+        &-inner {
+          padding: 13px 80px;
+        }
+      }
+    }
+    &-item {
+      &__inner {
+        padding: 40px 40px 111px;
+      }
+    }
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1124,6 +1236,72 @@
 }
 
 @media (max-width: 1160px) {
+  .modal {
+    &__title {
+      font-size: 24px;
+      line-height: 150%;
+    }
+  }
+  .modal-contact {
+    max-width: 640px;
+    padding: 40px 125px 21px;
+    &__title {
+      margin-bottom: 16px;
+    }
+    &__inner {
+      flex-wrap: wrap;
+      margin: 0;
+    }
+    &__side {
+      width: 100%;
+      padding: 0;
+      & + & {
+        margin-top: 16px;
+      }
+    }
+    &__texarea-wrapper {
+      height: 164px;
+    }
+    &__btn-wrapper {
+      margin: 24px 0 18px;
+    }
+  }
+  .err {
+    padding-top: 71px;
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 130px 0;
+    }
+    &-photo {
+      padding: 0;
+      width: 100%;
+      margin-bottom: 100px;
+    }
+    &-content {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      &__inner {
+        max-width: 598px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      &__title {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      &__desc {
+        max-width: 100%;
+        margin-bottom: 36px;
+      }
+    }
+  }
   .coockie {
     &__inner {
       padding: 36px 24px 36px;
@@ -1895,6 +2073,20 @@
         margin-top: 8px;
       }
     }
+    &--warranty {
+      .steps__section {
+        padding: 140px 0 80px;
+        & > img {
+          display: block;
+          height: auto;
+          width: 30%;
+          top: 0;
+        }
+      }
+      .steps__title {
+        padding: 0 60px;
+      }
+    }
     &--repair {
       padding-top: 130px;
     }
@@ -2411,6 +2603,100 @@
       }
     }
   }
+  .warranty-intro {
+    & .container > .warranty-intro-content__title,
+    & .container > .warranty-intro-content__desc {
+      display: block;
+    }
+    & .container > .warranty-intro-content__desc {
+      max-width: 100%;
+      margin-bottom: 36px;
+    }
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &-content {
+      width: 100%;
+      order: 2;
+      padding: 0 65px;
+      .warranty-intro-content__title,
+      .warranty-intro-content__desc {
+        display: none;
+      }
+      &__photo {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 3 / 2;
+        &-info {
+          padding: 60px 40px 20px;
+        }
+        &-title {
+          max-width: 500px;
+        }
+      }
+    }
+    &__list-wrapper {
+      width: 100%;
+      margin: 0 65px 24px;
+    }
+    &-list {
+      height: auto;
+      margin: -8px;
+      &__item {
+        height: auto;
+        padding: 8px;
+        &:nth-child(odd) {
+          .warranty-intro-list__item-tooltip-panel {
+            left: -30px;
+          }
+        }
+        &:nth-child(even) {
+          .warranty-intro-list__item-tooltip-panel {
+            right: -30px;
+          }
+        }
+        &-tooltip-icon {
+          right: 20px;
+          &::before {
+            top: 100%;
+            right: 50%;
+            transform: translate(50%, 50%) rotate(-90deg);
+          }
+        }
+        &-tooltip-panel {
+          top: 40px;
+        }
+      }
+    }
+  }
+  .warranty-cover {
+    padding-top: 130px;
+    &-nav {
+      &__item {
+        &-inner {
+          padding: 16px 35px;
+          font-size: 16px;
+        }
+      }
+    }
+    &-chars {
+      &__tooltip {
+        &-icon {
+          &::before {
+            left: 50%;
+            top: 100%;
+            transform: translate(-50%, 50%) rotate(90deg);
+          }
+        }
+        &-panel {
+          top: 50px;
+          left: -30px;
+          padding: 15px 20px;
+          max-width: 300px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 991px) {
@@ -2786,6 +3072,21 @@
       padding-top: 110px;
       .steps__btn-wrapper {
         margin-top: 60px;
+      }
+    }
+    &--warranty {
+      .steps__section {
+        padding: 90px 0 38px;
+        & > img {
+          width: 60%;
+          transform: rotateY(0);
+        }
+      }
+      .steps__title {
+        padding: 0 24px;
+      }
+      .steps__inner {
+        padding: 0 24px 0 16px;
       }
     }
     &--fluid {
@@ -3278,9 +3579,362 @@
       }
     }
   }
+  .warranty-intro {
+    & .container > .warranty-intro-content__desc {
+      font-size: 16px;
+    }
+    &__list-wrapper {
+      margin: 0 0 36px;
+    }
+    &-list {
+      margin: 0;
+      &__item {
+        padding: 0;
+        width: 100%;
+        & + & {
+          margin-top: 16px;
+        }
+        &-inner {
+          padding: 24px;
+          &.active {
+            .warranty-intro-list__item-body > * {
+              opacity: 1;
+              transition-delay: .15s;
+            }
+            .warranty-intro-list__item-collapse {
+              opacity: 0;
+              transition-delay: 0s;
+            }
+            .warranty-intro-list__item-expand {
+              opacity: 1;
+              transition-delay: .2s;
+            }
+          }
+          &::before {
+            font-size: 30px;
+            line-height: 110%;
+            top: 8px;
+            left: 16px;
+          }
+        }
+        &-head {
+          flex-direction: row;
+          align-items: flex-start;
+        }
+        &-content {
+          width: calc(100% - 60px - 24px);
+        }
+        &-icon {
+          margin: 0 24px 0 0;
+          width: 60px;
+          height: 60px;
+        }
+        &-title {
+          margin-bottom: 0;
+        }
+        &-desc {
+          margin-top: 4px;
+        }
+        &-btn {
+          display: block;
+          margin-top: 16px;
+          position: relative;
+          line-height: 1;
+        }
+        &-collapse {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+          text-transform: uppercase;
+          position: relative;
+          padding-left: 4px;
+          border-bottom: 1px solid $blackColor;
+          display: inline-block;
+          transition: opacity .2s ease .2s;
+        }
+        &-expand {
+          opacity: 0;
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+          text-transform: uppercase;
+          color: $thirdColor;
+          transition: opacity .2s ease 0s;
+        }
+        &-arrow {
+          width: 10px;
+          height: 8px;
+          margin-left: 4px;
+          transform: rotateX(180deg);
+          svg {
+            stroke: $thirdColor;
+          }
+        }
+        &-tooltip-section {
+          display: none;
+        }
+        &-photos {
+          display: flex;
+          margin: 24px 0 16px;
+        }
+        &-photo {
+          border-radius: 15px;
+          overflow: hidden;
+          &:nth-child(1) {
+            width: 70%;
+          }
+          &:nth-child(2) {
+            width: 30%;
+          }
+          & + & {
+            margin-left: 7px;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    &-content {
+      padding: 0;
+      &__photo {
+        aspect-ratio: 1 / 1;
+        &-info {
+          padding: 60px 36px 36px;
+        }
+        &-title {
+          max-width: 100%;
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+  .nonwarranty-reason {
+    padding-top: 110px;
+    &__title {
+      margin-bottom: 32px;
+    }
+    &__list {
+      margin: 0;
+    }
+    &-item {
+      width: 100%;
+      padding: 0;
+      &__inner {
+        cursor: default;
+        padding: 0 20px 0 16px;
+        flex-wrap: wrap;
+      }
+      &__head {
+        width: 100%;
+        padding: 8px 0 15px;
+      }
+      &__body {
+        width: 100%;
+        &-article {
+          padding: 8px 0 5px;
+        }
+      }
+      &__tooltip-icon {
+        display: none;
+      }
+      &__arrow {
+        margin-left: 19px;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid $blackColor;
+        svg {
+          stroke: $blackColor;
+          width: 10px;
+          height: 8px;
+        }
+      }
+      & + & {
+        margin-top: 16px;
+      }
+      &__tooltip-panel {
+        display: none;
+      }
+      &__title {
+        max-width: 100%;
+        flex: 1;
+      } 
+    }
+    &-content {
+      width: 100%;
+      &__title {
+        font-size: 16px;
+        line-height: 130%;
+      }
+      &__desc {
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+    &-benefits {
+      margin-top: 36px;
+      padding: 40px;
+      &__inner {
+        margin: 0;
+        flex-wrap: wrap;
+      }
+      &__item {
+        width: 100%;
+        padding: 0;
+        & + & {
+          margin-top: 36px;
+        }
+        &-title {
+          font-size: 16px;
+          padding-bottom: 8px;
+          span {
+            font-size: 50px;
+            line-height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .tooltip-section {
+    &__head {
+      cursor: pointer;
+    }
+  }
+  .tooltip-panel {
+    &__article {
+      p {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .warranty-cover {
+    padding-top: 110px;
+    &__title {
+      text-align: left;
+    }
+    &__subtitle-wrapper {
+      margin-bottom: 24px;
+      justify-content: flex-start;
+    }
+    &__subtitle {
+      text-align: left;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    &__title-small {
+      text-align: left;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+    &-nav {
+      flex-wrap: wrap;
+      border: none;
+      width: 100%;
+      &__item {
+        width: 50%;
+        font-size: 14px;
+        &-inner {
+          padding: 12px 16px;
+          border-radius: 10px;
+        }
+      }
+    }
+    &-item {
+      &__inner {
+        padding: 24px 16px 40px;
+      }
+    }
+    &-head {
+      flex-direction: column;
+      align-items: center;   
+      margin-bottom: 38px;
+      &__name {
+        margin: 0 0 18px 0;
+        font-size: 16px;
+      }
+    }
+    &-warr {
+      margin-bottom: 16px;
+      padding-bottom: 24px;
+      &__title {
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+      &__count {
+        font-size: 14px;
+        span {
+          font-size: 50px;
+          margin-right: 4px;
+        }
+      }
+    }
+    &-chars {
+      &__item {
+        & + & {
+          margin-top: 16px;
+        }
+      }
+      &__title {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+      &__code-wrapper {
+
+      }
+      &__code {
+        font-size: 14px;
+      }
+      &__list {
+        &-item {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 585px) {
+  .btn {
+    padding: 10px 30px;
+  }
+  .err {
+    padding-top: 58px;
+    &__inner {
+      padding: 60px 0 120px;
+    }
+    &-photo {
+      margin-bottom: 60px;
+      img {
+        max-width: 180px;
+      }
+    }
+    &-content {
+      align-items: flex-start;
+      &__inner {
+        text-align: left;
+      }
+      &__title {
+        align-self: flex-start;
+        max-width: 100%;
+        text-align: left;
+      }
+      &__desc {
+        max-width: 100%;
+      }
+    }
+  }
   .coockie {
     &__inner {
       padding: 16px 24px 24px;
@@ -4130,109 +4784,6 @@
       }
     }
   }
-  .tooltip-section {
-    &__head {
-      cursor: pointer;
-    }
-  }
-  .tooltip-panel {
-    &__article {
-      p {
-        font-size: 14px;
-        margin-bottom: 15px;
-      }
-    }
-  }
-  .nonwarranty-reason {
-    padding-top: 110px;
-    &__title {
-      margin-bottom: 32px;
-    }
-    &__list {
-      margin: 0;
-    }
-    &-item {
-      width: 100%;
-      padding: 0;
-      &__inner {
-        cursor: default;
-        padding: 0 20px 0 16px;
-        flex-wrap: wrap;
-      }
-      &__head {
-        width: 100%;
-        padding: 8px 0 15px;
-      }
-      &__body {
-        width: 100%;
-        &-article {
-          padding: 8px 0 5px;
-        }
-      }
-      &__tooltip-icon {
-        display: none;
-      }
-      &__arrow {
-        margin-left: 19px;
-        width: 28px;
-        height: 28px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        border: 1px solid $blackColor;
-        svg {
-          stroke: $blackColor;
-          width: 10px;
-          height: 8px;
-        }
-      }
-      & + & {
-        margin-top: 16px;
-      }
-      &__tooltip-panel {
-        display: none;
-      }
-      &__title {
-        max-width: 100%;
-        flex: 1;
-      } 
-    }
-    &-content {
-      width: 100%;
-      &__title {
-        font-size: 16px;
-        line-height: 130%;
-      }
-      &__desc {
-        width: 100%;
-        font-size: 14px;
-      }
-    }
-    &-benefits {
-      margin-top: 36px;
-      padding: 40px;
-      &__inner {
-        margin: 0;
-        flex-wrap: wrap;
-      }
-      &__item {
-        width: 100%;
-        padding: 0;
-        & + & {
-          margin-top: 36px;
-        }
-        &-title {
-          font-size: 16px;
-          padding-bottom: 8px;
-          span {
-            font-size: 50px;
-            line-height: 100%;
-          }
-        }
-      }
-    }
-  }
   .find {
     &--phones,
     &--tablet,
@@ -4471,5 +5022,18 @@
         }
       }
     }
+  }
+  .warranty-cover {
+    &__nav-wrapper {
+      justify-content: flex-start;
+    }
+    &-nav {
+      width: max-content;
+      flex-direction: column;
+      &__item {
+        width: fit-content;
+      }
+    }
+    
   }
 }

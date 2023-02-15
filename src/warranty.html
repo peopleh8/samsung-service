@@ -12,6 +12,8 @@
     <main class="main">
       <section class="warranty-intro intro">
         <div class="container">
+          <h3 class="warranty-intro-content__title title title--big title--black">Умови здійснення гарантійного ремонту</h3>
+          <p class="warranty-intro-content__desc">Щоб гарантувати ваш спокій, ми пропонуємо гарантію виробника на всі наші продукти. Якщо потрібно скористатися гарантією, зв'яжіться з нами, і ми надамо вам у цьому підтримку. Нижче наведений короткий огляд того, що включено в гаранті</p>
           <div class="warranty-intro__inner">
             <div class="warranty-intro__content warranty-intro-content">
               <h1 class="warranty-intro-content__title title title--big title--black">Умови здійснення гарантійного ремонту</h1>
@@ -28,63 +30,98 @@
               <ol class="warranty-intro__list warranty-intro-list">
                 <li class="warranty-intro-list__item">  
                   <div class="warranty-intro-list__item-inner">
-                    <div class="warranty-intro-list__item-icon icon">
-                      <img src="./img/warranty-intro-1.svg" alt="">
-                    </div>
-                    <div class="warranty-intro-list__item-content">
-                      <div class="warranty-intro-list__item-title">Документи, що підтверджують продаж (чек, накладна)</div>
+                    <div class="warranty-intro-list__item-head">
+                      <div class="warranty-intro-list__item-icon icon">
+                        <img src="./img/warranty-intro-1.svg" alt="">
+                      </div>
+                      <div class="warranty-intro-list__item-content">
+                        <div class="warranty-intro-list__item-title">Документи, що підтверджують продаж (чек, накладна)</div>
+                      </div>
                     </div>
                   </div>
                 </li>
                 <li class="warranty-intro-list__item">  
                   <div class="warranty-intro-list__item-inner">
-                    <div class="warranty-intro-list__item-icon icon">
-                      <img src="./img/warranty-intro-2.svg" alt="">
-                    </div>
-                    <div class="warranty-intro-list__item-content">
-                      <div class="warranty-intro-list__item-tooltip-section tooltip-section">
-                        <div class="warranty-intro-list__item-tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
-                        <div class="warranty-intro-list__item-tooltip-panel warranty-intro-tooltip tooltip-panel">
-                          <div class="warranty-intro-tooltip__photos">
-                            <div class="warranty-intro-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
-                              <img src="./img/tooltip-1.jpg" alt="">
+                    <div class="warranty-intro-list__item-head tooltip-section__head">
+                      <div class="warranty-intro-list__item-icon icon">
+                        <img src="./img/warranty-intro-2.svg" alt="">
+                      </div>
+                      <div class="warranty-intro-list__item-content">
+                        <div class="warranty-intro-list__item-tooltip-section tooltip-section">
+                          <div class="warranty-intro-list__item-tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
+                          <div class="warranty-intro-list__item-tooltip-panel warranty-intro-tooltip tooltip-panel">
+                            <div class="warranty-intro-tooltip__photos">
+                              <div class="warranty-intro-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
+                                <img src="./img/tooltip-1.jpg" alt="">
+                              </div>
+                              <div class="warranty-intro-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
+                                <img src="./img/tooltip-2.jpg" alt="">
+                              </div>
                             </div>
-                            <div class="warranty-intro-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
-                              <img src="./img/tooltip-2.jpg" alt="">
-                            </div>
+                            <article class="warranty-intro-tooltip__article tooltip-panel__article">
+                              <p>
+                                Шукайте на виробі Національний знак відповідності продукції вимогам технічних регламентів у вигляді трьохлистника.
+                              </p>
+                              <p>
+                                Зверніть увагу на код моделі (Modelcode), який знаходиться на заводській наліпці. По останнім літерам цього коду Ви зможете визначити офіційність продукту.
+                              </p>
+                            </article>
                           </div>
-                          <article class="warranty-intro-tooltip__article tooltip-panel__article">
-                            <p>
-                              Шукайте на виробі Національний знак відповідності продукції вимогам технічних регламентів у вигляді трьохлистника.
-                            </p>
-                            <p>
-                              Зверніть увагу на код моделі (Modelcode), який знаходиться на заводській наліпці. По останнім літерам цього коду Ви зможете визначити офіційність продукту.
-                            </p>
-                          </article>
+                        </div>
+                        <div class="warranty-intro-list__item-title">Перевірити офіційність девайсу </div>
+                        <p class="warranty-intro-list__item-desc">Необхідно показати, що на пакуванні девайсу повинно бути нанесене відповідне маркування </p>
+                        <div class="warranty-intro-list__item-btn">
+                          <div class="warranty-intro-list__item-collapse">детальніше</div>
+                          <div class="warranty-intro-list__item-expand">
+                            додаткова інформація
+                            <span class="warranty-intro-list__item-arrow icon">
+                              <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                            </span>
+                          </div>
                         </div>
                       </div>
-                      <div class="warranty-intro-list__item-title">Перевірити офіційність девайсу </div>
-                      <p class="warranty-intro-list__item-desc">Необхідно показати, що на пакуванні девайсу повинно бути нанесене відповідне маркування </p>
+                    </div>
+                    <div class="warranty-intro-list__item-body tooltip-section__body">
+                      <div class="warranty-intro-list__item-photos gallery">
+                        <a class="warranty-intro-list__item-photo gallery__item" href="./img/tooltip-1.jpg" data-fancybox="gallery-1">
+                          <img src="./img/tooltip-1.jpg" alt="">
+                        </a>
+                        <a class="warranty-intro-list__item-photo gallery__item" href="./img/tooltip-2.jpg" data-fancybox="gallery-1">
+                          <img src="./img/tooltip-2.jpg" alt="">
+                        </a>
+                      </div>
+                      <acticle class="warranty-intro-list__item-article tooltip-panel__article">
+                        <p>
+                          Шукайте на виробі Національний знак відповідності продукції вимогам технічних регламентів у вигляді трьохлистника.
+                        </p>
+                        <p>
+                          Зверніть увагу на код моделі (Modelcode), який знаходиться на заводській наліпці. По останнім літерам цього коду Ви зможете визначити офіційність продукту.
+                        </p>
+                      </acticle>
                     </div>
                   </div>
                 </li>
                 <li class="warranty-intro-list__item">  
                   <div class="warranty-intro-list__item-inner">
-                    <div class="warranty-intro-list__item-icon icon">
-                      <img src="./img/warranty-intro-3.svg" alt="">
-                    </div>
-                    <div class="warranty-intro-list__item-content">
-                      <div class="warranty-intro-list__item-title">Не порушення умов експлуатації</div>
+                    <div class="warranty-intro-list__item-head">
+                      <div class="warranty-intro-list__item-icon icon">
+                        <img src="./img/warranty-intro-3.svg" alt="">
+                      </div>
+                      <div class="warranty-intro-list__item-content">
+                        <div class="warranty-intro-list__item-title">Не порушення умов експлуатації</div>
+                      </div>
                     </div>
                   </div>
                 </li>
                 <li class="warranty-intro-list__item">  
                   <div class="warranty-intro-list__item-inner">
-                    <div class="warranty-intro-list__item-icon icon">
-                      <img src="./img/warranty-intro-4.svg" alt="">
-                    </div>
-                    <div class="warranty-intro-list__item-content">
-                      <div class="warranty-intro-list__item-title">Дійсний термін гарантійного обслуговування</div>
+                    <div class="warranty-intro-list__item-head">
+                      <div class="warranty-intro-list__item-icon icon">
+                        <img src="./img/warranty-intro-4.svg" alt="">
+                      </div>
+                      <div class="warranty-intro-list__item-content">
+                        <div class="warranty-intro-list__item-title">Дійсний термін гарантійного обслуговування</div>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -119,315 +156,137 @@
           <div class="warranty-cover__slider warranty-cover-slider tab-slider swiper">
             <div class="swiper-wrapper">
               <div class="warranty-cover-slider__slide warranty-cover-slide swiper-slide">
-                <div class="warranty-cover-slide__inner">
-                  <div class="warranty-cover-slide__item warranty-cover-item">
-                    <div class="warranty-cover-item__inner">
-                      <div class="warranty-cover-item__head warranty-cover-head">
-                        <div class="warranty-cover-head__name">Смартфони</div>
-                        <div class="warranty-cover-head__photo">
-                          <img src="./img/warranty-tab-1.jpg" alt="">
+                <div class="warranty-cover-slide__inner swiper">
+                  <div class="swiper-wrapper">
+                    <div class="warranty-cover-slide__item warranty-cover-item swiper-slide">
+                      <div class="warranty-cover-item__inner">
+                        <div class="warranty-cover-item__head warranty-cover-head">
+                          <div class="warranty-cover-head__name">Смартфони</div>
+                          <div class="warranty-cover-head__photo">
+                            <img src="./img/warranty-tab-1.jpg" alt="">
+                          </div>
                         </div>
-                      </div>
-                      <div class="warranty-cover-item__warr warranty-cover-warr">
-                        <div class="warranty-cover-warr__title">Гарантія</div>
-                        <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
-                      </div>
-                      <div class="warranty-cover-item__chars warranty-cover-chars">
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Останні літери коду</div>
-                          <div class="warranty-cover-chars__code-wrapper">
-                            <div class="warranty-cover-chars__code">SEK</div>
-                            <div class="warranty-cover-chars__tooltip-section tooltip-section">
-                              <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
-                              <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
-                                <div class="warranty-cover-tooltip__photos">
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
-                                    <img src="./img/tooltip-3.jpg" alt="">
+                        <div class="warranty-cover-item__warr warranty-cover-warr">
+                          <div class="warranty-cover-warr__title">Гарантія</div>
+                          <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
+                        </div>
+                        <div class="warranty-cover-item__chars warranty-cover-chars">
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Останні літери коду</div>
+                            <div class="warranty-cover-chars__code-wrapper">
+                              <div class="warranty-cover-chars__code">SEK</div>
+                              <div class="warranty-cover-chars__tooltip-section tooltip-section">
+                                <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
+                                <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
+                                  <div class="warranty-cover-tooltip__photos">
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
+                                      <img src="./img/tooltip-3.jpg" alt="">
+                                    </div>
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
+                                      <img src="./img/tooltip-4.jpg" alt="">
+                                    </div>
                                   </div>
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
-                                    <img src="./img/tooltip-4.jpg" alt="">
-                                  </div>
+                                  <article class="warranty-cover-tooltip__article tooltip-panel__article">
+                                    <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
+                                  </article>
                                 </div>
-                                <article class="warranty-cover-tooltip__article tooltip-panel__article">
-                                  <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
-                                </article>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Додаткова інформація</div>
-                          <ul class="warranty-cover-chars__list">
-                            <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
-                          </ul>
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Додаткова інформація</div>
+                            <ul class="warranty-cover-chars__list">
+                              <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="warranty-cover-slide__item warranty-cover-item">
-                    <div class="warranty-cover-item__inner">
-                      <div class="warranty-cover-item__head warranty-cover-head">
-                        <div class="warranty-cover-head__name">Планшети</div>
-                        <div class="warranty-cover-head__photo">
-                          <img src="./img/warranty-tab-2.jpg" alt="">
+                    <div class="warranty-cover-slide__item warranty-cover-item swiper-slide">
+                      <div class="warranty-cover-item__inner">
+                        <div class="warranty-cover-item__head warranty-cover-head">
+                          <div class="warranty-cover-head__name">Планшети</div>
+                          <div class="warranty-cover-head__photo">
+                            <img src="./img/warranty-tab-2.jpg" alt="">
+                          </div>
                         </div>
-                      </div>
-                      <div class="warranty-cover-item__warr warranty-cover-warr">
-                        <div class="warranty-cover-warr__title">Гарантія</div>
-                        <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
-                      </div>
-                      <div class="warranty-cover-item__chars warranty-cover-chars">
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Останні літери коду</div>
-                          <div class="warranty-cover-chars__code-wrapper">
-                            <div class="warranty-cover-chars__code">SEK</div>
-                            <div class="warranty-cover-chars__tooltip-section tooltip-section">
-                              <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
-                              <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
-                                <div class="warranty-cover-tooltip__photos">
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
-                                    <img src="./img/tooltip-3.jpg" alt="">
+                        <div class="warranty-cover-item__warr warranty-cover-warr">
+                          <div class="warranty-cover-warr__title">Гарантія</div>
+                          <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
+                        </div>
+                        <div class="warranty-cover-item__chars warranty-cover-chars">
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Останні літери коду</div>
+                            <div class="warranty-cover-chars__code-wrapper">
+                              <div class="warranty-cover-chars__code">SEK</div>
+                              <div class="warranty-cover-chars__tooltip-section tooltip-section">
+                                <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
+                                <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
+                                  <div class="warranty-cover-tooltip__photos">
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
+                                      <img src="./img/tooltip-3.jpg" alt="">
+                                    </div>
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
+                                      <img src="./img/tooltip-4.jpg" alt="">
+                                    </div>
                                   </div>
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
-                                    <img src="./img/tooltip-4.jpg" alt="">
-                                  </div>
+                                  <article class="warranty-cover-tooltip__article tooltip-panel__article">
+                                    <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
+                                  </article>
                                 </div>
-                                <article class="warranty-cover-tooltip__article tooltip-panel__article">
-                                  <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
-                                </article>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Додаткова інформація</div>
-                          <ul class="warranty-cover-chars__list">
-                            <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
-                          </ul>
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Додаткова інформація</div>
+                            <ul class="warranty-cover-chars__list">
+                              <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="warranty-cover-slide__item warranty-cover-item">
-                    <div class="warranty-cover-item__inner">
-                      <div class="warranty-cover-item__head warranty-cover-head">
-                        <div class="warranty-cover-head__name"> Носимі пристрої</div>
-                        <div class="warranty-cover-head__photo">
-                          <img src="./img/warranty-tab-3.jpg" alt="">
+                    <div class="warranty-cover-slide__item warranty-cover-item swiper-slide">
+                      <div class="warranty-cover-item__inner">
+                        <div class="warranty-cover-item__head warranty-cover-head">
+                          <div class="warranty-cover-head__name"> Носимі пристрої</div>
+                          <div class="warranty-cover-head__photo">
+                            <img src="./img/warranty-tab-3.jpg" alt="">
+                          </div>
                         </div>
-                      </div>
-                      <div class="warranty-cover-item__warr warranty-cover-warr">
-                        <div class="warranty-cover-warr__title">Гарантія</div>
-                        <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
-                      </div>
-                      <div class="warranty-cover-item__chars warranty-cover-chars">
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Останні літери коду</div>
-                          <div class="warranty-cover-chars__code-wrapper">
-                            <div class="warranty-cover-chars__code">SEK</div>
-                            <div class="warranty-cover-chars__tooltip-section tooltip-section">
-                              <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
-                              <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
-                                <div class="warranty-cover-tooltip__photos">
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
-                                    <img src="./img/tooltip-3.jpg" alt="">
+                        <div class="warranty-cover-item__warr warranty-cover-warr">
+                          <div class="warranty-cover-warr__title">Гарантія</div>
+                          <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
+                        </div>
+                        <div class="warranty-cover-item__chars warranty-cover-chars">
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Останні літери коду</div>
+                            <div class="warranty-cover-chars__code-wrapper">
+                              <div class="warranty-cover-chars__code">SEK</div>
+                              <div class="warranty-cover-chars__tooltip-section tooltip-section">
+                                <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
+                                <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
+                                  <div class="warranty-cover-tooltip__photos">
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
+                                      <img src="./img/tooltip-3.jpg" alt="">
+                                    </div>
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
+                                      <img src="./img/tooltip-4.jpg" alt="">
+                                    </div>
                                   </div>
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
-                                    <img src="./img/tooltip-4.jpg" alt="">
-                                  </div>
+                                  <article class="warranty-cover-tooltip__article tooltip-panel__article">
+                                    <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
+                                  </article>
                                 </div>
-                                <article class="warranty-cover-tooltip__article tooltip-panel__article">
-                                  <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
-                                </article>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Додаткова інформація</div>
-                          <ul class="warranty-cover-chars__list">
-                            <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="warranty-cover-slider__slide warranty-cover-slide swiper-slide">
-                <div class="warranty-cover-slide__inner">
-                  <div class="warranty-cover-slide__item warranty-cover-item">
-                    <div class="warranty-cover-item__inner">
-                      <div class="warranty-cover-item__head warranty-cover-head">
-                        <div class="warranty-cover-head__name">Смартфони</div>
-                        <div class="warranty-cover-head__photo">
-                          <img src="./img/warranty-tab-1.jpg" alt="">
-                        </div>
-                      </div>
-                      <div class="warranty-cover-item__warr warranty-cover-warr">
-                        <div class="warranty-cover-warr__title">Гарантія</div>
-                        <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
-                      </div>
-                      <div class="warranty-cover-item__chars warranty-cover-chars">
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Останні літери коду</div>
-                          <div class="warranty-cover-chars__code-wrapper">
-                            <div class="warranty-cover-chars__code">SEK</div>
-                            <div class="warranty-cover-chars__tooltip-section tooltip-section">
-                              <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
-                              <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
-                                <div class="warranty-cover-tooltip__photos">
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
-                                    <img src="./img/tooltip-3.jpg" alt="">
-                                  </div>
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
-                                    <img src="./img/tooltip-4.jpg" alt="">
-                                  </div>
-                                </div>
-                                <article class="warranty-cover-tooltip__article tooltip-panel__article">
-                                  <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
-                                </article>
-                              </div>
-                            </div>
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Додаткова інформація</div>
+                            <ul class="warranty-cover-chars__list">
+                              <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
+                            </ul>
                           </div>
-                        </div>
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Додаткова інформація</div>
-                          <ul class="warranty-cover-chars__list">
-                            <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="warranty-cover-slide__item warranty-cover-item">
-                    <div class="warranty-cover-item__inner">
-                      <div class="warranty-cover-item__head warranty-cover-head">
-                        <div class="warranty-cover-head__name">Планшети</div>
-                        <div class="warranty-cover-head__photo">
-                          <img src="./img/warranty-tab-2.jpg" alt="">
-                        </div>
-                      </div>
-                      <div class="warranty-cover-item__warr warranty-cover-warr">
-                        <div class="warranty-cover-warr__title">Гарантія</div>
-                        <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
-                      </div>
-                      <div class="warranty-cover-item__chars warranty-cover-chars">
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Останні літери коду</div>
-                          <div class="warranty-cover-chars__code-wrapper">
-                            <div class="warranty-cover-chars__code">SEK</div>
-                            <div class="warranty-cover-chars__tooltip-section tooltip-section">
-                              <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
-                              <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
-                                <div class="warranty-cover-tooltip__photos">
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
-                                    <img src="./img/tooltip-3.jpg" alt="">
-                                  </div>
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
-                                    <img src="./img/tooltip-4.jpg" alt="">
-                                  </div>
-                                </div>
-                                <article class="warranty-cover-tooltip__article tooltip-panel__article">
-                                  <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
-                                </article>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Додаткова інформація</div>
-                          <ul class="warranty-cover-chars__list">
-                            <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="warranty-cover-slide__item warranty-cover-item">
-                    <div class="warranty-cover-item__inner">
-                      <div class="warranty-cover-item__head warranty-cover-head">
-                        <div class="warranty-cover-head__name"> Носимі пристрої</div>
-                        <div class="warranty-cover-head__photo">
-                          <img src="./img/warranty-tab-3.jpg" alt="">
-                        </div>
-                      </div>
-                      <div class="warranty-cover-item__warr warranty-cover-warr">
-                        <div class="warranty-cover-warr__title">Гарантія</div>
-                        <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
-                      </div>
-                      <div class="warranty-cover-item__chars warranty-cover-chars">
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Останні літери коду</div>
-                          <div class="warranty-cover-chars__code-wrapper">
-                            <div class="warranty-cover-chars__code">SEK</div>
-                            <div class="warranty-cover-chars__tooltip-section tooltip-section">
-                              <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
-                              <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
-                                <div class="warranty-cover-tooltip__photos">
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
-                                    <img src="./img/tooltip-3.jpg" alt="">
-                                  </div>
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
-                                    <img src="./img/tooltip-4.jpg" alt="">
-                                  </div>
-                                </div>
-                                <article class="warranty-cover-tooltip__article tooltip-panel__article">
-                                  <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
-                                </article>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Додаткова інформація</div>
-                          <ul class="warranty-cover-chars__list">
-                            <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="warranty-cover-slide__item warranty-cover-item">
-                    <div class="warranty-cover-item__inner">
-                      <div class="warranty-cover-item__head warranty-cover-head">
-                        <div class="warranty-cover-head__name"> Носимі пристрої</div>
-                        <div class="warranty-cover-head__photo">
-                          <img src="./img/warranty-tab-3.jpg" alt="">
-                        </div>
-                      </div>
-                      <div class="warranty-cover-item__warr warranty-cover-warr">
-                        <div class="warranty-cover-warr__title">Гарантія</div>
-                        <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
-                      </div>
-                      <div class="warranty-cover-item__chars warranty-cover-chars">
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Останні літери коду</div>
-                          <div class="warranty-cover-chars__code-wrapper">
-                            <div class="warranty-cover-chars__code">SEK</div>
-                            <div class="warranty-cover-chars__tooltip-section tooltip-section">
-                              <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
-                              <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
-                                <div class="warranty-cover-tooltip__photos">
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
-                                    <img src="./img/tooltip-3.jpg" alt="">
-                                  </div>
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
-                                    <img src="./img/tooltip-4.jpg" alt="">
-                                  </div>
-                                </div>
-                                <article class="warranty-cover-tooltip__article tooltip-panel__article">
-                                  <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
-                                </article>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Додаткова інформація</div>
-                          <ul class="warranty-cover-chars__list">
-                            <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
-                          </ul>
                         </div>
                       </div>
                     </div>
@@ -435,91 +294,275 @@
                 </div>
               </div>
               <div class="warranty-cover-slider__slide warranty-cover-slide swiper-slide">
-                <div class="warranty-cover-slide__inner">
-                  <div class="warranty-cover-slide__item warranty-cover-item">
-                    <div class="warranty-cover-item__inner">
-                      <div class="warranty-cover-item__head warranty-cover-head">
-                        <div class="warranty-cover-head__name">Смартфони</div>
-                        <div class="warranty-cover-head__photo">
-                          <img src="./img/warranty-tab-1.jpg" alt="">
+                <div class="warranty-cover-slide__inner swiper">
+                  <div class="swiper-wrapper">
+                    <div class="warranty-cover-slide__item warranty-cover-item swiper-slide">
+                      <div class="warranty-cover-item__inner">
+                        <div class="warranty-cover-item__head warranty-cover-head">
+                          <div class="warranty-cover-head__name">Смартфони</div>
+                          <div class="warranty-cover-head__photo">
+                            <img src="./img/warranty-tab-1.jpg" alt="">
+                          </div>
                         </div>
-                      </div>
-                      <div class="warranty-cover-item__warr warranty-cover-warr">
-                        <div class="warranty-cover-warr__title">Гарантія</div>
-                        <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
-                      </div>
-                      <div class="warranty-cover-item__chars warranty-cover-chars">
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Останні літери коду</div>
-                          <div class="warranty-cover-chars__code-wrapper">
-                            <div class="warranty-cover-chars__code">SEK</div>
-                            <div class="warranty-cover-chars__tooltip-section tooltip-section">
-                              <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
-                              <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
-                                <div class="warranty-cover-tooltip__photos">
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
-                                    <img src="./img/tooltip-3.jpg" alt="">
+                        <div class="warranty-cover-item__warr warranty-cover-warr">
+                          <div class="warranty-cover-warr__title">Гарантія</div>
+                          <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
+                        </div>
+                        <div class="warranty-cover-item__chars warranty-cover-chars">
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Останні літери коду</div>
+                            <div class="warranty-cover-chars__code-wrapper">
+                              <div class="warranty-cover-chars__code">SEK</div>
+                              <div class="warranty-cover-chars__tooltip-section tooltip-section">
+                                <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
+                                <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
+                                  <div class="warranty-cover-tooltip__photos">
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
+                                      <img src="./img/tooltip-3.jpg" alt="">
+                                    </div>
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
+                                      <img src="./img/tooltip-4.jpg" alt="">
+                                    </div>
                                   </div>
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
-                                    <img src="./img/tooltip-4.jpg" alt="">
-                                  </div>
+                                  <article class="warranty-cover-tooltip__article tooltip-panel__article">
+                                    <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
+                                  </article>
                                 </div>
-                                <article class="warranty-cover-tooltip__article tooltip-panel__article">
-                                  <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
-                                </article>
                               </div>
                             </div>
                           </div>
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Додаткова інформація</div>
+                            <ul class="warranty-cover-chars__list">
+                              <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
+                            </ul>
+                          </div>
                         </div>
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Додаткова інформація</div>
-                          <ul class="warranty-cover-chars__list">
-                            <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
-                          </ul>
+                      </div>
+                    </div>
+                    <div class="warranty-cover-slide__item warranty-cover-item swiper-slide">
+                      <div class="warranty-cover-item__inner">
+                        <div class="warranty-cover-item__head warranty-cover-head">
+                          <div class="warranty-cover-head__name">Планшети</div>
+                          <div class="warranty-cover-head__photo">
+                            <img src="./img/warranty-tab-2.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="warranty-cover-item__warr warranty-cover-warr">
+                          <div class="warranty-cover-warr__title">Гарантія</div>
+                          <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
+                        </div>
+                        <div class="warranty-cover-item__chars warranty-cover-chars">
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Останні літери коду</div>
+                            <div class="warranty-cover-chars__code-wrapper">
+                              <div class="warranty-cover-chars__code">SEK</div>
+                              <div class="warranty-cover-chars__tooltip-section tooltip-section">
+                                <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
+                                <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
+                                  <div class="warranty-cover-tooltip__photos">
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
+                                      <img src="./img/tooltip-3.jpg" alt="">
+                                    </div>
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
+                                      <img src="./img/tooltip-4.jpg" alt="">
+                                    </div>
+                                  </div>
+                                  <article class="warranty-cover-tooltip__article tooltip-panel__article">
+                                    <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
+                                  </article>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Додаткова інформація</div>
+                            <ul class="warranty-cover-chars__list">
+                              <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="warranty-cover-slide__item warranty-cover-item swiper-slide">
+                      <div class="warranty-cover-item__inner">
+                        <div class="warranty-cover-item__head warranty-cover-head">
+                          <div class="warranty-cover-head__name"> Носимі пристрої</div>
+                          <div class="warranty-cover-head__photo">
+                            <img src="./img/warranty-tab-3.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="warranty-cover-item__warr warranty-cover-warr">
+                          <div class="warranty-cover-warr__title">Гарантія</div>
+                          <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
+                        </div>
+                        <div class="warranty-cover-item__chars warranty-cover-chars">
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Останні літери коду</div>
+                            <div class="warranty-cover-chars__code-wrapper">
+                              <div class="warranty-cover-chars__code">SEK</div>
+                              <div class="warranty-cover-chars__tooltip-section tooltip-section">
+                                <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
+                                <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
+                                  <div class="warranty-cover-tooltip__photos">
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
+                                      <img src="./img/tooltip-3.jpg" alt="">
+                                    </div>
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
+                                      <img src="./img/tooltip-4.jpg" alt="">
+                                    </div>
+                                  </div>
+                                  <article class="warranty-cover-tooltip__article tooltip-panel__article">
+                                    <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
+                                  </article>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Додаткова інформація</div>
+                            <ul class="warranty-cover-chars__list">
+                              <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="warranty-cover-slide__item warranty-cover-item swiper-slide">
+                      <div class="warranty-cover-item__inner">
+                        <div class="warranty-cover-item__head warranty-cover-head">
+                          <div class="warranty-cover-head__name"> Носимі пристрої</div>
+                          <div class="warranty-cover-head__photo">
+                            <img src="./img/warranty-tab-3.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="warranty-cover-item__warr warranty-cover-warr">
+                          <div class="warranty-cover-warr__title">Гарантія</div>
+                          <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
+                        </div>
+                        <div class="warranty-cover-item__chars warranty-cover-chars">
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Останні літери коду</div>
+                            <div class="warranty-cover-chars__code-wrapper">
+                              <div class="warranty-cover-chars__code">SEK</div>
+                              <div class="warranty-cover-chars__tooltip-section tooltip-section">
+                                <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
+                                <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
+                                  <div class="warranty-cover-tooltip__photos">
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
+                                      <img src="./img/tooltip-3.jpg" alt="">
+                                    </div>
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
+                                      <img src="./img/tooltip-4.jpg" alt="">
+                                    </div>
+                                  </div>
+                                  <article class="warranty-cover-tooltip__article tooltip-panel__article">
+                                    <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
+                                  </article>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Додаткова інформація</div>
+                            <ul class="warranty-cover-chars__list">
+                              <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="warranty-cover-slide__item warranty-cover-item">
-                    <div class="warranty-cover-item__inner">
-                      <div class="warranty-cover-item__head warranty-cover-head">
-                        <div class="warranty-cover-head__name">Планшети</div>
-                        <div class="warranty-cover-head__photo">
-                          <img src="./img/warranty-tab-2.jpg" alt="">
+                </div>
+              </div>
+              <div class="warranty-cover-slider__slide warranty-cover-slide swiper-slide">
+                <div class="warranty-cover-slide__inner swiper">
+                  <div class="swiper-wrapper">
+                    <div class="warranty-cover-slide__item warranty-cover-item swiper-slide">
+                      <div class="warranty-cover-item__inner">
+                        <div class="warranty-cover-item__head warranty-cover-head">
+                          <div class="warranty-cover-head__name">Смартфони</div>
+                          <div class="warranty-cover-head__photo">
+                            <img src="./img/warranty-tab-1.jpg" alt="">
+                          </div>
                         </div>
-                      </div>
-                      <div class="warranty-cover-item__warr warranty-cover-warr">
-                        <div class="warranty-cover-warr__title">Гарантія</div>
-                        <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
-                      </div>
-                      <div class="warranty-cover-item__chars warranty-cover-chars">
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Останні літери коду</div>
-                          <div class="warranty-cover-chars__code-wrapper">
-                            <div class="warranty-cover-chars__code">SEK</div>
-                            <div class="warranty-cover-chars__tooltip-section tooltip-section">
-                              <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
-                              <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
-                                <div class="warranty-cover-tooltip__photos">
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
-                                    <img src="./img/tooltip-3.jpg" alt="">
+                        <div class="warranty-cover-item__warr warranty-cover-warr">
+                          <div class="warranty-cover-warr__title">Гарантія</div>
+                          <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
+                        </div>
+                        <div class="warranty-cover-item__chars warranty-cover-chars">
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Останні літери коду</div>
+                            <div class="warranty-cover-chars__code-wrapper">
+                              <div class="warranty-cover-chars__code">SEK</div>
+                              <div class="warranty-cover-chars__tooltip-section tooltip-section">
+                                <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
+                                <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
+                                  <div class="warranty-cover-tooltip__photos">
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
+                                      <img src="./img/tooltip-3.jpg" alt="">
+                                    </div>
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
+                                      <img src="./img/tooltip-4.jpg" alt="">
+                                    </div>
                                   </div>
-                                  <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
-                                    <img src="./img/tooltip-4.jpg" alt="">
-                                  </div>
+                                  <article class="warranty-cover-tooltip__article tooltip-panel__article">
+                                    <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
+                                  </article>
                                 </div>
-                                <article class="warranty-cover-tooltip__article tooltip-panel__article">
-                                  <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
-                                </article>
                               </div>
                             </div>
                           </div>
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Додаткова інформація</div>
+                            <ul class="warranty-cover-chars__list">
+                              <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
+                            </ul>
+                          </div>
                         </div>
-                        <div class="warranty-cover-chars__item">
-                          <div class="warranty-cover-chars__title">Додаткова інформація</div>
-                          <ul class="warranty-cover-chars__list">
-                            <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
-                          </ul>
+                      </div>
+                    </div>
+                    <div class="warranty-cover-slide__item warranty-cover-item swiper-slide">
+                      <div class="warranty-cover-item__inner">
+                        <div class="warranty-cover-item__head warranty-cover-head">
+                          <div class="warranty-cover-head__name">Планшети</div>
+                          <div class="warranty-cover-head__photo">
+                            <img src="./img/warranty-tab-2.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="warranty-cover-item__warr warranty-cover-warr">
+                          <div class="warranty-cover-warr__title">Гарантія</div>
+                          <div class="warranty-cover-warr__count"><span>12</span> місяців</div>
+                        </div>
+                        <div class="warranty-cover-item__chars warranty-cover-chars">
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Останні літери коду</div>
+                            <div class="warranty-cover-chars__code-wrapper">
+                              <div class="warranty-cover-chars__code">SEK</div>
+                              <div class="warranty-cover-chars__tooltip-section tooltip-section">
+                                <div class="warranty-cover-chars__tooltip-icon tooltip-icon tooltip-icon--white tooltip-icon--white">?</div>
+                                <div class="warranty-cover-chars__tooltip-panel warranty-cover-tooltip tooltip-panel">
+                                  <div class="warranty-cover-tooltip__photos">
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-1.jpg)">
+                                      <img src="./img/tooltip-3.jpg" alt="">
+                                    </div>
+                                    <div class="warranty-cover-tooltip__photo zoom-img" style="background-image: url(./img/tooltip-2.jpg)">
+                                      <img src="./img/tooltip-4.jpg" alt="">
+                                    </div>
+                                  </div>
+                                  <article class="warranty-cover-tooltip__article tooltip-panel__article">
+                                    <p>Шукайте на виробі назву моделі, 3-и останні літери якої <strong>SEK</strong></p>
+                                  </article>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="warranty-cover-chars__item">
+                            <div class="warranty-cover-chars__title">Додаткова інформація</div>
+                            <ul class="warranty-cover-chars__list">
+                              <div class="warranty-cover-chars__list-item">Комлетні аксесури - 12 місяців</div>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>

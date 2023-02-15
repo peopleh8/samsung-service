@@ -42,7 +42,7 @@ const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images)
 
 /* Робота gulp в 2 режимах (dev, prod), таски в залежності від режимів будуть працювати по різному, послідовне виконання */
 const dev = gulp.series(clean, mainTasks, gulp.parallel(watcher, server));
-const build = gulp.series(clean, mainTasks);
+const build = gulp.series(clean, mainTasks, sprite);
 const deployZIP = gulp.series(clean, mainTasks, sprite, zip);
 const deployFTP = gulp.series(clean, mainTasks, sprite, ftp);
 

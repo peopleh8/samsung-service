@@ -233,6 +233,37 @@ document.querySelectorAll('.repair-item-slider').forEach((slider, index) => {
   })
 })
 
+document.querySelectorAll('.warranty-cover-slide__inner').forEach(slider => {
+  new Swiper(slider, {
+    slidesPerView: 3,
+    speed: 500,
+    spaceBetween: 30,
+    breakpoints: {
+      1441: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1161: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+      691: {
+        slidesPerView: 1.8,
+        spaceBetween: 16,
+      },
+      0: {
+        slidesPerView: 1.25,
+        spaceBetween: 10,
+      }
+    },
+    on: {
+      slideChange: () => {
+        document.querySelectorAll('.warranty-cover-chars__tooltip-section').forEach(item => item.classList.remove('visible'))
+      }
+    }
+  })
+})
+
 export const warrantyInfoMob = innerWidth <= 1160 && new Swiper('.warranty-info-slider', {
   modules: [Pagination],
   slidesPerView: 1.5,
