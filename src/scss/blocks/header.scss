@@ -22,6 +22,9 @@
       align-items: center;
       justify-content: space-between;
     }
+    div.header-top__phone {
+      display: none;
+    }
     &__phone {
       margin: 0 auto 0 148px;
       display: flex;

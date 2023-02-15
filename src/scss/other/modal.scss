@@ -5,6 +5,9 @@
 .fancybox__content :focus {
   outline: none !important;
 }
+.fancybox__slide {
+  padding: 40px 10px;
+}
 
 .fancybox__thumbs,
 .fancybox__toolbar__items--left,
@@ -215,7 +218,7 @@
 
 .modal-order {
   max-width: 1140px;
-  padding: 60px;
+  padding: 70px;
   color: $blackColor;
   &-head {
     display: flex;

@@ -1,5 +1,6 @@
 import * as flsFunctions from './modules/functions.js';
 import { toggleMenu, closeMenuOverlay, menuAccordion } from './modules/menu.js'
+import { togglePhoneSection, closePhoneSection } from './modules/phoneSection.js'
 import * as slider from './modules/sliders.js'
 import { setCustomScroll } from './modules/customScroll.js'
 import { setAddressAccrordion, setAddressSubAccordion, toggleNpInfo, toggleAddressInfo } from './modules/addressControls.js'

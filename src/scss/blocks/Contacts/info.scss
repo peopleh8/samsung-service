@@ -48,14 +48,12 @@
     }
     &.active {
       width: 100%;
-      height: auto;
-      min-height: calc(413px + 24px + 24px);
+      min-height: calc(var(--height) + 24px + 24px);
       order: -1;
       .contacts-info-item__photo {
         margin: -24px 0 -24px -16px;
         height: calc(100% + 24px + 24px);
         width: 24%;
-        max-width: 390px;
         border-radius: 20px 0 0 20px;
         img {
           filter: grayscale(0);
@@ -63,7 +61,7 @@
       }
       .contacts-info-content {
         padding-left: 36px;
-        width: calc(100% - 23%);
+        width: 76%;
       }
       .contacts-info-content__more {
         display: none;
