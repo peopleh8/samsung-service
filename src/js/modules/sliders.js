@@ -229,7 +229,21 @@ document.querySelectorAll('.repair-item-slider').forEach((slider, index) => {
     pagination: {
       el: `.repair-item__popular-pagination-${index + 1}`,
       clickable: true
-    }
+    },
+    breakpoints: {
+      1441: {
+        grid: {
+          rows: 2,
+        },
+        slidesPerView: 5.5,
+      },
+      0: {
+        grid: {
+          rows: 1,
+        },
+        slidesPerView: 3.5,
+      }
+    },
   })
 })
 

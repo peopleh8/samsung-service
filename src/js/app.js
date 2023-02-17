@@ -24,7 +24,8 @@ import { focusField, blurField } from './modules/inputControls.js'
 import { setFooterAccordion } from './modules/footerAccordion.js'
 import { toggleMore } from './modules/toggleMore.js'
 import * as Map from './modules/map/initMap.js'
-import * as flexWraAmim from './modules/flexWrapAmimation.js'
+import * as contactCards from './modules/contactCards.js'
+import * as repairCards from './modules/repairCards.js'
 import * as animations from './modules/animations.js'
 
 flsFunctions.isWebp()

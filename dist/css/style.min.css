@@ -7042,23 +7042,28 @@ iframe ~ * {
 .repair-cards {
   margin: -15px 0;
 }
+.repair-cards-mob {
+  display: none;
+}
 .repair__row {
   display: flex;
   margin: 0 -15px;
   padding: 15px 0;
 }
-.repair__row:hover .repair-item:not(:hover) .repair-item__title {
-  transform: translate(-55%, 150%) rotate(-90deg);
-}
-.repair__row:hover .repair-item:not(:hover) .repair-item__photo {
-  transform: translateX(35%);
+@media (min-width: 1161px) {
+  .repair__row:hover .repair-item:not(:hover) .repair-item__title {
+    transform: translate(-55%, 150%) rotate(-90deg);
+  }
+  .repair__row:hover .repair-item:not(:hover) .repair-item__photo {
+    transform: translateX(35%);
+  }
 }
 .repair-item {
   flex-basis: 33.3333333333%;
   padding: 0 15px;
   will-change: flex-basis;
 }
-@media (min-width: 1025px) {
+@media (min-width: 1161px) {
   .repair-item {
     transition: flex-basis 0.4s ease;
   }
@@ -7095,7 +7100,7 @@ iframe ~ * {
   align-items: center;
   justify-content: flex-end;
 }
-@media (min-width: 1025px) {
+@media (min-width: 1161px) {
   .repair-item__visible {
     transition: width 0.35s ease;
   }
@@ -7113,7 +7118,7 @@ iframe ~ * {
   visibility: hidden;
   pointer-events: none;
 }
-@media (min-width: 1025px) {
+@media (min-width: 1161px) {
   .repair-item__hidden {
     transition: all 0.1s ease;
   }
@@ -7127,7 +7132,7 @@ iframe ~ * {
   top: 60px;
   z-index: 10;
 }
-@media (min-width: 1025px) {
+@media (min-width: 1161px) {
   .repair-item__title {
     white-space: nowrap;
     will-change: transition;
@@ -7136,15 +7141,16 @@ iframe ~ * {
 }
 .repair-item__photo {
   position: absolute;
+  width: 390px;
 }
-@media (min-width: 1025px) {
+@media (min-width: 1161px) {
   .repair-item__photo {
     transition: left 0.3s ease 0s, transform 0.2s ease 0s;
   }
 }
 .repair-item__photo img {
-  width: fit-content;
-  max-width: initial;
+  width: 100%;
+  height: 100%;
 }
 .repair-item__search {
   margin-bottom: 10px;
@@ -7204,7 +7210,7 @@ iframe ~ * {
   pointer-events: auto;
   transition-delay: 0.1s;
 }
-@media (min-width: 1025px) {
+@media (min-width: 1161px) {
   .repair-item__search-btn:hover {
     background: #000;
   }
@@ -7219,7 +7225,7 @@ iframe ~ * {
 .repair-item__search-btn-icon svg {
   stroke: #000;
 }
-@media (min-width: 1025px) {
+@media (min-width: 1161px) {
   .repair-item__search-btn-icon svg {
     transition: stroke 0.2s ease;
   }
@@ -9379,6 +9385,74 @@ iframe ~ * {
   }
 }
 @media (max-width: 1440px) {
+  .repair-cards {
+    margin: -12px 0;
+  }
+  .repair__row {
+    margin: 0 -12px;
+    padding: 12px 0;
+  }
+  .repair-item {
+    padding: 0 12px;
+  }
+}
+@media (max-width: 1440px) and (min-width: 1161px) {
+  .repair-item:hover .repair-item__photo {
+    transform: translateY(-20%);
+  }
+}
+@media (max-width: 1440px) {
+  .repair-item__inner {
+    height: 392px;
+  }
+}
+@media (max-width: 1440px) {
+  .repair-item__title {
+    top: 40px;
+    left: 40px;
+    font-size: 20px;
+    line-height: 130%;
+  }
+}
+@media (max-width: 1440px) {
+  .repair-item__photo {
+    width: 250px;
+  }
+}
+@media (max-width: 1440px) {
+  .repair-item__hidden {
+    bottom: 34px;
+  }
+}
+@media (max-width: 1440px) {
+  .repair-item__search {
+    padding-right: 60px;
+  }
+  .repair-item__search-title {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .repair-item__search-inp {
+    padding: 11px 45px 12px 24px;
+  }
+}
+@media (max-width: 1440px) {
+  .repair-item-slider {
+    margin: 0 -3px;
+  }
+  .repair-item-slider__inner {
+    padding: 0 3px;
+  }
+  .repair-item-slider__photo {
+    margin-bottom: 14px;
+  }
+}
+@media (max-width: 1440px) {
+  .repair-item__popular-pagination {
+    margin-top: 24px;
+  }
+}
+@media (max-width: 1440px) {
   .modal-order {
     padding: 60px 70px;
     max-width: 1080px;
@@ -9404,7 +9478,8 @@ iframe ~ * {
   .modal-order__value {
     font-size: 16px;
   }
-
+}
+@media (max-width: 1440px) {
   .modal-repair {
     max-width: 900px;
     padding: 116px 30px 108px;
@@ -9415,7 +9490,8 @@ iframe ~ * {
   .modal-repair__inp-wrapper + .modal-repair__inp-wrapper {
     margin-left: 24px;
   }
-
+}
+@media (max-width: 1440px) {
   .modal-services {
     padding: 60px 60px 34px;
   }
@@ -9425,11 +9501,13 @@ iframe ~ * {
   .modal-services .modal-contact__btn-wrapper {
     margin: 24px 0 42px;
   }
-
+}
+@media (max-width: 1440px) {
   .modal-contact {
     padding: 60px;
   }
-
+}
+@media (max-width: 1440px) {
   .err {
     padding-top: 114px;
   }
@@ -9446,7 +9524,8 @@ iframe ~ * {
     max-width: 496px;
     margin-bottom: 48px;
   }
-
+}
+@media (max-width: 1440px) {
   .coockie__inner {
     padding: 24px 60px 24px 40px;
   }
@@ -9459,7 +9538,8 @@ iframe ~ * {
   .coockie__btn-wrapper {
     margin-left: 73px;
   }
-
+}
+@media (max-width: 1440px) {
   .subcategory-intro {
     padding-top: 36px;
   }
@@ -9472,7 +9552,8 @@ iframe ~ * {
   .subcategory-intro-photo {
     width: 296px;
   }
-
+}
+@media (max-width: 1440px) {
   .category-intro--phones .category-intro__section > img {
     max-width: 187px;
   }
@@ -9490,11 +9571,13 @@ iframe ~ * {
   .category-intro__title {
     margin-bottom: 24px;
   }
-
+}
+@media (max-width: 1440px) {
   .breadcrumbs {
     padding-top: 114px;
   }
-
+}
+@media (max-width: 1440px) {
   .logo--footer {
     margin-bottom: 40px;
   }
@@ -9502,16 +9585,19 @@ iframe ~ * {
     width: 253px;
     height: 28px;
   }
-
+}
+@media (max-width: 1440px) {
   .container {
     max-width: 1265px;
   }
-
+}
+@media (max-width: 1440px) {
   .title {
     font-size: 36px;
     line-height: 130%;
   }
-
+}
+@media (max-width: 1440px) {
   .search__inp {
     font-size: 16px;
     line-height: 21px;
@@ -9519,7 +9605,8 @@ iframe ~ * {
   .search__inp-wrapper {
     margin: 0 auto 20px;
   }
-
+}
+@media (max-width: 1440px) {
   .menu {
     max-width: 927px;
   }
@@ -9527,7 +9614,8 @@ iframe ~ * {
     font-size: 14px;
     line-height: 18px;
   }
-
+}
+@media (max-width: 1440px) {
   .submenu {
     padding: 16px 0 60px;
   }
@@ -9562,9 +9650,13 @@ iframe ~ * {
   .submenu-slider-item__title-wrapper {
     padding: 0 0 0 20px;
   }
-
-  .header-top__links:nth-of-type(3) .header-top__link:nth-child(n+3) {
+}
+@media (max-width: 1440px) {
+  .header-search + .header-top__links .header-top__link:nth-child(n+3) {
     display: none;
+  }
+  .header-top__links:nth-of-type(3) {
+    background: red;
   }
   .header-top__phone {
     margin: 0 auto 0 83px;
@@ -10505,6 +10597,117 @@ iframe ~ * {
   }
 }
 @media (max-width: 1160px) {
+  .repair {
+    padding: 70px 0 0;
+  }
+  .repair__title {
+    margin-bottom: 24px;
+  }
+  .repair-cards {
+    display: none;
+  }
+  .repair-cards-mob {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px -8px;
+  }
+  .repair-item {
+    padding: 12px 8px;
+    flex-basis: 33.3333333333%;
+    width: 33.3333333333%;
+  }
+  .repair-item.active {
+    flex-basis: 100%;
+    width: 100%;
+  }
+  .repair-item.active .repair-item__photo {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-duration: 0.03s;
+  }
+  .repair-item.active .repair-item__hidden {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-duration: 0.15s;
+    transition-delay: 0.3s;
+  }
+  .repair-item__inner {
+    height: auto;
+    padding: 40px 24px 0;
+    height: 310px;
+    overflow: visible;
+  }
+  .repair-item__title {
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    text-align: left;
+    width: 100%;
+  }
+  .repair-item__photo {
+    width: 100%;
+    max-width: 170px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.15s ease 0.3s;
+  }
+  .repair-item__search {
+    padding-right: 0;
+    margin-bottom: 16px;
+  }
+  .repair-item__search-title {
+    font-size: 12px;
+    line-height: 150%;
+    margin-bottom: 7px;
+  }
+  .repair-item__search-inp {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  .repair-item__popular-title {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 8px;
+  }
+  .repair-item__popular-overflow {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+  }
+  .repair-item__popular-item {
+    font-size: 12px;
+    line-height: 16px;
+    white-space: nowrap;
+    padding: 7px 25px;
+    border: 1px solid #000;
+    border-radius: 20px;
+  }
+  .repair-item__popular-item + .repair-item__popular-item {
+    margin-left: 8px;
+  }
+  .repair-item__visible {
+    position: static;
+    cursor: pointer;
+  }
+  .repair-item__hidden {
+    visibility: visible;
+    pointer-events: auto;
+    padding: 0 0 34px;
+    top: auto;
+    left: 30px;
+    right: 30px;
+    width: auto;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.03s ease 0s;
+  }
+
   .modal .carousel__button.is-close {
     top: 18px;
     right: 24px;
@@ -13189,6 +13392,32 @@ iframe ~ * {
   }
 }
 @media (max-width: 585px) {
+  .repair-cards-mob {
+    margin: -8px -5px;
+  }
+  .repair-item {
+    flex-basis: 50%;
+    width: 50%;
+    padding: 8px 5px;
+  }
+  .repair-item__inner {
+    padding: 24px 20px 0;
+    height: 240px;
+  }
+  .repair-item__title {
+    font-size: 14px;
+  }
+  .repair-item__photo {
+    max-width: 130px;
+  }
+  .repair-item__hidden {
+    left: 20px;
+    right: 20px;
+  }
+  .repair-item__popular-item {
+    line-height: 1;
+  }
+
   .modal-thx {
     padding: 56px 16px 48px;
   }
@@ -13329,9 +13558,6 @@ iframe ~ * {
   .category-intro {
     padding-top: 30px;
   }
-  .category-intro--phones .category-intro__section > img {
-    max-width: 108px;
-  }
   .category-intro .category-intro__section > img {
     width: 110px;
     bottom: 30px;
@@ -13344,6 +13570,13 @@ iframe ~ * {
     left: 50%;
     transform: translateX(-50%);
   }
+  .category-intro--phones .category-intro__section > img {
+    right: 0;
+    left: auto;
+    bottom: 0;
+    transform: translateX(0);
+    max-width: 108px;
+  }
   .category-intro__section {
     padding: 60px 24px 130px;
   }
@@ -13355,7 +13588,7 @@ iframe ~ * {
     line-height: 150%;
   }
   .category-intro-search__inp-wrapper {
-    max-width: 264px;
+    max-width: 100%;
   }
 
   .title--small {

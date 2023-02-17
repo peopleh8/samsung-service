@@ -6,16 +6,21 @@
   &-cards {
     margin: -15px 0;
   }
+  &-cards-mob {
+    display: none;
+  }
   &__row {
     display: flex;
     margin: 0 -15px;
     padding: 15px 0;
-    &:hover .repair-item:not(:hover) {
-      .repair-item__title {
-        transform: translate(-55%, 150%) rotate(-90deg);
-      }
-      .repair-item__photo {
-        transform: translateX(35%);
+    @media (min-width: 1161px) {
+      &:hover .repair-item:not(:hover) {
+        .repair-item__title {
+          transform: translate(-55%, 150%) rotate(-90deg);
+        }
+        .repair-item__photo {
+          transform: translateX(35%);
+        }
       }
     }
   }
@@ -23,7 +28,7 @@
     flex-basis: calc(100% / 3);
     padding: 0 15px;
     will-change: flex-basis;
-    @media (min-width: 1025px) {
+    @media (min-width: 1161px) {
       transition: flex-basis .4s ease;
       &:hover {
         flex-basis: 150%;
@@ -57,7 +62,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-end;
-      @media (min-width: 1025px) {
+      @media (min-width: 1161px) {
         transition: width .35s ease;
       }
     }
@@ -73,7 +78,7 @@
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
-      @media (min-width: 1025px) {
+      @media (min-width: 1161px) {
         transition: all .1s ease;
       }
     }
@@ -85,7 +90,7 @@
       left: 60px;
       top: 60px;
       z-index: 10;
-      @media (min-width: 1025px) {
+      @media (min-width: 1161px) {
         white-space: nowrap;
         will-change: transition;
         transition: transform .3s ease;
@@ -93,12 +98,13 @@
     }
     &__photo {
       position: absolute;
-      @media (min-width: 1025px) {
+      width: 390px;
+      @media (min-width: 1161px) {
         transition: left .3s ease 0s, transform .2s ease 0s;
       }
       img {
-        width: fit-content;
-        max-width: initial;
+        width: 100%;
+        height: 100%;
       }
     }
     &__search {
@@ -157,7 +163,7 @@
             transition-delay: .1s;
           }
         }
-        @media (min-width: 1025px) {
+        @media (min-width: 1161px) {
           &:hover {
             background: $blackColor;
             svg {
@@ -170,7 +176,7 @@
           height: 8px;
           svg {
             stroke: $blackColor;
-            @media (min-width: 1025px) {
+            @media (min-width: 1161px) {
               transition: stroke .2s ease;
             }
           }
