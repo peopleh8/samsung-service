@@ -26,8 +26,9 @@ intfoItems.forEach((item, index) => {
     })
 
     item.parentElement.parentElement.parentElement.parentElement.classList.toggle('active')
+
     item.parentElement.parentElement.parentElement.parentElement.style.setProperty('--height', 0)
-    item.parentElement.parentElement.parentElement.parentElement.style.setProperty('--height', gsap.getProperty(item.parentElement.parentElement.parentElement.parentElement, 'height') + 'px')
+    item.parentElement.parentElement.parentElement.parentElement.style.setProperty('--height', `${gsap.getProperty(item.parentElement.parentElement.parentElement.parentElement, 'height')}px`)
 
     setTimeout(() => {
       item.parentElement.parentElement.parentElement.parentElement.classList.toggle('visible')
@@ -42,6 +43,7 @@ intfoItems.forEach((item, index) => {
       ease: 'power1.inOut'
     })
 
+
     flip.fromTo('.contacts-info__list-wrapper', {
       height: startHeight
     }, {
@@ -49,6 +51,8 @@ intfoItems.forEach((item, index) => {
       clearProps: 'height',
       duration: flip.duration()
     }, 0)
+
+    if (index === intfoItems.length - 1) return
 
     if (item.parentElement.parentElement.parentElement.parentElement.classList.contains('active')) {
       window.infowindow.setContent(renderContent(locations[index], index))
