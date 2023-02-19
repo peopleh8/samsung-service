@@ -17,6 +17,22 @@ export const introSlider = new Swiper('.main-intro-slider', {
   navigation: {
     prevEl: '.main-intro__prev',
     nextEl: '.main-intro__next'
+  },
+  on: {
+    slideChange: swiper => {
+      let index = swiper.realIndex
+      const popular = document.querySelector('.popular')
+      
+      if (index !== 0) {
+        popular.style.transitionDuration = '.5s'
+        popular.style.zIndex = -1
+        popular.style.opacity = 0
+      } else {
+        popular.style.transitionDuration = '.5s'
+        popular.style.zIndex = ''
+        popular.style.opacity = 1
+      }
+    }
   }
 })
 

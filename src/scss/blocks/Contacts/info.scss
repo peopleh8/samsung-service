@@ -14,6 +14,10 @@
     overflow: hidden;
     height: 540px;
   }
+  &__arrordions {
+    display: none;
+    content-visibility: hidden;
+  }
   &-list {
     display: flex;
     flex-wrap: wrap;

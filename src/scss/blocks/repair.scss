@@ -1,5 +1,9 @@
 .repair {
   padding-top: 80px;
+  &--tv,
+  &--household {
+    padding-top: 60px;
+  }
   &__title {
     margin-bottom: 35px;
   }
@@ -207,6 +211,9 @@
       }
       &-list {
         max-height: 200px;
+      }
+      &-dropdown {
+        top: 95%;
       }
     }
     &__popular {

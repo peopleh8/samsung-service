@@ -1,4 +1,4 @@
-import { disableScrollbar, enableScrollbar, slideToggle, slideUp } from './functions.js'
+import { disableScrollbar, enableScrollbar, slideToggle } from './functions.js'
 
 const burger = document.querySelector('.burger'),
       headerBot = document.querySelector('.header-bot'),

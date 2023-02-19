@@ -12,11 +12,11 @@ export const openIntroSearch = () => {
           dropdown = form.querySelector('.search-dropdown'),
           closeIcons = form.querySelector('.search__times')
 
-      header.classList.add('search-open')
-      overlay.classList.add('visible')
+      overlay && header.classList.add('search-open')
+      overlay && overlay.classList.add('visible')
       inpWrapper.classList.add('search-open')
       dropdown.classList.add('open')
-      closeIcons.classList.add('visible')
+      closeIcons && closeIcons.classList.add('visible')
     })
   })
 }

@@ -9,6 +9,10 @@
     z-index: unset;
     .swiper-wrapper {
       z-index: unset;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
     }
     &__slide {
       display: flex;
