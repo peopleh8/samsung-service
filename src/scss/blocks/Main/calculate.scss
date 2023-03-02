@@ -77,6 +77,7 @@
       padding: 0 12px;
       &:not(:last-child) {
         position: relative;
+        z-index: 2;
         &::after {
           content: "";
           position: absolute;
@@ -85,6 +86,22 @@
           width: 24px;
           height: 1px;
           background: $secColor;
+          z-index: -2;
+        }
+        .calculate-progress__item-num {
+          &::after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            left: 100%;
+            top: calc(50% - 1px);
+            width: 24px;
+            height: 1px;
+            background: $whiteColor;
+            transition: transform .2s ease, background .2s ease;
+            transform-origin: left center;
+            transform: scaleX(0);
+          }
         }
       }
       &-num {
@@ -119,6 +136,9 @@
           .calculate-progress__item-icon {
             transition-delay: 0s;
           }
+          &::after {
+            transform: scaleX(.5) !important;
+          }
         }
         &.passed {
           border-color: #21B17D;
@@ -126,6 +146,10 @@
           color: transparent;
           .calculate-progress__item-icon {
             opacity: 1;
+          }
+          &::after {
+            transform: scaleX(1) !important;
+            background: #21B17D !important;
           }
         }
       }
@@ -219,11 +243,11 @@
       }
     }
     &__slider-prev {
-      transform: translate(-48px, -50%) rotate(90deg);
+      transform: translate(-48px, -100%) rotate(90deg);
       left: 0
     }
     &__slider-next {
-      transform: translate(48px, -50%) rotate(-90deg);
+      transform: translate(48px, -100%) rotate(-90deg);
       right: 0;
     }
     &-slider {
@@ -319,7 +343,7 @@
       border: 1px solid $thirdColor;
       border-radius: 20px;
       &__slide {
-        padding: 40px 210px 40px 130px;
+        padding: 40px 10px;
         &.swiper-slide-active {
           position: relative;
           z-index: 1;
@@ -337,18 +361,19 @@
       }
       &__inner {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
       }
       &__photo-wrapper {
         display: flex;
-        margin-right: 160px;
         justify-content: center;
         align-items: center;
         transform: translateY(-10%);
+        width: 200px;
+        padding: 0 10px;
       }
       &__content {
-        flex: 1;
+        width: 460px;
       }
       &__list {
         width: 100%;
@@ -362,7 +387,7 @@
           align-items: center;
           justify-content: space-between;
           padding-bottom: 8px;
-          border-bottom: 1px solid $whiteColor;
+          border-bottom: 1px solid $thirdColor;
         }
         &-title,
         &-price {

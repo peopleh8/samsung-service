@@ -116,7 +116,7 @@
                 line-height: 150%;
                 &::before {
                   counter-increment: listSecond;
-                  content: counter(listFirst) "." counter(listSecond) ". ";
+                  content: counter(listFirst) "." counter(listSecond);
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -127,7 +127,7 @@
                   border: 1px solid $blackColor;
                   border-radius: 50%;
                   font-size: 16px;
-                  padding: 0 5px;
+                  padding: 0 15px;
                   max-width: 40px;
                 }
               }

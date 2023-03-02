@@ -1,6 +1,6 @@
 .blog-intro {
   &__title {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
   &__slider-wrapper {
     display: none;
@@ -15,8 +15,11 @@
     &:nth-child(1) {
       grid-column: 1 / 2;
       grid-row: 1 / 3;
+      .blog-intro-item__photo {
+        max-height: 470px;
+      }
       .blog-intro-item__content {
-        padding: 24px 60px 24px;
+        padding: 24px 50px 24px;
       }
       .blog-intro-item__date {
         margin-bottom: 36px;

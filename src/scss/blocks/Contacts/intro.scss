@@ -23,9 +23,15 @@
     padding-left: 87px;
     flex: 1;
     margin: -30px;
+    transform: translateY(-5%);
     &__item {
-      width: 50%; 
       padding: 30px;
+      &:nth-child(even) {
+        width: 55%;
+      }
+      &:nth-child(odd) {
+        width: 45%;
+      }
       &-inner {
         display: flex;
         align-items: flex-start;

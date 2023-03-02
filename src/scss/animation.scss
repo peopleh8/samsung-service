@@ -35,3 +35,12 @@
 		background-position: 0% 50%;
 	}
 }
+
+@keyframes positions {
+  0% { 
+    background-position: center center; 
+  }
+  100% { 
+    background-position: -300px center; 
+  }
+}

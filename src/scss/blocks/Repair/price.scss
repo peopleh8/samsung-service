@@ -10,8 +10,8 @@
     display: flex;
   }
   &-content {
-    width: 560px;
-    padding-right: 110px;
+    width: 580px;
+    padding-right: 130px;
     &__btns {
       display: flex;
       align-items: center;
@@ -21,7 +21,8 @@
     }
   }
   &-info {
-    width: calc(100% - 560px);
+    width: calc(100% - 580px);
+    padding-right: 140px;
     &__inner {
       height: 100%;
       display: flex;

@@ -9,6 +9,9 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    img {
+      transform: translateX(-17%);
+    }
   }
   &-content {
     width: 50%;
@@ -19,10 +22,13 @@
       max-width: 560px;
     }
     &__title {
-      margin-bottom: 33px;
+      margin-bottom: 24px;
     }
     &__desc {
-      margin-bottom: 29px;
+      margin-bottom: 48px;
+      font-size: 20px;
+      line-height: 150%;
+      max-width: 532px;
     }
   }
 }

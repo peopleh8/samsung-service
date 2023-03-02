@@ -1,5 +1,5 @@
 .fancybox__backdrop {
-  background: rgba($blackColor, .9);
+  background: rgba($blackColor, .6);
 }
 
 .fancybox__content :focus {
@@ -457,7 +457,7 @@
       width: 16px;
       height: 16px;
       border-radius: 2px;
-      background: $thirdColor;
+      background: $secColor;
       margin-right: 8px;
       display: flex;
       align-items: center;

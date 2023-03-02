@@ -10,15 +10,16 @@ const intfoItems = document.querySelectorAll('.contacts-info-item__visible'),
       accItems = document.querySelectorAll('.contacts-info-arrordion__head'),
       subAccItems = document.querySelectorAll('.contacts-info-subarrordion__head')
 
-window.addEventListener('load', () => {
-  let activeEl = document.querySelector('.contacts-info-item.active')
+// window.addEventListener('load', () => {
+//   let activeEl = document.querySelector('.contacts-info-item.active')
 
-  activeEl && activeEl.style.setProperty('--height', `${gsap.getProperty(activeEl, 'height')}px`)
-})
+//   activeEl && activeEl.style.setProperty('--height', `${gsap.getProperty(activeEl, 'height')}px`)
+// })
 
 intfoItems.forEach((item, index) => {
   item.addEventListener('click', () => {
     const state = Flip.getState('.contacts-info-item')
+    const parent = item.parentElement.parentElement.parentElement.parentElement
     let startHeight = gsap.getProperty('.contacts-info__list-wrapper', 'height')
 
     document.querySelectorAll('.contacts-info-item').forEach((item, itemIndex) => {
@@ -28,13 +29,19 @@ intfoItems.forEach((item, index) => {
       }
     })
 
-    item.parentElement.parentElement.parentElement.parentElement.classList.toggle('active')
+    parent.classList.toggle('active')
 
-    item.parentElement.parentElement.parentElement.parentElement.style.setProperty('--height', 0)
-    item.parentElement.parentElement.parentElement.parentElement.style.setProperty('--height', `${gsap.getProperty(item.parentElement.parentElement.parentElement.parentElement, 'height')}px`)
+    parent.style.setProperty('--height', 0)
+    parent.style.setProperty('--height', `${gsap.getProperty(parent, 'height')}px`)
+
+    const firstItem = parent.querySelector('.contacts-info-content__item:nth-child(1)')
+    const secItem = parent.querySelector('.contacts-info-content__item:nth-child(2)')
+
+
+    secItem && secItem.offsetHeight >= firstItem.offsetHeight && firstItem.style.setProperty('--item-height', `${secItem.offsetHeight + 30}px`)
 
     setTimeout(() => {
-      item.parentElement.parentElement.parentElement.parentElement.classList.toggle('visible')
+      parent.classList.toggle('visible')
     }, 400)
 
   

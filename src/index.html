@@ -279,7 +279,7 @@
                     <div class="calculate-content__item">
                       <p class="calculate__text">Не вдалось знайти бажану модель техніки – залиште Ваші контакні дані і ми обов’язково зв’яжемося з Вами</p>
                       <div class="calculate__btns">
-                        <button class="calculate__btn btn btn--transparent-light" data-fancybox data-src="#contact">зв’язатся з нами</button>
+                        <button class="calculate__btn btn btn--transparent-light" data-fancybox data-src="#contact">зв’язатися з нами</button>
                         <a class="calculate__phone link-underline link-underline--white" href="tel:+30800330354">
                           0 800 330 354
                           <span class="calculate__phone-icon icon link-underline__icon link-underline__icon--white">
@@ -3268,10 +3268,90 @@
       @@include('html/blocks/addresses.html', {
         "page": "main" 
       })
-      @@include('html/blocks/steps.html', {
-        "page": "main",
-        "color": "light"
-      })
+      <section class="steps steps--light steps--main">
+        <div class="container">
+          <div class="steps__section">
+            <img src="./img/image-water-pthone.png" alt="">
+            <div class="steps__top steps-top">
+              <div class="steps-top__side">
+                <div class="steps__subtitle subtitle subtitle--black">ваш якісний сервіс</div>
+              </div>
+              <div class="steps-top__side">
+                <div class="steps__title steps__title--smile title title--black">
+                  <span>Ремонт вашого пристрою всього за <span>4 кроки</span></span>
+                </div>
+              </div>
+            </div>
+            <div class="steps__inner">
+              <div class="steps__item steps-item">
+                <div class="steps-item__inner">
+                  <div class="steps-item__icon">
+                    <div class="steps-item__icon-inner icon">
+                      <img src="img/step-item-1.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="steps-item__num">1 крок</div>
+                  <div class="steps-item__identic">
+                    <span class="steps-item__dot"></span>
+                    <span class="steps-item__line"></span>
+                  </div>
+                  <div class="steps-item__title">Відправка в ремонт</div>
+                  <div class="steps-item__text">
+                    <p class="steps-item__desc">Нова Пошта / Відвідування Сервісного Центру</p>
+                  </div>
+                </div>
+              </div>
+              <div class="steps__item steps-item">
+                <div class="steps-item__inner">
+                  <div class="steps-item__icon">
+                    <div class="steps-item__icon-inner icon">
+                      <img src="img/step-item-2.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="steps-item__num">2 крок</div>
+                  <div class="steps-item__identic">
+                    <span class="steps-item__dot"></span>
+                    <span class="steps-item__line"></span>
+                  </div>
+                  <div class="steps-item__title">Діагностика пристрою</div>
+                </div>
+              </div>
+              <div class="steps__item steps-item">
+                <div class="steps-item__inner">
+                  <div class="steps-item__icon">
+                    <div class="steps-item__icon-inner icon">
+                      <img src="img/step-item-3.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="steps-item__num">3 крок</div>
+                  <div class="steps-item__identic">
+                    <span class="steps-item__dot"></span>
+                    <span class="steps-item__line"></span>
+                  </div>
+                  <div class="steps-item__title">Погодження вартості та ремонт</div>
+                </div>
+              </div>
+              <div class="steps__item steps-item">
+                <div class="steps-item__inner">
+                  <div class="steps-item__icon">
+                    <div class="steps-item__icon-inner icon">
+                      <img src="img/step-item-4.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="steps-item__num">4 крок</div>
+                  <div class="steps-item__identic">
+                    <span class="steps-item__dot"></span>
+                  </div>
+                  <div class="steps-item__title">Отримання та пересилання</div>
+                </div>
+              </div>
+            </div>
+            <div class="steps__btn-wrapper">
+              <button class="steps__btn btn btn--dark" data-fancybox data-src="#contact">замовити послугу</button>
+            </div>
+          </div>
+        </div>
+      </section>
       @@include('html/blocks/marquee.html', {
         "page": "main",
       })

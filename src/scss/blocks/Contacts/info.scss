@@ -43,6 +43,9 @@
           }
         }
       }
+      .contacts-info-item__inner {
+        padding: 24px 30px 24px 16px;
+      }
       .contacts-info-content__item {
         & > .contacts-info-content__hidden-label {
           display: none;
@@ -55,6 +58,17 @@
         position: relative;
         img {
           filter: grayscale(0);
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 1px;
+          height: 100%;
+          background: $decColor;
+          opacity: 0;
+          transition: opacity .2s ease 0s;
         }
         .contacts-info-item__photo-logo {
           width: 48px;
@@ -76,6 +90,9 @@
       }
       &.active {
         .contacts-info-item__photo {
+          &::after {
+            opacity: 1;
+          }
           .contacts-info-item__photo-logo {
             width: 102px;
             height: 102px;
@@ -120,7 +137,7 @@
       .contacts-info-content__item {
         &:nth-child(1) {
           width: 333px;
-          min-height: calc(var(--height) - 24px);
+          min-height: var(--item-height);
         }
         &:nth-child(2) {
           width: calc(100% - 333px)
@@ -144,7 +161,7 @@
       background: $lightWhiteMainColor;
       border-radius: 20px;
       overflow: hidden;
-      padding: 24px 16px;
+      padding: 24px 40px 24px 16px;
       @media (min-width: 1025px) {
         &:hover {
           .contacts-info-item__photo {
@@ -186,10 +203,12 @@
   }
   &-content {
     display: flex;
+    align-items: flex-start;
     padding-left: 16px;
     width: calc(100% - 84px);
     height: 100%;
     transition: all .3s ease;
+    overflow: hidden;
     &__item {
       &:nth-child(1) {
         padding-right: 6px;
@@ -203,8 +222,8 @@
           left: 0;
           top: 0;
           width: 1px;
-          height: 100%;
-          background: $thirdColor;
+          height: 200%;
+          background: $decColor;
         }
       }
     }
