@@ -18,7 +18,7 @@
     }
     &__item {
       & + & {
-        margin-top: 24px;
+        margin-top: 10px;
       }
     }
     &__anchor {
@@ -27,7 +27,7 @@
       line-height: 150%;
       color: $secColor;
       position: relative;
-      padding-left: 20px;
+      padding: 7px 0 7px 20px;
       transition: color .2s ease;
       &::before {
         content: "";

@@ -9,6 +9,12 @@
     .seo-block-top {
       margin: 0 -15px 90px;
     }
+    .seo-block-head {
+      margin: 0 -15px 90px;
+    }
+    .seo-block-article {
+      margin-bottom: 155px;
+    }
   }
   &--other {
     background: $lightWhiteMainColor;
@@ -18,6 +24,12 @@
     }
     .seo-block-top {
       margin: 0 -15px 100px;
+    }
+    .seo-block-head {
+      margin: 0 -15px 100px;
+    }
+    .seo-block-article {
+      margin-bottom: 100px;
     }
   }
   &__more-wrapper {
@@ -70,7 +82,6 @@
   }
   &-head {
     display: flex;
-    margin: 0 -15px 90px;
     &__content,
     &__photo {
       width: 50%;
@@ -95,7 +106,6 @@
   }
   &-article {
     display: flex;
-    margin-bottom: 155px;
     &__photo,
     &__content {
       width: 50%;
@@ -118,6 +128,14 @@
         margin-top: 90px;
         border-radius: 20px;
         overflow: hidden;
+        &--laptop {
+          display: none;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
   }
@@ -126,7 +144,7 @@
     &__side {
       width: calc(370px + 51px);
       margin-right: 158px;
-      padding-left: 51px;
+      padding-left: 30px;
       position: relative;
       &-title {
         margin-bottom: 24px;
@@ -141,7 +159,7 @@
         text-transform: uppercase;
         color: $secColor;
         transform-origin: left center;
-        transform: rotate(90deg) translate(0%, -100%);
+        transform: rotate(90deg) translate(0%, -30%);
       }
       &-desc {
         font-size: 20px;

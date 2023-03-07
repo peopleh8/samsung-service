@@ -1,5 +1,5 @@
 .breadcrumbs {
-  padding-top: 122px;
+  margin-top: calc(122px + 24px);
   background: $lightWhiteMainColor;
   &__inner {
     display: flex;

@@ -18,12 +18,31 @@
     margin: 0 -15px;
     padding: 15px 0;
     @media (min-width: 1161px) {
-      &:hover .repair-item:not(:hover) {
-        .repair-item__title {
-          transform: translate(-55%, 150%) rotate(-90deg);
+      &--collapse {
+        &:hover .repair-item:not(:hover) {
+          .repair-item__title {
+            transform: translate(-55%, 150%) rotate(-90deg);
+          }
+          .repair-item__photo {
+            transform: translateX(35%);
+          }
         }
-        .repair-item__photo {
-          transform: translateX(35%);
+        .repair-item {
+          transition: flex-basis .4s ease;
+          &:hover {
+            flex-basis: 150%;
+            .repair-item__visible {
+              width: 40%;
+              transition-duration: .1s;
+            }
+            .repair-item__hidden {
+              opacity: 1;
+              visibility: visible;
+              pointer-events: auto;
+              transition-delay: .35s;
+              transition-duration: .2s;
+            }
+          }
         }
       }
     }
@@ -32,23 +51,6 @@
     flex-basis: calc(100% / 3);
     padding: 0 15px;
     will-change: flex-basis;
-    @media (min-width: 1161px) {
-      transition: flex-basis .4s ease;
-      &:hover {
-        flex-basis: 150%;
-        .repair-item__visible {
-          width: 40%;
-          transition-duration: .1s;
-        }
-        .repair-item__hidden {
-          opacity: 1;
-          visibility: visible;
-          pointer-events: auto;
-          transition-delay: .35s;
-          transition-duration: .2s;
-        }
-      }
-    }
     &__inner {
       height: 530px;
       border-radius: 20px;
@@ -68,6 +70,12 @@
       justify-content: flex-end;
       @media (min-width: 1161px) {
         transition: width .35s ease;
+        &:hover {
+          .repair-item__title-icon {
+            transform: translate(0, 3px);
+            opacity: 1;
+          }
+        }
       }
     }
     &__hidden {
@@ -86,6 +94,14 @@
         transition: all .1s ease;
       }
     }
+    &__link {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 11;
+    }
     &__title {
       font-weight: 500;
       font-size: 24px;
@@ -94,6 +110,19 @@
       left: 60px;
       top: 60px;
       z-index: 10;
+      display: flex;
+      align-items: center;
+      &-icon {
+        width: 17px;
+        height: 8px;
+        margin-left: 8px;
+        transform: translate(-5px, 3px);
+        opacity: 0;
+        transition: all .2s ease;
+        svg {
+          fill: $blackColor;
+        }
+      }
       @media (min-width: 1161px) {
         white-space: nowrap;
         will-change: transition;

@@ -15,7 +15,7 @@
   }
   &-content {
     max-width: 1124px;
-    margin: 0 auto 30px;
+    margin: 0 auto 0;
     &__title {
       text-align: center;
       margin-bottom: 30px;
@@ -84,15 +84,17 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    margin: -80px -40px -50px;
+    pointer-events: none;
     &__item {
       & + & {
         margin-left: 30px;
       }
       &:nth-child(1) {
-        width: 398px;
+        width: 423px;
       }
       &:nth-child(2) {
-        width: 501px;
+        width: 570px;
       }
       img {
         width: 100%;

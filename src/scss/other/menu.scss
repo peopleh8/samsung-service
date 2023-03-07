@@ -196,10 +196,8 @@
         padding: 5px 12px 4px 24px;
         border-left: 1px solid $blackColor;
         @media (min-width: 1161px) {
-          &:hover {
-            .submenu-slider-item__title {
-              background-size: 100% calc(100% - 0em);
-            }
+          &:hover span {
+            background-size: 100% calc(100% - 0em);
           }
         }
       }
@@ -215,14 +213,6 @@
         padding: 6px 0 0 25px;
         max-width: 157px;
         flex: 1;
-      }
-      &__title {
-        @media (min-width: 1161px) {
-          background-image: linear-gradient(transparent calc(100% - 1px),$blackColor 0,$blackColor);
-          background-repeat: no-repeat;
-          background-size: 0 calc(100% - 0em);
-          transition: .3s ease;
-        }
       }
     }
   }

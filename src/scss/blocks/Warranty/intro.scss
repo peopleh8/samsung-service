@@ -57,10 +57,29 @@
       width: 50%;
       height: 50%;
       padding: 15px;
+      position: relative;
+      @media (min-width: 1161px) {
+        &:hover {
+          z-index: 12;
+        }
+      }
       &-head {
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+      &-anchor {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        @media (min-width: 1161px) {
+          &:hover + * .warranty-intro-list__item-title span {
+            background-size: 100% calc(100% - 0em);
+          }
+        }
       }
       &-inner {
         height: 100%;
@@ -104,6 +123,23 @@
           border-left: 30px solid $whiteColor;
           border-top: 10px solid transparent;
           border-bottom: 10px solid transparent;
+        }
+      }
+      &-tooltip-panel {
+        &--horizontal {
+          display: flex;
+          .warranty-intro-tooltip__photos {
+            margin-bottom: 0;
+          }
+          .warranty-intro-tooltip__photo {
+            &:nth-child(1) {
+              width: 85px;
+            }
+          }
+          .warranty-intro-tooltip__article {
+            max-width: 216px;
+            padding-left: 16px;
+          }
         }
       }
       &-title {

@@ -96,13 +96,13 @@
           .contacts-info-item__photo-logo {
             width: 102px;
             height: 102px;
-            transform: translateX(calc(-50% - 10px));
+            transform: translateX(calc(-80% - 10px));
             transition-delay: 0s, 0s, 0s, 0s, .5s;
           }
         }
         .contacts-info-item__photo-text {
           opacity: 1;
-          transform: translate(10px, -50%);
+          transform: translate(calc(-10% - 10px), -50%);
           transition-delay: 0s, 0s, 0s, .5s, .5s;
         }
       }

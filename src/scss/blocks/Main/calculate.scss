@@ -343,7 +343,7 @@
       border: 1px solid $thirdColor;
       border-radius: 20px;
       &__slide {
-        padding: 40px 10px;
+        padding: 40px;
         &.swiper-slide-active {
           position: relative;
           z-index: 1;
@@ -362,15 +362,14 @@
       &__inner {
         display: flex;
         justify-content: space-around;
-        width: 100%;
+        padding-right: 80px;
       }
       &__photo-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: translateY(-10%);
-        width: 200px;
         padding: 0 10px;
+        transform: translateY(-10%);
       }
       &__content {
         width: 460px;

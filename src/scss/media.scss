@@ -408,7 +408,7 @@
     }
   }
   .breadcrumbs {
-    padding-top: 114px;
+    margin-top: calc(114px + 16px);
   }
   .logo {
     &--footer {
@@ -611,6 +611,17 @@
     &-pagination {
       bottom: 24px !important;
     }
+    &-photos {
+      margin: -20px -10px 0;
+      &__item {
+        &:nth-child(1) {
+          width: 390px;
+        }
+        &:nth-child(2) {
+          width: 440px;
+        }
+      }
+    }
   }
   .main-trust {
     &-top {
@@ -660,7 +671,7 @@
         margin: 0 0 40px;
       }
       &-main__slide {
-        padding: 40px 60px 137px 52px;
+        padding: 40px 30px 137px 30px;
         position: relative;
       }
       &__main-wrapper {
@@ -668,6 +679,9 @@
       }
       &-main__list-inner {
         padding-bottom: 12px;
+      }
+      &-main__inner {
+        padding-right: 0;
       }
       &-main__list-title,
       &-main__list-price {
@@ -686,8 +700,7 @@
         width: 30%;
       }
       &-main__photo-wrapper {
-        padding-top: 0;
-        margin-right: 52px;
+        padding: 0 30px 0 10px;
         display: flex;
         align-items: center;
       }
@@ -959,18 +972,62 @@
     }
   }
   .steps {
-    &--main {
+    &--main,
+    &--repair {
       .steps__section {
         & > img {
           top: 88px;
         }
       }
     }
-    &--fluid {
+    &--phone {
       & > img {
         top: 140px;
-        right: 108px;
+        left: 108px;
         width: 20%;
+      }
+    }
+    &--household {
+      & > img {
+        top: 24px;
+        left: 96px;
+        width: 15%;
+      }
+    }
+    &--tablet {
+      & > img {
+        top: 68px;
+        left: 95px;
+        width: 24%;
+      }
+    }
+    &--whatch {
+      & > img {
+        top: 76px;
+        left: 162px;
+        width: 16%;
+      }
+    }
+    &--tv {
+      & > img {
+        left: 87px;
+        width: 25%;
+      }
+    }
+    &--monitor {
+      & > img {
+        top: 72px;
+        left: 110px;
+      }
+    }
+    &--fluid {
+      .steps__section {
+        padding: 120px 0 90px;
+      }
+    }
+    &--dark {
+      .steps-item__desc--small {
+        color: $secColor;
       }
     }
     &--warranty {
@@ -982,6 +1039,14 @@
       }
       .steps__title {
         max-width: 100%;
+      }
+    }
+    &--nonwarranty {
+      .steps__section {
+        padding: 120px 0 60px;
+        & > img {
+          top: 66px;
+        }
       }
     }
     &__section {
@@ -1012,7 +1077,7 @@
       }
     }
     &__warn {
-      margin-top: 38px;
+      margin-top: 36px;
     }
     &-item {
       &__title {
@@ -1021,7 +1086,7 @@
         max-width: 170px;
       }
       &__text {
-        max-width: 170px;
+        max-width: 240px;
         margin: 8px auto 0;
         display: flex;
         flex-direction: column;
@@ -1030,16 +1095,13 @@
         line-height: 150%;
       }
       &__desc {
+        max-width: 160px;
         & + & {
           margin-top: 16px;
         }
-        &:first-child {
-          max-width: 170px;
-        }
-        &:last-child {
-          color: $secColor;
+        &--small {
           font-size: 12px;
-          line-height: 150%;
+          max-width: 240px;
         }
       }
     }
@@ -1083,6 +1145,12 @@
       .seo-block-top {
         margin: 0 -12px 40px;
       }
+      .seo-block-head {
+        margin: 0 -12px 90px;
+      }
+      .seo-block-article {
+        margin-bottom: 0;
+      }
     }
     &--other {
       .seo-block-article__photo {
@@ -1091,6 +1159,12 @@
       .seo-block-top {
         margin: 0 -12px 40px;
       }
+      .seo-block-head {
+        margin: 0 -12px 90px;
+      }
+      .seo-block-article {
+        margin-bottom: 90px;
+      }
     }
     &-top {
       &__side {
@@ -1098,7 +1172,6 @@
       }
     }
     &-head {
-      margin: 0 -12px 90px;
       &__content {
         padding: 0 12px;
       }
@@ -1128,9 +1201,15 @@
       }
     }
     &-article {
-      margin-bottom: 60px;
       &__content-photo {
-        display: none;
+        aspect-ratio: 2 / 1;
+        margin: 60px 0 90px;
+        &--desktop {
+          display: none;
+        }
+        &--laptop {
+          display: block;
+        }
       }
     }
     &-bot {
@@ -1265,7 +1344,7 @@
       &__anchor {
         font-size: 16px;
         line-height: 150%;
-        padding-left: 16px;
+        padding: 6px 0 6px 16px;
       }
     }
     &-content {
@@ -1277,7 +1356,7 @@
       }
       &__item {
         & + & {
-          margin-top: 16px;
+          margin-top: 4px;
         }
         &-title {
           font-size: 16px;
@@ -2854,7 +2933,7 @@
         margin-top: 40px;
       }
       &-main__slide {
-        padding: 40px 68px 137px 60px;
+        padding: 40px 30px 137px 30px;
       }
       &-main__btns {
         bottom: 48px;
@@ -2930,7 +3009,7 @@
     }
   }
   .breadcrumbs {
-    padding-top: 71px;
+    margin-top: calc(71px + 16px);
   }
   .intro {
     padding-top: 24px;
@@ -3116,7 +3195,8 @@
     }
   }
   .steps {
-    &--main {
+    &--main,
+    &--repair {
       padding: 130px 0;
       .steps__section {
         & > img {
@@ -3125,16 +3205,66 @@
         }
       }
     }
-    &--fluid {
+    &--phone {
       & > img {
         top: 170px;
         left: 30px;
+      }
+    }
+    &--household {
+      & > img {
+        top: 111px;
+        left: 35px;
+        width: 17%;
+      }
+    }
+    &--tablet {
+      & > img {
+        top: 181px;
+        left: 28px;
+        width: 20%;
+      }
+    }
+    &--whatch {
+      & > img {
+        left: 37px;
+        top: 154px;
+      }
+    }
+    &--tv {
+      & > img {
+        top: 166px;
+        left: 39px;
+        width: 22%;
+      }
+    }
+    &--monitor {
+      & > img {
+        top: 153px;
+        left: 31px;
+        width: 19%;
+      }
+    }
+    &--fluid {
+      .steps__section {
+        padding: 110px 0;
+      }
+    }
+    &--dark {
+      .steps-item__desc--small {
+        color: $thirdColor;
       }
     }
     &--nonwarranty {
       padding-top: 130px;
       .steps__btn-wrapper {
         margin-top: 8px;
+      }
+      .steps__section {
+        padding: 110px 0 60px;
+        & > img {
+          top: 176px;
+        }
       }
     }
     &--warranty {
@@ -3185,8 +3315,7 @@
         & + & {
           margin-top: 24px;
         }
-        &:last-child {
-          color: $thirdColor;
+        &--small {
           font-size: 14px;
         }
       }
@@ -3715,7 +3844,7 @@
         padding: 8px;
         &:nth-child(odd) {
           .warranty-intro-list__item-tooltip-panel {
-            left: -30px;
+            left: 30px;
           }
         }
         &:nth-child(even) {
@@ -3816,6 +3945,12 @@
       .seo-block-top {
         margin: 0 -8px 36px;
       }
+      .seo-block-head {
+        margin: 0 0 60px;
+      }
+      .seo-block-article {
+        margin-bottom: 130px;
+      }
     }
     &--other {
       .seo-block-head__photo {
@@ -3823,6 +3958,12 @@
       }
       .seo-block-top {
         margin: 0 -8px 36px;
+      }
+      .seo-block-head {
+        margin: 0 0 60px;
+      }
+      .seo-block-article {
+        margin-bottom: 130px;
       }
     }
     &-top {
@@ -3838,7 +3979,6 @@
       transform: translateY(80%);
     }
     &-head {
-      margin: 0 0 60px;
       flex-wrap: wrap;
       &__content {
         width: 100%;
@@ -3870,6 +4010,11 @@
       &__content {
         width: 100%;
         margin-bottom: 36px;
+        &-photo {
+          &--laptop {
+            display: none;
+          }
+        }
       }
     }
     &-bot {
@@ -4347,11 +4492,24 @@
         padding: 0 36px;
       }
     }
-    &--main {
+    &--main,
+    &--repair {
       padding: 110px 0;
       .steps__section {
         & > img {
           width: 238px;
+        }
+      }
+    }
+    &--phone,
+    &--household,
+    &--tablet,
+    &--whatch,
+    &--tv,
+    &--monitor {
+      .steps__section {
+        & > img {
+          width: 180px;
         }
       }
     }
@@ -4360,17 +4518,26 @@
       .steps__btn-wrapper {
         margin-top: 60px;
       }
+      .steps__section {
+        padding: 90px 0 70px;
+        & > img {
+          width: 180px;
+        }
+      }
     }
     &--warranty {
       .steps__section {
         padding: 90px 0 38px;
         & > img {
-          width: 60%;
+          width: 238px;
           transform: rotateY(0);
         }
       }
       .steps__title {
         padding: 0 24px;
+        span span::after {
+          left: 0;
+        }
       }
       .steps__inner {
         padding: 0 24px 0 16px;
@@ -4383,6 +4550,7 @@
         display: none;
       }
       .steps__section {
+        padding: 90px 0;
         & > img {
           display: block;
           transform: translateX(20px);
@@ -4503,8 +4671,12 @@
         text-align: left;
       }
       &__desc {
-        &:first-child {
-          max-width: 100%;
+        max-width: 100%;
+        & + & {
+          margin-top: 8px;
+        }
+        &--small {
+          font-size: 12px;
         }
       }
       &__text {
@@ -4987,6 +5159,24 @@
         }
         &-tooltip-section {
           display: none;
+        }
+        &-flex {
+          &--horizontal {
+            display: flex;
+            align-items: flex-start;
+            padding-top: 24px;
+            .warranty-intro-list__item-photos {
+              margin: 0;
+            }
+            .warranty-intro-list__item-photo {
+              &:nth-child(1) {
+                width: 67px;
+              }
+            }
+            .warranty-intro-list__item-article {
+              padding-left: 17px;
+            }
+          }
         }
         &-photos {
           display: flex;
@@ -5581,7 +5771,7 @@
     padding-top: 110px;
   }
   .breadcrumbs {
-    padding-top: 58px;
+    margin-top: calc(58px + 12px);
   }
   .logo {
     &__link {
@@ -5690,7 +5880,7 @@
     }
     &-content {
       padding: 0 24px 0 13px;
-      margin: 0 0 40px 0;
+      margin: 0 0 70px 0;
     }
     &-photos {
       &__item {
@@ -5822,6 +6012,7 @@
       margin-bottom: 60px;
     }
     &-model-main__photo-wrapper {
+      padding: 0;
       margin-right: 0;
       margin-bottom: 60px;
     }

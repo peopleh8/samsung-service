@@ -3,11 +3,9 @@ import Flip from 'gsap/Flip.js'
 
 gsap.registerPlugin(Flip)
 
-const repairItems = document.querySelectorAll('.repair-item__visible')
+const repairItems = document.querySelectorAll('.repair-cards-mob.repair-cards-mob--collapse .repair-item__visible')
 
 repairItems.forEach((item, index) => {
-  if (innerWidth > 1160) return
-
   item.addEventListener('click', () => {
     const state = Flip.getState('.repair-item')
 

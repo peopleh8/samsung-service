@@ -7,6 +7,7 @@ import { setAddressAccrordion, setAddressSubAccordion, toggleNpInfo, toggleAddre
 import { setAccordion } from './modules/accordion.js'
 import { setTabs } from './modules/tabs.js'
 import { menuHover } from './modules/menuHover.js'
+import { changeActiveScrollItem } from './modules/changeActiveScrollItem.js'
 import { scrollToAnchor } from './modules/scrollToAnchor.js'
 import { searchOpen, btnsClose, clickSeachOutside } from './modules/searchControlls.js'
 import { openIntroSearch } from './modules/searchIntroControls.js'

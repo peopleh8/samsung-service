@@ -38,7 +38,7 @@ intfoItems.forEach((item, index) => {
     const secItem = parent.querySelector('.contacts-info-content__item:nth-child(2)')
 
 
-    secItem && secItem.offsetHeight >= firstItem.offsetHeight && firstItem.style.setProperty('--item-height', `${secItem.offsetHeight + 30}px`)
+    secItem && secItem.offsetHeight >= firstItem.offsetHeight && firstItem.style.setProperty('--item-height', `${secItem.offsetHeight + 40}px`)
 
     setTimeout(() => {
       parent.classList.toggle('visible')

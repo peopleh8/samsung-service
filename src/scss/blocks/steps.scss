@@ -1,5 +1,8 @@
 .steps {
-  &--main {
+  position: relative;
+  z-index: 2;
+  &--main,
+  &--repair {
     padding-top: 150px;
     .steps__section {
       & > img {
@@ -7,6 +10,48 @@
         left: 0;
         width: 32%;
       }
+    }
+  }
+  &--phone {
+    & > img {
+      top: 80px;
+      left: 86px;
+      width: 22%;
+    }
+  }
+  &--household {
+    & > img {
+      top: 20px;
+      left: 142px;
+      width: 14%;
+    }
+  }
+  &--tablet {
+    & > img {
+      top: 63px;
+      left: 151px;
+      width: 18%;
+    }
+  }
+  &--whatch {
+    & > img {
+      top: 67px;
+      left: 135px;
+      width: 15%;
+    }
+  }
+  &--tv {
+    & > img {
+      top: 65px;
+      left: 155px;
+      width: 23%;
+    }
+  }
+  &--monitor {
+    & > img {
+      top: 56px;
+      left: 257px;
+      width: 14%;
     }
   }
   &--warranty {
@@ -17,6 +62,12 @@
     }
     .steps__section {
       padding: 150px 0 100px;
+      & > img {
+        right: 0;
+        top: 68px;
+        transform: rotateY(180deg);
+        width: 24%;
+      }
     }
     .steps__inner {
       padding: 0;
@@ -24,6 +75,16 @@
   }
   &--nonwarranty {
     padding-top: 150px;
+    .steps__section {
+      padding: 150px 0 90px;
+      & > img {
+        top: 80px;
+        width: 21%;
+      }
+    }
+    .steps__btn-wrapper {
+      margin-top: -23px;
+    }
   }
   &--light {
     .steps__section {
@@ -90,6 +151,7 @@
     .steps__section {
       background: transparent;
       position: initial !important;
+      padding: 150px 0 162px;
       & > img {
         display: none;
       }
@@ -131,6 +193,12 @@
         }
       }
     }
+  }
+  & > img {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
   }
   &__section {
     border-radius: 20px;
@@ -240,6 +308,9 @@
       & + & {
         margin-top: 13px;
       }
+      &--small {
+        font-size: 14px;
+      }
     }
   }
   &__btn-wrapper {
@@ -263,6 +334,8 @@
     }
     &__text {
       width: fit-content;
+      font-size: 14px;
+      list-height: 150%;
     }
   }
 }
