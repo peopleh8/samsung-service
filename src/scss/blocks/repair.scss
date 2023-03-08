@@ -133,7 +133,7 @@
       position: absolute;
       width: 390px;
       @media (min-width: 1161px) {
-        transition: left .3s ease 0s, transform .2s ease 0s;
+        transition: left .3s ease 0s, transform .2s ease 0s, width .2s ease;
       }
       img {
         width: 100%;

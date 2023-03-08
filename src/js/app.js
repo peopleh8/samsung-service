@@ -29,8 +29,6 @@ import * as contactCards from './modules/contactCards.js'
 import * as repairCards from './modules/repairCards.js'
 import * as animations from './modules/animations.js'
 
-flsFunctions.isWebp()
-
 window.addEventListener('resize', () => {
   flsFunctions.calculateMobileHeight()
 })

@@ -50,7 +50,7 @@ export const trustSlider = new Swiper('.main-trust-slider', {
     },
     768: {
       slidesPerView: 4,
-      spaceBetween: 24,
+      spaceBetween: 16,
     },
     645: {
       slidesPerView: 2,

@@ -47,14 +47,14 @@
       border-radius: 20px;
       padding: 7px 25px;
       &--dark {
-        @media (min-width: 1025px) {
+        @media (min-width: 1161px) {
           transition: all .2s ease;
           &:hover {
             color: $blackColor;
             border-color: $blackColor;
           }
         }
-        @media (max-width: 1024px) {
+        @media (max-width: 1160px) {
           transition: all .1s ease;
           &:active {
             color: $blackColor;
@@ -63,14 +63,14 @@
         }
       }
       &--light {
-        @media (min-width: 1025px) {
+        @media (min-width: 1161px) {
           transition: all .2s ease;
           &:hover {
             color: $whiteColor;
             border-color: $whiteColor;
           }
         }
-        @media (max-width: 1024px) {
+        @media (max-width: 1160px) {
           transition: all .1s ease;
           &:active {
             color: $whiteColor;

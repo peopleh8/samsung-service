@@ -319,6 +319,9 @@
         transition: opacity .2s ease;
         &.active {
           opacity: 1;
+          .calculate-model-nav__title {
+            font-weight: 600;
+          }
         }
         @media (min-width: 1025px) {
           &:hover {
@@ -334,6 +337,7 @@
         color: $whiteColor;
         padding-bottom: 7px;
         border-bottom: 2px solid $whiteColor;
+        transition: all .2s ease;
       }
     }
     &__main-wrapper {

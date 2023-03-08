@@ -10,13 +10,15 @@ export const openIntroSearch = () => {
       let overlay = form.querySelector('.overlay--search'),
           inpWrapper = form.querySelector('.search__inp-wrapper'),
           dropdown = form.querySelector('.search-dropdown'),
-          closeIcons = form.querySelector('.search__times')
+          closeIcons = form.querySelector('.search__times'),
+          popularItemsContainer = form.querySelector('.modal-search-section__items')
 
       overlay && header.classList.add('search-open')
       overlay && overlay.classList.add('visible')
       inpWrapper.classList.add('search-open')
       dropdown.classList.add('open')
       closeIcons && closeIcons.classList.add('visible')
+      popularItemsContainer && popularItemsContainer.classList.add('hidden')
     })
   })
 }

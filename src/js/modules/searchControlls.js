@@ -37,6 +37,7 @@ export const clickSeachOutside = () => {
       btnsClose.forEach(btn => btn.classList.remove('visible'))
       btnsOpen.forEach(btn => btn.classList.remove('hide'))
       searchPanels.forEach(panel => panel.classList.remove('open'))
+      document.querySelector('.modal-search-section__items').classList.remove('hidden')
     }
   })
 }

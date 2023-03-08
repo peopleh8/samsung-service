@@ -319,6 +319,7 @@
       align-items: center;
       & + & {
         margin-top: 4px;
+        transform: translateX(7px);
       }
       &:first-child {
         color: $blackColor;

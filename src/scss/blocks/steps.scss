@@ -6,52 +6,10 @@
     padding-top: 150px;
     .steps__section {
       & > img {
-        top: 34px;
+        top: 30px;
         left: 0;
-        width: 32%;
+        width: 30%;
       }
-    }
-  }
-  &--phone {
-    & > img {
-      top: 80px;
-      left: 86px;
-      width: 22%;
-    }
-  }
-  &--household {
-    & > img {
-      top: 20px;
-      left: 142px;
-      width: 14%;
-    }
-  }
-  &--tablet {
-    & > img {
-      top: 63px;
-      left: 151px;
-      width: 18%;
-    }
-  }
-  &--whatch {
-    & > img {
-      top: 67px;
-      left: 135px;
-      width: 15%;
-    }
-  }
-  &--tv {
-    & > img {
-      top: 65px;
-      left: 155px;
-      width: 23%;
-    }
-  }
-  &--monitor {
-    & > img {
-      top: 56px;
-      left: 257px;
-      width: 14%;
     }
   }
   &--warranty {
@@ -64,6 +22,7 @@
       padding: 150px 0 100px;
       & > img {
         right: 0;
+        left: auto;
         top: 68px;
         transform: rotateY(180deg);
         width: 24%;
@@ -77,10 +36,6 @@
     padding-top: 150px;
     .steps__section {
       padding: 150px 0 90px;
-      & > img {
-        top: 80px;
-        width: 21%;
-      }
     }
     .steps__btn-wrapper {
       margin-top: -23px;
@@ -164,6 +119,8 @@
     }
   }
   &__title {
+    font-size: 54px;
+    line-height: 70px;
     &--smile {
       & > span {
         &::after {
@@ -199,6 +156,9 @@
     z-index: -1;
     pointer-events: none;
     user-select: none;
+    top: 80px;
+    left: 86px;
+    width: 22%;
   }
   &__section {
     border-radius: 20px;
@@ -210,6 +170,9 @@
       z-index: -1;
       pointer-events: none;
       user-select: none;
+      top: 80px;
+      left: 86px;
+      width: 22%;
     }
   }
   &-top {
