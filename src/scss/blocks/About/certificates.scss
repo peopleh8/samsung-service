@@ -2,7 +2,6 @@
   padding-top: 150px;
   &-top {
     max-width: 810px;
-    margin-bottom: 80px;
   }
   &__title {
     margin-bottom: 24px;
@@ -13,19 +12,21 @@
   }
   &-slider  {
     &__slide {
+      height: auto;
       &.swiper-slide-active {
         .about-certificates-slider__photo {
-          transform: scaleY(1);
           img {
-            transform: scaleY(1);
+            transform: scale(.8);
           }
         }
       } 
     }
     &__inner {
-      display: block;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: relative;
-      transition: height .3s ease;
     }
     &__icon {
       pointer-events: none;
@@ -50,17 +51,16 @@
       }
     }
     &__photo {
-      display: block;
-      transform: scaleY(.5);
       overflow: hidden;
-      transition: all .5s ease;
-      padding: 0 65px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transform: scaleY(1.5);
-        transition: transform .5s ease;
+        transform: scale(.7);
+        transition: all .5s ease;
       }
     }
   }

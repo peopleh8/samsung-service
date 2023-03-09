@@ -18,6 +18,13 @@
     display: none;
     content-visibility: hidden;
   }
+  &-arrordion {
+    &__head {
+      &-content {
+        flex: 1;
+      }
+    }
+  }
   &-list {
     display: flex;
     flex-wrap: wrap;
@@ -494,7 +501,7 @@
             top: 0;
             width: 1px;
             height: 100%;
-            background: $thirdColor;
+            background: $decColor;
           }
           &-title {
             font-weight: 500;

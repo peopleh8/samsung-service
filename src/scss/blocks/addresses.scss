@@ -77,6 +77,9 @@
       padding-top: 25px;
       border-top: 1px solid $blackColor;
     }
+    &__content {
+      flex: 1;
+    }
     &__photo-wrapper {
       display: flex;
       justify-content: flex-end;
@@ -670,6 +673,6 @@
   }
   &__subtext {
     display: block;
-    color: $thirdColor;
+    color: $secColor;
   }
 }

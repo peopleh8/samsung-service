@@ -110,6 +110,14 @@
               &:not(:last-child) {
                 margin-bottom: 24px;
               }
+              & > span {
+                display: block;
+                font-size: 20px;
+                line-height: 150%;
+                color: $secColor;
+                margin-top: 8px;
+                padding-left: calc(40px + 24px);
+              }
               & > p {
                 display: flex;
                 font-size: 20px;

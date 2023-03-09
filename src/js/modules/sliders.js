@@ -64,21 +64,21 @@ export const trustSlider = new Swiper('.main-trust-slider', {
 })
 
 export const certificatesSlider = new Swiper('.about-certificates-slider', {
-  loop: true,
   slidesPerView: 3,
   speed: 500,
   spaceBetween: 30,
   centeredSlides: true,
+  initialSlide: 1,
   breakpoints: {
     1441: {
       spaceBetween: 30,
     },
     992: {
-      spaceBetween: 116,
+      spaceBetween: 30,
       slidesPerView: 3,
     },
     596: {
-      spaceBetween: 40,
+      spaceBetween: 0,
       slidesPerView: 3,
     },
     0: {
