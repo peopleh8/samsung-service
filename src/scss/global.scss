@@ -501,7 +501,7 @@ body {
     font-weight: 500;
     font-size: 24px;
     line-height: 150%;
-    transform: translateY(1px);
+    margin-top: 1px;
     width: calc(100% - 38px);
   }
   &__body {
@@ -795,13 +795,13 @@ body {
   &__inp {
     font-size: 20px;
     line-height: 26px;
-    font-style: italic;
     padding: 12px 35px 11px 24px;
     width: 100%;
     position: relative;
     z-index: 101;
     &::placeholder {
       color: $thirdColor;
+      font-style: italic;
     }
   }
   &__btn {

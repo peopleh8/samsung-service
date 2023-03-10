@@ -2648,7 +2648,7 @@ body {
   font-weight: 500;
   font-size: 24px;
   line-height: 150%;
-  transform: translateY(1px);
+  margin-top: 1px;
   width: calc(100% - 38px);
 }
 .accordion__body {
@@ -2924,7 +2924,6 @@ body {
 .search__inp {
   font-size: 20px;
   line-height: 26px;
-  font-style: italic;
   padding: 12px 35px 11px 24px;
   width: 100%;
   position: relative;
@@ -2932,6 +2931,7 @@ body {
 }
 .search__inp::placeholder {
   color: #999;
+  font-style: italic;
 }
 .search__btn {
   width: 20px;
@@ -7514,6 +7514,9 @@ iframe ~ * {
   z-index: unset;
 }
 .main-intro-slider .swiper-wrapper {
+  overflow: hidden;
+}
+.main-intro-slider .swiper-wrapper {
   z-index: unset;
   position: absolute;
   left: 0;
@@ -10756,7 +10759,6 @@ iframe ~ * {
 @media (max-width: 1440px) {
   .accordion__title {
     font-size: 20px;
-    transform: translateY(6px);
   }
 }
 @media (max-width: 1440px) {
@@ -10830,16 +10832,14 @@ iframe ~ * {
   }
   .seo-block-head__photo {
     padding: 0 12px;
+    flex-wrap: wrap;
   }
   .seo-block-head__photo-item {
     width: 100%;
     aspect-ratio: 2/1;
   }
-  .seo-block-head__photo-item:last-child {
-    display: none;
-  }
   .seo-block-head__photo-item + .seo-block-head__photo-item {
-    margin-left: 0;
+    margin: 10px 0 0 0;
   }
   .seo-block-desc__item + .seo-block-desc__item {
     margin-left: 24px;
@@ -11284,11 +11284,33 @@ iframe ~ * {
     line-height: 120%;
   }
 
+  .main-faq {
+    padding-top: 130px;
+  }
   .main-faq__inner {
     padding: 0 65px;
   }
+  .main-faq__title {
+    margin-bottom: 24px;
+  }
+  .main-faq__subtitle {
+    display: none;
+  }
+  .main-faq__inner {
+    flex-wrap: wrap;
+  }
+  .main-faq-photo {
+    width: 100%;
+    margin-bottom: 39px;
+    padding-left: 0;
+  }
   .main-faq-photo__inner {
+    width: 100%;
     aspect-ratio: 3/2;
+  }
+  .main-faq-accordion {
+    width: 100%;
+    padding-left: 0;
   }
 
   .contacts-info {
@@ -11400,6 +11422,11 @@ iframe ~ * {
   }
   .contacts-info-arrordion__head-arrow svg {
     stroke: #999;
+  }
+  .contacts-info-arrordion__head-address span {
+    display: block;
+    font-size: 12px;
+    line-height: 150%;
   }
   .contacts-info-arrordion__body {
     display: none;
@@ -11692,8 +11719,13 @@ iframe ~ * {
     margin: -12px -25px;
   }
   .contacts-info-subarrordion__body-info-item {
-    width: 50%;
     padding: 12px 25px;
+  }
+  .contacts-info-subarrordion__body-info-item:nth-child(odd) {
+    width: 45%;
+  }
+  .contacts-info-subarrordion__body-info-item:nth-child(even) {
+    width: 55%;
   }
   .contacts-info-subarrordion__body-info-title {
     font-weight: 500;
@@ -12527,9 +12559,14 @@ iframe ~ * {
     margin: -18px -21px;
   }
   .footer-navs__nav {
-    width: 50%;
     max-width: 100%;
     padding: 18px 21px;
+  }
+  .footer-navs__nav:nth-child(odd) {
+    width: 46%;
+  }
+  .footer-navs__nav:nth-child(even) {
+    width: 54%;
   }
 }
 @media (max-width: 1160px) {
@@ -12567,6 +12604,10 @@ iframe ~ * {
   }
   .main-trust-item__title {
     margin-bottom: 8px;
+  }
+  .main-trust-item__desc {
+    font-size: 14px;
+    line-height: 150%;
   }
 }
 @media (max-width: 1160px) {
@@ -12908,6 +12949,9 @@ iframe ~ * {
   .steps--nonwarranty .steps__section {
     padding: 110px 0 60px;
   }
+  .steps--warranty {
+    padding-top: 130px;
+  }
   .steps--warranty .steps__section {
     padding: 140px 0 80px;
   }
@@ -13150,6 +13194,9 @@ iframe ~ * {
   }
   .find-main__list {
     margin-top: 36px;
+  }
+  .find-main__list-content {
+    max-width: 430px;
   }
 }
 @media (max-width: 1160px) {
@@ -13530,31 +13577,6 @@ iframe ~ * {
     max-width: 100%;
   }
 
-  .main-faq {
-    padding-top: 130px;
-  }
-  .main-faq__title {
-    margin-bottom: 24px;
-  }
-  .main-faq__subtitle {
-    display: none;
-  }
-  .main-faq__inner {
-    flex-wrap: wrap;
-  }
-  .main-faq-photo {
-    width: 100%;
-    margin-bottom: 39px;
-    padding-left: 0;
-  }
-  .main-faq-photo__inner {
-    width: 100%;
-  }
-  .main-faq-accordion {
-    width: 100%;
-    padding-left: 0;
-  }
-
   .seo-block {
     padding: 110px 0 130px;
     margin-top: 130px;
@@ -13628,8 +13650,8 @@ iframe ~ * {
     width: 100%;
     margin-bottom: 36px;
   }
-  .seo-block-article__content-photo--laptop {
-    display: none;
+  .seo-block-article__content-photo {
+    margin-top: 0;
   }
   .seo-block-bot {
     flex-wrap: wrap;
@@ -13725,6 +13747,9 @@ iframe ~ * {
     font-size: 14px;
     transition: margin-left 0.2s ease;
   }
+  .contacts-info-arrordion__head-address span {
+    font-size: 14px;
+  }
   .contacts-info-arrordion__body-wrapper {
     padding: 16px 20px 0 20px;
   }
@@ -13780,7 +13805,7 @@ iframe ~ * {
     margin: 0;
   }
   .contacts-info-subarrordion__body-info-item {
-    width: 100%;
+    width: 100% !important;
     padding: 0;
   }
   .contacts-info-subarrordion__body-info-item + .contacts-info-subarrordion__body-info-item {
@@ -13977,9 +14002,11 @@ iframe ~ * {
     justify-content: center;
   }
   .footer-navs__nav {
-    width: 100%;
     padding: 0;
     border-bottom: 1px solid #333333;
+  }
+  .footer-navs__nav:nth-child(odd), .footer-navs__nav:nth-child(even) {
+    width: 100%;
   }
   .footer-navs__nav.active .footer-navs__title-icon {
     transform: rotate(-180deg);
@@ -14274,6 +14301,9 @@ iframe ~ * {
   .steps-warn {
     order: 5;
     margin-top: 36px;
+  }
+  .steps-warn__text {
+    font-size: 12px;
   }
 
   .services {
@@ -15002,6 +15032,9 @@ iframe ~ * {
   .search-dropdown__item + .search-dropdown__item {
     margin-top: 10px;
   }
+  .search-dropdown__name {
+    font-size: 14px;
+  }
   .search-dropdown__name-inner {
     font-size: 14px;
     line-height: 150%;
@@ -15487,14 +15520,13 @@ iframe ~ * {
     margin-bottom: 36px;
   }
   .main-trust-top__side {
-    width: 100%;
+    width: 100% !important;
   }
   .main-trust-top__side:first-child {
     text-align: left;
     margin: 0 0 16px;
   }
   .main-trust__title {
-    max-width: 100%;
     margin-bottom: 16px;
   }
   .main-trust__desc {
@@ -15508,7 +15540,11 @@ iframe ~ * {
   .main-trust-item__preview {
     margin-bottom: 8px;
   }
+  .main-trust-item__title {
+    max-width: 240px;
+  }
   .main-trust-item__desc {
+    max-width: 240px;
     font-size: 14px;
     line-height: 150%;
   }
@@ -15516,6 +15552,9 @@ iframe ~ * {
   .calculate {
     padding: 80px 0 90px;
     border-radius: 40px 40px 0 0;
+  }
+  .calculate-model__text {
+    font-size: 12px;
   }
   .calculate__btns {
     margin-top: 36px;
@@ -15868,7 +15907,6 @@ iframe ~ * {
 
   .accordion__title {
     font-size: 16px;
-    transform: translateY(7px);
   }
   .accordion__text {
     font-size: 16px;
@@ -16131,6 +16169,7 @@ iframe ~ * {
   }
   .find-main__list-content {
     margin-right: 16px;
+    max-width: 180px;
   }
   .find-main__list-desc {
     font-size: 14px;

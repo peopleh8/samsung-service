@@ -1,4 +1,4 @@
-import { slideToggle, slideUp } from './functions.js'
+import { slideToggle, slideUp, anchorScroll } from './functions.js'
 
 import { locations, renderContent } from './map/initMap.js'
 
@@ -104,7 +104,11 @@ export const setAddressSubAccordion = () => {
 }
 
 export const toggleNpInfo = () => {
-  npBtn.addEventListener('click', e => {
+  npBtn.addEventListener('click', () => {
+    if (innerWidth <= 1160 && !mapSection.classList.contains('open')) {
+      anchorScroll(window, '#address', 1)
+    }
+
     let npSectionHeight = npSection.clientHeight,
         npSectionSpace = parseInt(window.getComputedStyle(npSection, null).getPropertyValue('margin-top'))
     
