@@ -52,6 +52,12 @@
         padding-bottom: 17px;
         height: 100%;
         position: relative;
+        @media (min-width: 1161px) {
+          &:hover::after {
+            width: 70%;
+            opacity: 1;
+          }
+        }
         &--moc {
           .find-nav__slide-photo {
             width: 23px;
@@ -162,6 +168,9 @@
         font-weight: 500;
         font-size: 20px;
         white-space: nowrap;
+        &--free {
+          color: #21B17D;
+        }
       }
     }
   }

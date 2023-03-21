@@ -67,7 +67,6 @@ export const certificatesSlider = new Swiper('.about-certificates-slider', {
   slidesPerView: 3,
   speed: 500,
   spaceBetween: 30,
-  centeredSlides: true,
   initialSlide: 1,
   breakpoints: {
     1441: {

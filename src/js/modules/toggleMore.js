@@ -12,9 +12,9 @@ export const toggleMore = () => {
       btn.classList.add('fade')
 
       if (container.classList.contains('expand')) {
-        setTimeout(() => btn.textContent = 'read less', 200)
+        setTimeout(() => btn.textContent = 'читати менше', 200)
       } else {
-        setTimeout(() => btn.textContent = 'read more', 200)
+        setTimeout(() => btn.textContent = 'читати далі', 200)
       }
       
       setTimeout(() => btn.classList.remove('fade'), 250)

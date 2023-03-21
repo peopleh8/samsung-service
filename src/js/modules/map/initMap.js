@@ -1,3 +1,5 @@
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger.js'
 import GoogleMapsApi from './GoogleMapsApi.js'
 import { styles } from './styles.js'
 import { anchorScroll } from '../functions.js'
@@ -8,8 +10,9 @@ export const locations = [
   { logo: '../img/mti-logo.svg', photo: '../img/address-1.jpg', name: 'МТI-СЕРВІС', address: 'м. Київ, вул. Білоруська, 26', btn: 'більше інформації', lat: -34.028249, lng: 151.157507 }
 ]
 
+gsap.registerPlugin(ScrollTrigger)
+
 const mapWrapper = document.querySelector('#map')
-const headerBotHeight = document.querySelector('.header-bot').offsetHeight
 const gApiKey = 'AIzaSyC2Zq7VBtQJJ41xXy6EuxQoQm0k5J31zBw'
 const gmapApi = new GoogleMapsApi(gApiKey)
 
@@ -89,11 +92,12 @@ const initMap = (mapSelector) => {
     let windowBtn = document.querySelector('.window-btn')
     windowBtn && windowBtn.addEventListener('click', e => {
       e.preventDefault()
+
+      ScrollTrigger.refresh()
       
-      let href = `#${e.currentTarget.href.split('#')[1]}`,
-          scrollDistanse = document.querySelector(href).offsetTop
+      let href = `#${e.currentTarget.href.split('#')[1]}`
         
-      anchorScroll(window, scrollDistanse - headerBotHeight, 1)
+      anchorScroll(window, document.querySelector(href), 1)
     })
   })
 }

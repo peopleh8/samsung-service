@@ -1,16 +1,19 @@
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger.js'
 import { anchorScroll } from './functions.js'
 
-const headerBotHeight = document.querySelector('.header-bot').offsetHeight
+gsap.registerPlugin(ScrollTrigger)
 
 export const scrollToAnchor = () => {
   document.addEventListener('click', e => {
     if (e.target.closest('.anchor-btn')) {
       e.preventDefault()
 
-      let href = `#${e.target.href.split('#')[1]}`,
-          scrollDistanse = document.querySelector(href).offsetTop
-          
-      anchorScroll(window, scrollDistanse - headerBotHeight, 1)
+      ScrollTrigger.refresh()
+
+      let href = `#${e.target.href.split('#')[1]}`
+
+      anchorScroll(window, document.querySelector(href), 1)
     }
   })
 }

@@ -49,6 +49,23 @@
       }
     }
   }
+  &__side {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    @media (min-width: 1160px) {
+      &:hover + .main-intro__btn {
+        opacity: 1;
+      }
+    }
+    &--left {
+      left: 0;
+    }
+    &--right {
+      right: 0;
+    }
+  }
   &__btn {
     position: absolute;
     top: 50%;
@@ -62,8 +79,10 @@
     border: 1px solid $thirdColor;
     cursor: pointer;
     @media (min-width: 1160px) {
-      transition: border-color .2s ease;
+      opacity: 0;
+      transition: border-color .2s ease, opacity .2s ease;
       &:hover {
+        opacity: 1;
         border-color: $blackColor;
       }
     }

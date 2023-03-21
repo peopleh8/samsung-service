@@ -13,7 +13,7 @@
   &-slider  {
     &__slide {
       height: auto;
-      &.swiper-slide-active {
+      &.swiper-slide-active + * {
         .about-certificates-slider__photo {
           img {
             transform: scale(.8);

@@ -22,6 +22,7 @@
   }
   &-info {
     width: calc(100% - 580px);
+    transform: translateY(15px);
     padding-right: 140px;
     &__inner {
       height: 100%;

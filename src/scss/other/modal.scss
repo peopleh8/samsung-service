@@ -220,6 +220,9 @@
   max-width: 1140px;
   padding: 70px;
   color: $blackColor;
+  .carousel__button.is-close {
+    display: none;
+  }
   &-head {
     display: flex;
     align-items: center;
@@ -372,6 +375,7 @@
       }
     }
     &__label {
+      font-size: 14px;
       font-weight: 500;
       color: $secColor;
       margin-right: 32px;
@@ -389,7 +393,7 @@
   &__label {
     font-weight: 500;
     font-size: 14px;
-    line-height: 150%;
+    line-height: 1;
     color: $secColor;
     margin-right: 16px;
     display: flex;
@@ -402,10 +406,9 @@
   }
   &__value {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 150%;
     display: flex;
     align-items: center;
+    line-height: 1;
     &-icon {
       width: 12px;
       height: 12px;
