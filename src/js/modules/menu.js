@@ -26,16 +26,9 @@ export const closeMenuOverlay = () => {
 }
 
 export const menuAccordion = () => {
-  accHead.forEach((btn, index) => {
+  accHead.forEach(btn => {
     btn.addEventListener('click', e => {
       if (innerWidth >= 1161) return
-      
-      // document.querySelectorAll('.submenu').forEach((item, itemIndex) => {
-      //   if (itemIndex !== index) {
-      //     slideUp(item, 300)
-      //     item.parentElement.classList.remove('active')
-      //   }
-      // })
       
       slideToggle(btn.nextElementSibling, 300, 'block')
       btn.parentElement.classList.toggle('active')

@@ -1,13 +1,13 @@
 <section class="addresses addresses--@@page" id="address">
   <div class="container">
-    <div class="addresses__title title title--black">Адреси сервісних центрів</div>
+    <div class="addresses__title title title--black" id="address-title">Адреси сервісних центрів</div>
     <div class="addresses__inner">
       <div class="addresses__map-wrapper">
         <div class="addresses__map-overflow">
           <div class="addresses__map-section">
             <div class="addresses__map-inner">
               <div class="addresses__map addresses-map" id="map"></div>
-              <div class="addresses__info addresses-info visible">
+              <div class="addresses__info addresses-info">
                 <button class="addresses-info__btn">
                   <span class="addresses-info__btn-icon icon">
                     <svg><use href="./img/icons/sprite.svg#double-arrow"></use></svg>
@@ -167,7 +167,7 @@
                 </div>
               </div>
             </div>
-            <div class="addresses__np addresses-np scroll-section">
+            <div class="addresses__np addresses-np">
               <div class="addresses-np__inner">
                 <div class="addresses-np__title">Наша компанія працює з відправленнями зі всієї території України через перевізника Нова Пошта (окрім тимчасово окупованих територій)</div>
                 <p class="addresses-np__subtitle">Відправка НП дійсна лише для мобільних пристроїв (смартфони, планшети, носимі пристрої)</p>
@@ -299,7 +299,17 @@
       </div>
       <div class="addresses__accordion-wrapper">
         <div class="addresses__accordion addresses-accordion">
-          <div class="addresses-accordion__item active" id="card-1" data-href="uniq-1">
+          <div 
+            class="addresses-accordion__item dynamic-item" 
+            id="card-1" 
+            data-href="uniq-1"
+            data-point="-33.890542, 151.274856"
+            data-logo-src="../img/mti-logo.svg"
+            data-photo-src="../img/address-1.jpg"
+            data-name="МТI-СЕРВІС"
+            data-address="м. Київ, вул. Білоруська, 26"
+            data-btn-text="більше інформації"
+          >
             <div class="addresses-accordion__photo-wrapper">
               <span class="addresses-accordion__num">1</span>
               <div class="addresses-accordion__photo">
@@ -429,7 +439,16 @@
               </div>
             </div>
           </div>
-          <div class="addresses-accordion__item" id="card-2" data-href="uniq-2">
+          <div class="addresses-accordion__item dynamic-item" 
+            id="card-2" 
+            data-href="uniq-2"
+            data-point="-33.923036, 151.259052"
+            data-logo-src="../img/mti-logo.svg"
+            data-photo-src="../img/address-1.jpg"
+            data-name="МТI-СЕРВІС"
+            data-address="м. Київ, вул. Білоруська, 26"
+            data-btn-text="більше інформації"
+          >
             <div class="addresses-accordion__photo-wrapper">
               <span class="addresses-accordion__num">2</span>
               <div class="addresses-accordion__photo">
@@ -491,7 +510,17 @@
               </div>
             </div>
           </div>
-          <div class="addresses-accordion__item" id="card-3" data-href="uniq-3">
+          <div 
+            class="addresses-accordion__item dynamic-item" 
+            id="card-3" 
+            data-href="uniq-3"
+            data-point="-34.028249, 151.157507"
+            data-logo-src="../img/mti-logo.svg"
+            data-photo-src="../img/address-1.jpg"
+            data-name="МТI-СЕРВІС"
+            data-address="м. Київ, вул. Білоруська, 26"
+            data-btn-text="більше інформації"
+          >
             <div class="addresses-accordion__photo-wrapper">
               <span class="addresses-accordion__num">3</span>
               <div class="addresses-accordion__photo">
@@ -636,6 +665,140 @@
                   <div class="addresses-accordion__title">Відправка Новою Поштою</div>
                   <div class="addresses-accordion__subtitle">Працюємо по всій території України </div>
                   <p class="addresses-accordion__label">(окрім тимчасово окупованих територій)</p>
+                </div>
+                <span class="addresses-accordion__arrow icon">
+                  <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                </span>
+              </div>
+
+
+              <div class="addresses-accordion__body">
+                <div class="contacts-info-arrordion__body-inner">
+                  <p class="contacts-info-arrordion__np-text">Відправка НП дійсна лише для мобільних пристроїв (смартфони, планшети, носимі пристрої)</p>
+                  <div class="contacts-info-arrordion__np-departaments">
+                    <div class="contacts-info-arrordion__np-departaments-title">МТІ - СЕРВІС приймає в ремонт обладнання за наступними адресами:</div>
+                    <div class="contacts-info-arrordion__np-departaments-inner">
+                      <div class="contacts-info-arrordion__np-departament">
+                        <div class="contacts-info-arrordion__np-departament-item">
+                          <div class="contacts-info-arrordion__np-departament-icon icon">
+                            <img src="./img/marker.svg" alt="">
+                          </div>
+                          <div class="contacts-info-arrordion__np-departament-text">м. Київ, вул. Білоруська, 26</div>
+                        </div>
+                        <div class="contacts-info-arrordion__np-departament-item">
+                          <div class="contacts-info-arrordion__np-departament-icon icon">
+                            <img src="./img/np-small.svg" alt="">
+                          </div>
+                          <div class="contacts-info-arrordion__np-departament-text">
+                            Відділення НП №24
+                            <span>м. Київ, вул. Білоруська, 28а</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="contacts-info-arrordion__np-departament">
+                        <div class="contacts-info-arrordion__np-departament-item">
+                          <div class="contacts-info-arrordion__np-departament-icon icon">
+                            <img src="./img/marker.svg" alt="">
+                          </div>
+                          <div class="contacts-info-arrordion__np-departament-text">м. Київ, б-р Дружби Народів, 14 - 16</div>
+                        </div>
+                        <div class="contacts-info-arrordion__np-departament-item">
+                          <div class="contacts-info-arrordion__np-departament-icon icon">
+                            <img src="./img/np-small.svg" alt="">
+                          </div>
+                          <div class="contacts-info-arrordion__np-departament-text">
+                            Доставка кур'єром до дверей
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contacts-info-arrordion__np-label">
+                    <div class="contacts-info-arrordion__np-label-warn warn-icon warn-icon--white">!</div>
+                    <div class="contacts-info-arrordion__np-label-text">
+                      <p class="contacts-info-arrordion__np-desc">Для <strong>гарантійного ремонту</strong> відправка здійснюється за рахунок отримувача</p>
+                      <p class="contacts-info-arrordion__np-desc">Для <strong>негарантійних випадків</strong> вартість доставки повкриває відправник.</p>
+                    </div>
+                  </div>
+                  <div class="contacts-info-arrordion__np-info">
+                    <div class="contacts-info-arrordion__np-info-item">
+                      <div class="contacts-info-arrordion__np-info-head">
+                        <div class="contacts-info-arrordion__np-info-icon icon">
+                          <img src="./img/np-box.svg" alt="">
+                        </div>
+                        <div class="contacts-info-arrordion__np-info-text">Наші дані для відправки</div>
+                      </div>
+                      <div class="contacts-info-arrordion__np-contact contact">
+                        <div class="contacts-info-arrordion__np-contact-item contact__item">
+                          <div class="contacts-info-arrordion__np-contact-title contact__title">Одержувач</div>
+                          <div class="contacts-info-arrordion__np-contact-content contact__desc">
+                            <p class="contacts-info-arrordion__np-contact-text contact__text">представник ТОВ МТІ-СЕРВІС </p>
+                          </div>
+                        </div>
+                        <div class="contacts-info-arrordion__np-contact-item contact__item">
+                          <div class="contacts-info-arrordion__np-contact-title contact__title">Контактний номер</div>
+                          <div class="contacts-info-arrordion__np-contact-content contact__desc">
+                            <a class="contacts-info-arrordion__np-contact-text contact__text" href="tel:+380675507617">
+                              38 067 550 76 17
+                              <span class="contacts-info-arrordion__np-contact-icon icon">
+                                <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="contacts-info-arrordion__np-contact-item contact__item">
+                          <div class="contacts-info-arrordion__np-contact-title contact__title">Реєстраційний номер</div>
+                          <div class="contacts-info-arrordion__np-contact-content contact__desc">
+                            <p class="contacts-info-arrordion__np-contact-text contact__text">39554115</p>
+                          </div>
+                        </div>
+                        <div class="contacts-info-arrordion__np-contact-item contact__item">
+                          <div class="contacts-info-arrordion__np-contact-title contact__title">Адреса одержувача</div>
+                          <div class="contacts-info-arrordion__np-contact-content contact__desc">
+                            <p class="contacts-info-arrordion__np-contact-text contact__text">м. Київ, вул. Білоруська, 26</p>
+                            <p class="contacts-info-arrordion__np-contact-subtext contact__subtext">(доставка кур'єром до дверей)</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="contacts-info-arrordion__np-info-item">
+                      <div class="contacts-info-arrordion__np-info-head">
+                        <div class="contacts-info-arrordion__np-info-icon icon">
+                          <img src="./img/note.svg" alt="">
+                        </div>
+                        <div class="contacts-info-arrordion__np-info-text">Вкладіть в посилку необхідну інформацію </div>
+                      </div>
+                      <div class="contacts-info-arrordion__np-list-wraper">
+                        <ul class="contacts-info-arrordion__np-list">
+                          <li class="contacts-info-arrordion__np-list-item">
+                            <span class="contacts-info-arrordion__np-list-icon icon">
+                              <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                            </span>
+                            <span class="contacts-info-arrordion__np-list-text">Заявлений недолік та особливості його проявів (постійно, періодично, т.ін.)</span>
+                          </li>
+                          <li class="contacts-info-arrordion__np-list-item">
+                            <span class="contacts-info-arrordion__np-list-icon icon">
+                              <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                            </span>
+                            <span class="contacts-info-arrordion__np-list-text">Ваш ПІБ та контактний номер телефона</span>
+                          </li>
+                          <li class="contacts-info-arrordion__np-list-item">
+                            <span class="contacts-info-arrordion__np-list-icon icon">
+                              <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                            </span>
+                            <span class="contacts-info-arrordion__np-list-text">Дата гарантійного ремонту, або гарантійний талон виробника</span>
+                          </li>
+                          <li class="contacts-info-arrordion__np-list-item">
+                            <span class="contacts-info-arrordion__np-list-icon icon">
+                              <svg><use href="./img/icons/sprite.svg#check"></use></svg>
+                            </span>
+                            <span class="contacts-info-arrordion__np-list-text">Адресу зворотньої доставки**</span>
+                          </li>
+                        </ul>
+                        <p class="contacts-info-arrordion__np-list-label">** При відсутності даних вкладених з відправленим пристроєм, буде використовуватися ПІБ, номер телефону або адресу доставки зазначений в накладній перевізника</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

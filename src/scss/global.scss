@@ -19,6 +19,7 @@ body {
   background: $whiteColor;
   overflow-x: hidden;
   width: 100%;
+  overflow-anchor: none;
 }
 
 .container {
@@ -809,6 +810,8 @@ body {
     height: 20px;
     position: relative;
     z-index: 11;
+    transition: opacity .2s ease;
+    pointer-events: none;
     svg {
       stroke: $blackColor;
     }
@@ -831,6 +834,7 @@ body {
       width: 10px;
       height: 8px;
       svg {
+        pointer-events: none;
         stroke: $blackColor;
         @media (min-width: 1161px) {
           transition: stroke .2s ease;
@@ -891,6 +895,12 @@ body {
       transition-delay: 0s;
     }
   }
+  [type="submit"] {
+    pointer-events: none;
+    &.active {
+      pointer-events: all;
+    }
+  }
 }
 
 .search-dropdown {
@@ -923,10 +933,16 @@ body {
     background: $whiteColor;
     z-index: -1;
   }
-  &__title {
+  &__title,
+  &__err {
     font-weight: 500;
     line-height: 21px;
+  }
+  &__title {
     margin-bottom: 16px;
+  }
+  &__err {
+    text-align: center;
   }
   &__item {
     & + & {
@@ -950,6 +966,7 @@ body {
     right: 0;
     bottom: 0;
     z-index: 10;
+    cursor: pointer;
   }
   &__photo {
     width: 32px;
@@ -1098,6 +1115,41 @@ body {
     p {
       margin-bottom: 25px;
     }
+    a {
+      position: relative;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        height: 1px;
+        background: $blackColor;
+      }
+      &::before {
+        width: 100%;
+      }
+      &::after {
+        width: 40%;
+        opacity: 0;
+      }
+      @media (min-width: 1161px) {
+        &:hover {
+          .link-underline__icon {
+            transform: translateX(5px);
+          }
+          &::before {
+            display: none;
+          }
+          &::after {
+            width: 100%;
+            opacity: 1;
+            transition: width .22s ease .1s, opacity .15s ease .1s;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1119,31 +1171,29 @@ body {
   }
 }
 
-.scroll-section {
-  &.simplebar-scrollable-y {
-    padding-right: 10px;
+.simplebar-scrollable-y {
+  padding-right: 10px;
+}
+.simplebar-track {
+  background: #D9D9D9;
+  border-radius: 1px;
+  &.simplebar-vertical {
+    width: 2px; 
   }
-  .simplebar-track {
-    background: #D9D9D9;
-    border-radius: 1px;
-    &.simplebar-vertical {
-      width: 2px; 
-    }
-    &.simplebar-horizontal {
-      display: none !important;
-    }
-    .simplebar-scrollbar {
+  &.simplebar-horizontal {
+    display: none !important;
+  }
+  .simplebar-scrollbar {
+    width: 100%;
+    &::before {
       width: 100%;
-      &::before {
-        width: 100%;
-        opacity: 1;
-        border-radius: 2px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        background: $thirdColor;
-      }
+      opacity: 1;
+      border-radius: 2px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background: $thirdColor;
     }
   }
 }
@@ -1288,29 +1338,6 @@ body {
   }
 }
 
-input.just-validate-error-field,
-input.just-validate-success-field {
-  background-position: calc(100% - 12px) 50%;
-  background-repeat: no-repeat;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-}
-
-.callback input.just-validate-error-field {
-  background-image: url("../img/err-white.svg");
-}
-
-.callback input.just-validate-success-field {
-  background-image: url("../img/check-white.svg");
-}
-
-input.just-validate-error-field {
-  background-image: url("../img/err.svg");
-}
-
-input.just-validate-success-field {
-  background-image: url("../img/check.svg");
-}
-
 .just-validate-error-label {
   display: none;
   width: 100%;
@@ -1324,6 +1351,42 @@ input.just-validate-success-field {
   position: absolute;
   left: 0;
   top: 100%;
+}
+
+input.just-validate-error-field,
+input.just-validate-success-field {
+  background-position: calc(100% - 12px) 50%;
+  background-repeat: no-repeat;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+textarea.just-validate-error-field,
+textarea.just-validate-success-field {
+  background-position: calc(100% - 12px) 13% !important;
+  background-repeat: no-repeat !important;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
+}
+
+input.just-validate-error-field,
+textarea.just-validate-error-field {
+  background-image: url("../img/err.svg");
+}
+
+input.just-validate-success-field,
+textarea.just-validate-success-field {
+  background-image: url("../img/check.svg");
+}
+
+.callback {
+  input.just-validate-error-field,
+  textarea.just-validate-error-field {
+    background-image: url("../img/err-white.svg");
+  }
+
+  input.just-validate-success-field,
+  textarea.just-validate-success-field {
+    background-image: url("../img/check-white.svg");
+  }
 }
 
 iframe {

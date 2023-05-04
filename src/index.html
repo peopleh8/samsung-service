@@ -18,6 +18,10 @@
                     <label class="main-intro-search__title popular-search__title search__title" for="intro-search">Введіть модель свого приладу, або оберіть з популярних</label>
                     <div class="overlay overlay--search"></div>
                     <div class="main-intro-search__inp-wrapper popular-search__inp-wrapper search__inp-wrapper">
+                      <div class="loader loader--black">
+                        <span class="loader__text">Завантаження</span>
+                        <span class="loader__load"></span>
+                      </div>
                       <button class="main-intro-search__btn popular-search__btn search__btn icon" type="submit">
                         <svg><use href="./img/icons/sprite.svg#search"></use></svg>
                       </button>
@@ -27,102 +31,14 @@
                       <input 
                         class="main-intro-search__inp popular-search__inp search__inp" 
                         name="search" 
+                        type="text"
                         id="intro-search" 
                         placeholder="Наприклад Galaxy S21 ..." 
                         autocomplete="off"
                       />
                       <div class="main-intro-search__dropdown search-dropdown">
                         <div class="search-dropdown__title">Відповідно вашого запиту</div>
-                        <div class="search-dropdown__list repair-item__search-list scroll-section">
-                          <div class="search-dropdown__item">
-                            <div class="search-dropdown__inner">
-                              <a class="search-dropdown__link" href="#"></a>
-                              <div class="search-dropdown__photo">
-                                <img src="./img/phone-search-1.png" alt="">
-                              </div>
-                              <div class="search-dropdown__name text-underline text-underline--black">
-                                <span>Galaxy Tab A8 WiFi 3/32 Galaxy Tab A8 WiFi 3/32 Galaxy Tab A8 WiFi 3/32</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="search-dropdown__item">
-                            <div class="search-dropdown__inner">
-                              <a class="search-dropdown__link" href="#"></a>
-                              <div class="search-dropdown__photo">
-                                <img src="./img/phone-search-2.png" alt="">
-                              </div>
-                              <div class="search-dropdown__name text-underline text-underline--black">
-                                <span>Galaxy Tab A8 WiFi 3/32</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="search-dropdown__item">
-                            <div class="search-dropdown__inner">
-                              <a class="search-dropdown__link" href="#"></a>
-                              <div class="search-dropdown__photo">
-                                <img src="./img/phone-search-3.png" alt="">
-                              </div>
-                              <div class="search-dropdown__name text-underline text-underline--black">
-                                <span>Galaxy Tab A8 WiFi 3/32</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="search-dropdown__item">
-                            <div class="search-dropdown__inner">
-                              <a class="search-dropdown__link" href="#"></a>
-                              <div class="search-dropdown__photo">
-                                <img src="./img/phone-search-4.png" alt="">
-                              </div>
-                              <div class="search-dropdown__name text-underline text-underline--black">
-                                <span>Galaxy Tab A8 WiFi 3/32</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="search-dropdown__item">
-                            <div class="search-dropdown__inner">
-                              <a class="search-dropdown__link" href="#"></a>
-                              <div class="search-dropdown__photo">
-                                <img src="./img/phone-search-5.png" alt="">
-                              </div>
-                              <div class="search-dropdown__name text-underline text-underline--black">
-                                <span>Galaxy Tab A8 WiFi 3/32</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="search-dropdown__item">
-                            <div class="search-dropdown__inner">
-                              <a class="search-dropdown__link" href="#"></a>
-                              <div class="search-dropdown__photo">
-                                <img src="./img/phone-search-6.png" alt="">
-                              </div>
-                              <div class="search-dropdown__name text-underline text-underline--black">
-                                <span>Galaxy Tab A8 WiFi 3/32</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="search-dropdown__item">
-                            <div class="search-dropdown__inner">
-                              <a class="search-dropdown__link" href="#"></a>
-                              <div class="search-dropdown__photo">
-                                <img src="./img/phone-search-7.png" alt="">
-                              </div>
-                              <div class="search-dropdown__name text-underline text-underline--black">
-                                <span>Galaxy Tab A8 WiFi 3/32</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="search-dropdown__item">
-                            <div class="search-dropdown__inner">
-                              <a class="search-dropdown__link" href="#"></a>
-                              <div class="search-dropdown__photo">
-                                <img src="./img/phone-moc-small-black.svg" alt="">
-                              </div>
-                              <div class="search-dropdown__name text-underline text-underline--black">
-                                <span>Не знайшов своєї моделі</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        <div class="search-dropdown__list repair-item__search-list"></div>
                       </div>
                     </div>
                     <div class="main-intro-search__items-wrapper popular-search__items-wrapper">
@@ -370,124 +286,39 @@
                     <div class="calculate-info__title">Оберіть модель пристрою</div>
                     <div class="calculate-model__search calculate-model-search">
                       <p class="calculate-model__text">Почніть вводити модель вашого пристрою</p>
-                      <div class="calculate-model-search__inp-wrapper search__inp-wrapper">
-                        <input class="calculate-model-search__inp search__inp" name="search" id="intro-search" placeholder="Наприклад Galaxy S21 ..." autocomplete="off">
-                        <button class="calculate-model-search__btn calculate-model-search__btn--close search__times close-search">
+                      <form class="calculate-model-search__inp-wrapper search__inp-wrapper search" data-type-id="3">
+                        <div class="loader loader--black">
+                          <span class="loader__text">Завантаження</span>
+                          <span class="loader__load"></span>
+                        </div>
+                        <input class="calculate-model-search__inp search__inp" type="text" name="search" id="intro-search" placeholder="Наприклад Galaxy S21 ..." autocomplete="off">
+                        <button class="calculate-model-search__btn calculate-model-search__btn--close search__times close-search" type="button">
                           <span class="calculate-model-search__btn-times search__times-icon"></span>
                         </button>
-                        <button class="calculate-model-search__btn calculate-model-search__btn--open search__arrow open-search">
+                        <button class="calculate-model-search__btn calculate-model-search__btn--open search__arrow open-search" type="submit">
                           <span class="calculate-model-search__btn-icon search__arrow-icon icon">
                             <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
                           </span>
                         </button>
                         <div class="calculate-model-search__dropdown search-dropdown">
                           <div class="search-dropdown__title">Відповідно вашого запиту</div>
-                          <div class="search-dropdown__list repair-item__search-list scroll-section">
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-1.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32 Galaxy Tab A8 WiFi 3/32 Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-2.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-3.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-4.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-5.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-6.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-7.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-moc-small-black.svg" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Не знайшов своєї моделі</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                          <div class="search-dropdown__list repair-item__search-list"></div>
                         </div>
-                      </div>
+                      </form>
                     </div>
-                    <div class="calculate-model__tabs">
+                    <div class="calculate-model__tabs" id="model-result">
                       <p class="calculate-model__text">Або оберіть з найпопулярніших моделей:</p>
                       <div class="calculate-model__slider-nav calculate-model-nav swiper">
                         <div class="swiper-wrapper">
-                          <div class="calculate-model-nav__slider swiper-slide">
+                          <div class="calculate-model-nav__slider swiper-slide" data-id="216">
                             <div class="calculate-model-nav__inner active">
                               <div class="calculate-model-nav__preview">
                                 <img src="./img/phone-moc-big-white.svg" alt="">
                               </div>
-                              <div class="calculate-model-nav__title">Планшет 1</div>
+                              <div class="calculate-model-nav__title">Планшет 1 Планшет 1</div>
                             </div>
                           </div>
-                          <div class="calculate-model-nav__slider swiper-slide">
+                          <div class="calculate-model-nav__slider swiper-slide" data-id="237">
                             <div class="calculate-model-nav__inner">
                               <div class="calculate-model-nav__preview">
                                 <img src="./img/phone-moc-big-white.svg" alt="">
@@ -495,7 +326,7 @@
                               <div class="calculate-model-nav__title">Планшет 2</div>
                             </div>
                           </div>
-                          <div class="calculate-model-nav__slider swiper-slide">
+                          <div class="calculate-model-nav__slider swiper-slide" data-id="212">
                             <div class="calculate-model-nav__inner">
                               <div class="calculate-model-nav__preview">
                                 <img src="./img/phone-moc-big-white.svg" alt="">
@@ -949,110 +780,21 @@
                     <div class="calculate-info__title">Оберіть модель пристрою</div>
                     <div class="calculate-model__search calculate-model-search">
                       <p class="calculate-model__text">Почніть вводити модель вашого пристрою</p>
-                      <div class="calculate-model-search__inp-wrapper search__inp-wrapper">
-                        <input class="calculate-model-search__inp search__inp" name="search" id="intro-search" placeholder="Наприклад Galaxy S21 ..." autocomplete="off">
-                        <button class="calculate-model-search__btn calculate-model-search__btn--close search__times close-search">
+                      <form class="calculate-model-search__inp-wrapper search__inp-wrapper search" data-type-id="1">
+                        <input class="calculate-model-search__inp search__inp" type="text" name="search" id="intro-search" placeholder="Наприклад Galaxy S21 ..." autocomplete="off">
+                        <button class="calculate-model-search__btn calculate-model-search__btn--close search__times close-search" type="button">
                           <span class="calculate-model-search__btn-times search__times-icon"></span>
                         </button>
-                        <button class="calculate-model-search__btn calculate-model-search__btn--open search__arrow open-search">
+                        <button class="calculate-model-search__btn calculate-model-search__btn--open search__arrow open-search" type="submit">
                           <span class="calculate-model-search__btn-icon search__arrow-icon icon">
                             <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
                           </span>
                         </button>
                         <div class="calculate-model-search__dropdown search-dropdown">
                           <div class="search-dropdown__title">Відповідно вашого запиту</div>
-                          <div class="search-dropdown__list repair-item__search-list scroll-section">
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-1.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32 Galaxy Tab A8 WiFi 3/32 Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-2.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-3.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-4.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-5.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-6.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-7.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-moc-small-black.svg" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Не знайшов своєї моделі</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                          <div class="search-dropdown__list repair-item__search-list"></div>
                         </div>
-                      </div>
+                      </form>
                     </div>
                     <div class="calculate-model__tabs">
                       <p class="calculate-model__text">Або оберіть з найпопулярніших моделей:</p>
@@ -1525,114 +1267,6 @@
                     </div>
                   </div>
                   <div class="calculate-info__slide calculate-model swiper-slide">
-                    <div class="calculate-info__title">Оберіть модель пристрою</div>
-                    <div class="calculate-model__search calculate-model-search">
-                      <p class="calculate-model__text">Почніть вводити модель вашого пристрою</p>
-                      <div class="calculate-model-search__inp-wrapper search__inp-wrapper">
-                        <input class="calculate-model-search__inp search__inp" name="search" id="intro-search" placeholder="Наприклад Galaxy S21 ..." autocomplete="off">
-                        <button class="calculate-model-search__btn calculate-model-search__btn--close search__times close-search">
-                          <span class="calculate-model-search__btn-times search__times-icon"></span>
-                        </button>
-                        <button class="calculate-model-search__btn calculate-model-search__btn--open search__arrow open-search">
-                          <span class="calculate-model-search__btn-icon search__arrow-icon icon">
-                            <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
-                          </span>
-                        </button>
-                        <div class="calculate-model-search__dropdown search-dropdown">
-                          <div class="search-dropdown__title">Відповідно вашого запиту</div>
-                          <div class="search-dropdown__list repair-item__search-list scroll-section">
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-1.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32 Galaxy Tab A8 WiFi 3/32 Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-2.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-3.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-4.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-5.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-6.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-7.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-moc-small-black.svg" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Не знайшов своєї моделі</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                     <div class="calculate-model__tabs">
                       <p class="calculate-model__text">Або оберіть з найпопулярніших моделей:</p>
                       <div class="calculate-model__slider-nav calculate-model-nav swiper">
@@ -2107,110 +1741,21 @@
                     <div class="calculate-info__title">Оберіть модель пристрою</div>
                     <div class="calculate-model__search calculate-model-search">
                       <p class="calculate-model__text">Почніть вводити модель вашого пристрою</p>
-                      <div class="calculate-model-search__inp-wrapper search__inp-wrapper">
-                        <input class="calculate-model-search__inp search__inp" name="search" id="intro-search" placeholder="Наприклад Galaxy S21 ..." autocomplete="off">
-                        <button class="calculate-model-search__btn calculate-model-search__btn--close search__times close-search">
+                      <form class="calculate-model-search__inp-wrapper search__inp-wrapper search" data-type-id="2">
+                        <input class="calculate-model-search__inp search__inp" type="text" name="search" id="intro-search" placeholder="Наприклад Galaxy S21 ..." autocomplete="off">
+                        <button class="calculate-model-search__btn calculate-model-search__btn--close search__times close-search" type="button">
                           <span class="calculate-model-search__btn-times search__times-icon"></span>
                         </button>
-                        <button class="calculate-model-search__btn calculate-model-search__btn--open search__arrow open-search">
+                        <button class="calculate-model-search__btn calculate-model-search__btn--open search__arrow open-search" type="submit">
                           <span class="calculate-model-search__btn-icon search__arrow-icon icon">
                             <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
                           </span>
                         </button>
                         <div class="calculate-model-search__dropdown search-dropdown">
                           <div class="search-dropdown__title">Відповідно вашого запиту</div>
-                          <div class="search-dropdown__list repair-item__search-list scroll-section">
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-1.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32 Galaxy Tab A8 WiFi 3/32 Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-2.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-3.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-4.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-5.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-6.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-7.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-moc-small-black.svg" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Не знайшов своєї моделі</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                          <div class="search-dropdown__list repair-item__search-list"></div>
                         </div>
-                      </div>
+                      </form>
                     </div>
                     <div class="calculate-model__tabs">
                       <p class="calculate-model__text">Або оберіть з найпопулярніших моделей:</p>
@@ -2686,110 +2231,21 @@
                     <div class="calculate-info__title">Оберіть модель пристрою</div>
                     <div class="calculate-model__search calculate-model-search">
                       <p class="calculate-model__text">Почніть вводити модель вашого пристрою</p>
-                      <div class="calculate-model-search__inp-wrapper search__inp-wrapper">
-                        <input class="calculate-model-search__inp search__inp" name="search" id="intro-search" placeholder="Наприклад Galaxy S21 ..." autocomplete="off">
-                        <button class="calculate-model-search__btn calculate-model-search__btn--close search__times close-search">
+                      <form class="calculate-model-search__inp-wrapper search__inp-wrapper search" data-type-id="3">
+                        <input class="calculate-model-search__inp search__inp" type="text" name="search" id="intro-search" placeholder="Наприклад Galaxy S21 ..." autocomplete="off">
+                        <button class="calculate-model-search__btn calculate-model-search__btn--close search__times close-search" type="button">
                           <span class="calculate-model-search__btn-times search__times-icon"></span>
                         </button>
-                        <button class="calculate-model-search__btn calculate-model-search__btn--open search__arrow open-search">
+                        <button class="calculate-model-search__btn calculate-model-search__btn--open search__arrow open-search" type="submit">
                           <span class="calculate-model-search__btn-icon search__arrow-icon icon">
                             <svg><use href="./img/icons/sprite.svg#arrow"></use></svg>
                           </span>
                         </button>
                         <div class="calculate-model-search__dropdown search-dropdown">
                           <div class="search-dropdown__title">Відповідно вашого запиту</div>
-                          <div class="search-dropdown__list repair-item__search-list scroll-section">
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-1.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32 Galaxy Tab A8 WiFi 3/32 Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-2.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-3.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-4.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-5.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-6.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-search-7.png" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Galaxy Tab A8 WiFi 3/32</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="search-dropdown__item">
-                              <div class="search-dropdown__inner">
-                                <a class="search-dropdown__link" href="#"></a>
-                                <div class="search-dropdown__photo">
-                                  <img src="./img/phone-moc-small-black.svg" alt="">
-                                </div>
-                                <div class="search-dropdown__name text-underline text-underline--black">
-                                  <span>Не знайшов своєї моделі</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                          <div class="search-dropdown__list repair-item__search-list"></div>
                         </div>
-                      </div>
+                      </form>
                     </div>
                     <div class="calculate-model__tabs">
                       <p class="calculate-model__text">Або оберіть з найпопулярніших моделей:</p>
@@ -3273,7 +2729,7 @@
       <section class="steps steps--light steps--main">
         <div class="container">
           <div class="steps__section">
-            <img src="./img/image-water-pthone.png" alt="">
+            <img src="./img/1.png" alt="">
             <div class="steps__top steps-top">
               <div class="steps-top__side">
                 <div class="steps__subtitle subtitle subtitle--black">ваш якісний сервіс</div>

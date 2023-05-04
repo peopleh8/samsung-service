@@ -3,36 +3,35 @@ import ScrollTrigger from 'gsap/ScrollTrigger.js'
 import GoogleMapsApi from './GoogleMapsApi.js'
 import { styles } from './styles.js'
 import { anchorScroll } from '../functions.js'
-
-export const locations = [
-  { logo: '../img/mti-logo.svg', photo: '../img/address-1.jpg', name: 'МТI-СЕРВІС', address: 'м. Київ, вул. Білоруська, 26', btn: 'більше інформації', lat: -33.890542, lng: 151.274856 },
-  { logo: '../img/mti-logo.svg', photo: '../img/address-1.jpg', name: 'МТI-СЕРВІС', address: 'м. Київ, вул. Білоруська, 26', btn: 'більше інформації', lat: -33.923036, lng: 151.259052 },
-  { logo: '../img/mti-logo.svg', photo: '../img/address-1.jpg', name: 'МТI-СЕРВІС', address: 'м. Київ, вул. Білоруська, 26', btn: 'більше інформації', lat: -34.028249, lng: 151.157507 }
-]
+import { GOOGLE_MAPS_API_KEY } from '../vars.js'
+import { renderContent } from './renderContent.js'
+import { locations } from './locations.js'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const mapWrapper = document.querySelector('#map')
-const gApiKey = 'AIzaSyC2Zq7VBtQJJ41xXy6EuxQoQm0k5J31zBw'
-const gmapApi = new GoogleMapsApi(gApiKey)
-
-export const renderContent = (props, count) => {
-  if (window.location.pathname.indexOf('contact') === -1) {
-    return (`
-      <div class="window-logo"><img src="${props.logo}" alt="" /></div>
-    `)
-  } else {
-    return (`
-      <div class="window-inner"><div class="window-photo"><img src="${props.photo}" alt="" /></div><div class="window-info"> <div class="window-name">${props.name}</div><div class="window-address">${props.address}</div><a class="window-btn" href="#card-${count + 1}">${props.btn}<span class="window-icon icon"><svg><use href="../img/icons/sprite.svg#arrow"></use></svg></span></a></div></div>
-    `)
-  }
-}
+const gmapApi = new GoogleMapsApi(GOOGLE_MAPS_API_KEY)
 
 const initMap = (mapSelector) => {
   const element = document.getElementById(mapSelector)
   const map = new google.maps.Map(element, {
     zoom: 10,
     center: new google.maps.LatLng(locations[0].lat, locations[0].lng),
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+      position: google.maps.ControlPosition.TOP_CENTER,
+    },
+    zoomControl: true,
+    zoomControlOptions: {
+      position: google.maps.ControlPosition.LEFT_CENTER,
+    },
+    scaleControl: true,
+    streetViewControl: true,
+    streetViewControlOptions: {
+      position: google.maps.ControlPosition.LEFT_TOP,
+    },
+    fullscreenControl: true,
     styles: styles.styles
   })
 
@@ -72,8 +71,10 @@ const initMap = (mapSelector) => {
     })(marker, i))
   }
 
-  infowindow.setContent(renderContent(locations[0], 0))
-  infowindow.open(map, markers[0])
+  if (window.location.pathname.indexOf('contact') !== -1) {
+    infowindow.setContent(renderContent(locations[0], 0))
+    infowindow.open(map, markers[0])
+  }
 
   window.markers = markers
   window.map = map
@@ -90,11 +91,20 @@ const initMap = (mapSelector) => {
 
   google.maps.event.addListener(infowindow, 'domready', function() {
     let windowBtn = document.querySelector('.window-btn')
+    let windowLogo = document.querySelector('.window-logo')
     windowBtn && windowBtn.addEventListener('click', e => {
       e.preventDefault()
 
-      ScrollTrigger.refresh()
-      
+      let href = `#${e.currentTarget.href.split('#')[1]}`
+        
+      anchorScroll(window, document.querySelector(href), 1)
+    })
+
+    windowLogo && windowLogo.addEventListener('click', e => {
+      e.preventDefault()
+
+      if (innerWidth >= 1161) return
+
       let href = `#${e.currentTarget.href.split('#')[1]}`
         
       anchorScroll(window, document.querySelector(href), 1)

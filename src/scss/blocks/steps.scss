@@ -8,7 +8,8 @@
       & > img {
         top: 30px;
         left: 0;
-        width: 30%;
+        width: 540px;
+        mix-blend-mode: multiply;
       }
     }
   }
@@ -17,15 +18,20 @@
     .steps__title {
       padding: 0 140px;
       margin-bottom: 60px;
+      & > div {
+        margin-bottom: 12px;
+        mix-blend-mode: multiply;
+      }
     }
     .steps__section {
       padding: 150px 0 100px;
       & > img {
+        mix-blend-mode: multiply;
         right: 0;
         left: auto;
         top: 68px;
         transform: rotateY(180deg);
-        width: 24%;
+        width: 392px;
       }
     }
     .steps__inner {
@@ -36,6 +42,9 @@
     padding-top: 150px;
     .steps__section {
       padding: 150px 0 90px;
+      & > img {
+        width: 413px;
+      }
     }
     .steps__btn-wrapper {
       margin-top: -23px;
@@ -129,7 +138,7 @@
           width: 59px;
           height: 66px;
           margin: 0 0 -30px 35px;            
-          background: url(../../img/smile.png) center center no-repeat;
+          background: url(../img/smile.png) center center no-repeat;
           background-size: cover;
         }
       }
@@ -144,7 +153,7 @@
           right: 0;
           top: 100%;
           height: 6px;
-          background-image: url(../../img/marquee-demo.jpg);
+          background-image: url(../img/marquee-demo.jpg);
           background-size: cover;
           animation: positions 10s linear infinite alternate;
         }
@@ -158,7 +167,7 @@
     user-select: none;
     top: 80px;
     left: 86px;
-    width: 22%;
+    width: 413px;
   }
   &__section {
     border-radius: 20px;
@@ -172,7 +181,6 @@
       user-select: none;
       top: 80px;
       left: 86px;
-      width: 22%;
     }
   }
   &-top {

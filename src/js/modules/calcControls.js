@@ -1,9 +1,10 @@
+import { anchorScroll } from './functions.js'
 import { calculateInfoSlider, calculateContentSlider } from './sliders.js'
 
-const devices = document.querySelectorAll('.calculate-type-slider__inner'),
-      modelNavs = document.querySelectorAll('.calculate-model-nav'),
-      modelPanels = document.querySelectorAll('.calculate-model-main'),
-      pagItems = document.querySelectorAll('.calculate-progress__item-num')
+const devices = document.querySelectorAll('.calculate-type-slider__inner')
+const modelNavs = document.querySelectorAll('.calculate-model-nav')
+const modelPanels = document.querySelectorAll('.calculate-model-main')
+const pagItems = document.querySelectorAll('.calculate-progress__item-num')
 
 export const selectDevice = () => {
   devices.forEach((item, index) => {
@@ -44,6 +45,8 @@ export const selectModel = () => {
         item.classList.add('active')
 
         modelPanelInstance.slideTo(itemIndex)
+
+        anchorScroll(window, '#model-result', 1, 120)
       })
     })
   })

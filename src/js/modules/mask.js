@@ -10,5 +10,5 @@ const setMask = (selector, mask) => {
 
 export default setMask
 
-setMask('input[type="tel"]', '+38 (999) 999-99-99')
+setMask('input[type="tel"]', '+38 (099) 999-99-99')
 setMask('input[name="receipt"]', '9999 9999')

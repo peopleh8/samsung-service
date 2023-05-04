@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="77ed0504-0fc6-4196-ab03-d07e0becb987" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/dist/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/household.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/household.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/about-intro.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/about-intro.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/address-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/address-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/blog-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/blog-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/blog-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/blog-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/blog-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/blog-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/blog-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/blog-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/blog-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/blog-6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/calc-body.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/calc-body.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/callback.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/callback.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/certificate-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/certificate-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/certificate-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/certificate-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/certificate-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/certificate-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/chack.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/chack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/contacts-intro-photo.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/contacts-intro-photo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/cookie.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/cookie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/err-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/err-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/err-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/err-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/err-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/err-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/err-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/err-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/err-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/err-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/google-map-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/google-map-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-menu-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-menu-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-menu-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-menu-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-menu-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-menu-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-menu-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-menu-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-menu-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-menu-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-menu-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-menu-6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-repair-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-repair-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-repair-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-repair-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-repair-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-repair-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-repair-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-repair-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-repair-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-repair-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-repair-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-repair-6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/household-steps.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/household-steps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/image-water-pthone.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/image-water-pthone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/intro-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/intro-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/intro-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/intro-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/main-faq.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/main-faq.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/main-trust-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/main-trust-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/main-trust-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/main-trust-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/main-trust-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/main-trust-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/main-trust-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/main-trust-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/marquee-demo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/marquee-demo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/menu-slider-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/menu-slider-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/menu-whatch-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/menu-whatch-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/menu-whatch-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/menu-whatch-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/menu-whatch-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/menu-whatch-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/menu-whatch-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/menu-whatch-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/monitor-steps.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/monitor-steps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/nonwarranty-intro-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/nonwarranty-intro-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/nonwarranty-intro-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/nonwarranty-intro-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/nonwarranty-intro-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/nonwarranty-intro-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/nonwarranty-intro-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/nonwarranty-intro-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/nonwarranty-intro-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/nonwarranty-intro-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/nonwarranty-reason-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/nonwarranty-reason-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/nonwarranty-reason-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/nonwarranty-reason-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/nonwarranty-reason-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/nonwarranty-reason-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/np.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/np.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/original-shop.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/original-shop.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-intro.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-intro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-menu-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-menu-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-menu-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-menu-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-menu-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-menu-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-menu-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-menu-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-menu-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-menu-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-menu-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-menu-6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-menu-7.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-menu-7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-menu-8.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-menu-8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-repair-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-repair-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-repair-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-repair-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-repair-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-repair-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-repair-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-repair-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-repair-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-repair-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-repair-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-repair-6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-repair-7.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-repair-7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-repair-8.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-repair-8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-search-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-search-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-search-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-search-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-search-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-search-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-search-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-search-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-search-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-search-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-search-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-search-6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-search-7.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-search-7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/phone-steps.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/phone-steps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/post-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/post-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/post-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/post-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/seo-1-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/seo-1-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/seo-1-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/seo-1-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/seo-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/seo-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/seo-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/seo-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/seo-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/seo-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/seo-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/seo-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/seo-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/seo-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/seo-ar.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/seo-ar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/step-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/step-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/step-item-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/step-item-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/steps-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/steps-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/subcat-household-intro.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/subcat-household-intro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/subcat-monitor-intro.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/subcat-monitor-intro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/subcat-phone-intro.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/subcat-phone-intro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/subcat-tablet-intro.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/subcat-tablet-intro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/subcat-whatch-intro.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/subcat-whatch-intro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/table-menu-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/table-menu-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/table-menu-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/table-menu-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tablet-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tablet-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tablet-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tablet-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tablet-intro.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tablet-intro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tablet-repair-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tablet-repair-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tablet-repair-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tablet-repair-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tablet-steps.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tablet-steps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tooltip-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tooltip-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tooltip-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tooltip-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tooltip-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tooltip-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tooltip-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tooltip-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-intro.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-intro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-menu-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-menu-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-menu-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-menu-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-menu-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-menu-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-menu-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-menu-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-menu-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-menu-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-menu-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-menu-6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-repair-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-repair-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-repair-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-repair-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-repair-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-repair-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-repair-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-repair-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-repair-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-repair-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-repair-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-repair-6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/tv-steps.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/tv-steps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/type-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/type-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/type-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/type-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/type-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/type-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/type-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/type-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/warranty-intro.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/warranty-intro.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/warranty-tab-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/warranty-tab-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/warranty-tab-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/warranty-tab-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/warranty-tab-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/warranty-tab-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/whatch-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/whatch-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/whatch-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/whatch-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/whatch-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/whatch-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/whatch-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/whatch-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/whatch-intro.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/whatch-intro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/whatch-repair-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/whatch-repair-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/whatch-repair-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/whatch-repair-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/whatch-repair-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/whatch-repair-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/whatch-repair-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/whatch-repair-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/whatch-steps.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/whatch-steps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/app.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/nonwarranty.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/nonwarranty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/phone.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/phone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/privacy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/single-household.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/single-household.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/single-monitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/single-monitor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/single-phone.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/single-phone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/single-post.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/single-post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/single-repair.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/single-repair.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/single-tablet.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/single-tablet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/single-tv.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/single-tv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/single-whatch.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/single-whatch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tablet.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tablet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/terms.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/terms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tv.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/warranty.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/warranty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/whatch.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/whatch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulp/version.json" beforeDir="false" afterPath="$PROJECT_DIR$/gulp/version.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/blocks/addresses.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/blocks/addresses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/blocks/marquee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/blocks/marquee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/addressControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/addressControls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/calcControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/calcControls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/contactCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/contactCards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/footerAccordion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/footerAccordion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/map/initMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/map/initMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/repairCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/repairCards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/setCoockieCondense.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/setCoockieCondense.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/sliders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/sliders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/phone.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/phone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/Main/calculate.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/Main/calculate.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/addresses.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/addresses.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/repair.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/repair.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/steps.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/steps.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/subcategory-intro.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/subcategory-intro.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/media.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/media.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/single-phone.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/single-phone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/single-repair.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/single-repair.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tablet.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/tablet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/warranty.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/warranty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whatch.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/whatch.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2OPG9BrogFMF5yJj7BWbgIlaL2R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77ed0504-0fc6-4196-ab03-d07e0becb987" name="Changes" comment="" />
+      <created>1681454663499</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681454663499</updated>
+      <workItem from="1681454666686" duration="44000" />
+    </task>
+    <servers />
+  </component>
+</project>

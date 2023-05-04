@@ -133,15 +133,28 @@ export const tabSlider = new Swiper('.tab-slider', {
   },
 })
 
-export const menuTabSlider = new Swiper('.menu-tab-slider', {
-  modules: [EffectFade],
-  effect: 'fade',
-  autoHeight: true,
-  speed: 200,
-  allowTouchMove: false,
-  fadeEffect: {
-    crossFade: false
-  },
+// export const menuTabSlider = new Swiper('.menu-tab-slider', {
+//   modules: [EffectFade],
+//   effect: 'fade',
+//   autoHeight: true,
+//   speed: 200,
+//   allowTouchMove: false,
+//   fadeEffect: {
+//     crossFade: false
+//   },
+// })
+
+document.querySelectorAll('.menu-tab-slider').forEach(slider => {
+  new Swiper(slider, {
+    modules: [EffectFade],
+    effect: 'fade',
+    autoHeight: true,
+    speed: 200,
+    allowTouchMove: false,
+    fadeEffect: {
+      crossFade: false
+    },
+  })
 })
 
 export const calculateInfoSlider = new Swiper('.calculate-info-slider', {
@@ -245,7 +258,7 @@ document.querySelectorAll('.repair-item-slider').forEach((slider, index) => {
       rows: 2,
     },
     pagination: {
-      el: `.repair-item__popular-pagination-${index + 1}`,
+      el: `.repair-item__popular-pagination-${slider.dataset.serieId}`,
       clickable: true
     },
     breakpoints: {

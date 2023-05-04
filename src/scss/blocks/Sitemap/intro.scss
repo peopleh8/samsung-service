@@ -1,0 +1,40 @@
+.sitemap {
+  padding: 50px 0 100px;
+  &__title {
+    margin-bottom: 30px;
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px -10px;
+    &__item {
+      width: calc(100% / 6);
+      padding: 20px 10px;
+      & > .sitemap-list__link {
+        font-weight: 700;
+      }
+    }
+    &__inner {
+      margin-top: 10px;
+      li {
+        @media (min-width: 1161px) {
+          &:hover a {
+            background-size: 100% calc(100% - 0em);
+          }
+        }
+        a {
+          display: inline;
+          background-image: linear-gradient(transparent calc(100% - 1px), #000 0, #000);
+          background-repeat: no-repeat;
+          background-size: 0 calc(100% - 0em);
+          transition: 0.3s ease;
+        }
+      }
+    }
+    &__link {
+      & + & {
+        margin-top: 5px;
+      }
+    }
+  }
+}

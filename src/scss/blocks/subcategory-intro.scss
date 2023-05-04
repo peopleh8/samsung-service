@@ -126,5 +126,10 @@
     align-items: center;
     justify-content: center;
     padding-left: 38px;
+    &__inner {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
   }
 }

@@ -1,12 +1,12 @@
 const checkbox = document.querySelectorAll('.services-item__check'),
-      servicesBtn = document.querySelector('.services__btn')
+      servicesBtn = document.querySelectorAll('.services__btn[data-fancybox]')
 
 export const selectServices = () => {
   checkbox.forEach(check => {
     check.addEventListener('change', () => {
       const checked = [...checkbox].filter(item => item.checked)
 
-      checked && checked.length !== 0 ? servicesBtn.dataset.src = '#services' : servicesBtn.dataset.src = '#contact'
+      checked && checked.length !== 0 ? servicesBtn.forEach(btn => btn.dataset.src = '#services') : servicesBtn.forEach(btn => btn.dataset.src = '#contact')
     })
   })
   

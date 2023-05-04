@@ -1,10 +1,15 @@
+import gsap from 'gsap'
+import Flip from 'gsap/Flip.js'
 import { slideToggle, slideUp, anchorScroll } from './functions.js'
 
-import { locations, renderContent } from './map/initMap.js'
+import { renderContent } from './map/renderContent.js'
+import { locations } from './map/locations.js'
+
+gsap.registerPlugin(Flip)
 
 const accItemsHead = document.querySelectorAll('.addresses-accordion__head:not(.addresses-accordion__head--single)'),
       infoSection = document.querySelector('.addresses-info'),
-      npBtn = document.querySelector('.addresses-accordion__photo--single')?.parentElement?.nextElementSibling,
+      npBtn = document.querySelector('.addresses-accordion__head--single'),
       mapSection = document.querySelector('.addresses__map-section'),
       npSection = document.querySelector('.addresses-np'),
       openInfoBtn = document.querySelector('.addresses-info__btn'),
@@ -13,24 +18,61 @@ const accItemsHead = document.querySelectorAll('.addresses-accordion__head:not(.
 export const setAddressAccrordion = () => {
   accItemsHead.forEach((item, index) => {
     item.addEventListener('click', e => {
+      const state = Flip.getState('.addresses-accordion:nth-child(1) .addresses-accordion__item')
+
+      let startHeight = gsap.getProperty('.addresses-accordion:nth-child(1)', 'height')
+      
       let head = e.currentTarget,
           body = head.nextElementSibling,
           parent = head.parentElement.parentElement
 
       mapSection.classList.remove('open')
-      npBtn.parentElement.classList.remove('open')
+      npBtn.parentElement.parentElement.classList.remove('open')
       mapSection.style = ''
 
       document.querySelectorAll('.addresses-accordion__body').forEach((item, itemIndex) => {
-        if (itemIndex !== index) {  
-          slideUp(item, 250)
+        if (itemIndex !== index) {
+          if (innerWidth > 1161) {
+            slideUp(item, 250)
+          } else {
+            item.parentElement.parentElement.classList.contains('addresses-accordion__item--single') && slideUp(item, 250)
+
+            slideUp(npBtn.nextElementSibling, 250, 'block')
+            npBtn.parentElement.parentElement.classList.remove('active')
+          }
           item.parentElement.parentElement.classList.remove('active')
         }
       })
 
       infoSection.classList.remove('visible')
-      slideToggle(body, 250, 'block')
+      if (innerWidth > 1161) {
+        slideToggle(body, 250, 'block')
+      } else {
+        item.parentElement.parentElement.classList.contains('addresses-accordion__item--single') && slideToggle(body, 250, 'block')
+      }
       parent.classList.toggle('active')
+
+      let endHeight = gsap.getProperty('.addresses-accordion:nth-child(1)', 'height')
+
+      if (innerWidth <= 1160) {
+        const flip = Flip.from(state, {
+          absolute: true,
+          duration: 0.4, 
+          ease: 'power1.inOut'
+        })
+    
+        flip.fromTo('.addresses-accordion:nth-child(1)', {
+          height: startHeight
+        }, {
+          height: endHeight,
+          clearProps: 'height',
+          duration: flip.duration()
+        }, 0)
+      }
+
+      if (innerWidth <= 1160 && parent.classList.contains('active')) {
+        anchorScroll(window, '#address-title', 1)
+      }
 
       window.infowindow.setContent(renderContent(locations[index], index))
       window.infowindow.open(window.map, window.markers[index])
@@ -105,18 +147,42 @@ export const setAddressSubAccordion = () => {
 
 export const toggleNpInfo = () => {
   npBtn.addEventListener('click', () => {
-    if (innerWidth <= 1160 && !mapSection.classList.contains('open')) {
-      anchorScroll(window, '#address', 1)
-    }
+    if (innerWidth <= 1160) {
+      const state = Flip.getState('.addresses-accordion:nth-child(1) .addresses-accordion__item')
 
-    let npSectionHeight = npSection.clientHeight,
-        npSectionSpace = parseInt(window.getComputedStyle(npSection, null).getPropertyValue('margin-top'))
+      let startHeight = gsap.getProperty('.addresses-accordion:nth-child(1)', 'height')
+      
+      slideToggle(npBtn.nextElementSibling, 250, 'block')
+      npBtn.parentElement.parentElement.classList.toggle('active')
+      accItemsHead.forEach(item => item.parentElement.parentElement.classList.remove('active'))
+
+      let endHeight = gsap.getProperty('.addresses-accordion:nth-child(1)', 'height')
+
+      const flip = Flip.from(state, {
+        absolute: true,
+        duration: 0.4, 
+        ease: 'power1.inOut'
+      })
+  
+      flip.fromTo('.addresses-accordion:nth-child(1)', {
+        height: startHeight
+      }, {
+        height: endHeight,
+        clearProps: 'height',
+        duration: flip.duration()
+      }, 0)
+
+      return
+    } 
+
+    let npSectionHeight = npSection.scrollHeight,
+        npSectionSpace = parseInt(window.getComputedStyle(npSection, null).getPropertyValue('margin-top')),
+        npSectionInsideSpace = parseInt(window.getComputedStyle(npSection, null).getPropertyValue('padding-top'))
     
     infoSection.classList.remove('visible')
     window.infowindow.close()
-
     document.querySelectorAll('.addresses-accordion__body').forEach(item => {
-      slideUp(item, 250)
+      innerWidth >= 1161 && slideUp(item, 250)
       item.parentElement.parentElement.classList.remove('active')
     })
 
@@ -128,11 +194,15 @@ export const toggleNpInfo = () => {
     
 
     mapSection.classList.toggle('open')
-    npBtn.parentElement.classList.toggle('open')
+    npBtn.parentElement.parentElement.classList.toggle('open')
 
-    mapSection.classList.contains('open')
-      ? mapSection.style = `transform: translateY(-${npSectionHeight + npSectionSpace}px)`
-      : mapSection.style = ''
+    if (mapSection.classList.contains('open')) {
+      mapSection.style.height = `${npSection.scrollHeight + 100}px`
+      mapSection.style.transform = `translateY(-${npSectionHeight + npSectionSpace + npSectionInsideSpace}px)`
+    } else {
+      mapSection.style.transform = ''
+      mapSection.style.height = ''
+    }
   })
 }
 

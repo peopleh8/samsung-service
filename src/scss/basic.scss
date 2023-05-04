@@ -35,6 +35,46 @@ dd {
   margin: 0;
 }
 
+form {
+  position: relative;
+  .inp-wrapper,
+  .texarea-wrapper,
+  .callback-form__btn-wrapper,
+  .modal-contact__btn-wrapper,
+  .callback-form__label,
+  .modal-contact__label,
+  .modal-repair__btn-wrapper,
+  .search__btn,
+  .search__inp {
+    transition: opacity .2s ease;
+  }
+  &.loading {
+    pointer-events: none;
+    .loader {
+      display: flex;
+    }
+    .inp-wrapper,
+    .texarea-wrapper,
+    .callback-form__btn-wrapper,
+    .modal-contact__btn-wrapper,
+    .callback-form__label,
+    .modal-contact__label,
+    .modal-repair__btn-wrapper,
+    .search__btn,
+    .close-search,
+    .open-search,
+    .search__inp {
+      opacity: .6;
+    }
+  }
+  &.sent {
+    [type="submit"] {
+      opacity: .6;
+      pointer-events: none;
+    }
+  }
+}
+
 input,
 button,
 textarea,
@@ -91,4 +131,8 @@ button,
   &:focus {
     outline: none;
   }
+}
+
+[data-link] {
+  cursor: pointer;
 }

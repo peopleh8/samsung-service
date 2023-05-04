@@ -4,39 +4,46 @@
       <div class="callback__content callback-content">
         <div class="callback-content__title title title--white">Якщо у Вас залишились запитання просимо заповнити контактну форму</div>
         <form class="callback-content__form callback-form">
-          <div class="callback-form__inp-wrapper inp-wrapper inp-wrapper--white">
-            <input 
-              class="callback-form__inp inp inp--white field"
-              id="callback-name"
-              type="text"
-              name="name"
-              autocomplete="off"
-            >
-            <label class="callback-form__placeholder placeholder placeholder--white" for="callback-name">Введіть ваше ім’я *</label>
-          </div>
-          <div class="callback-form__inp-wrapper inp-wrapper inp-wrapper--white">
-            <input 
-              class="callback-form__inp inp inp--white field" 
-              id="callback-phone"
-              type="tel"
-              name="phone"
-              autocomplete="off"
-            >
-            <label class="callback-form__placeholder placeholder placeholder--white" for="callback-phone">+38 (088) 888 88 88 *</label>
-          </div>
-          <div class="callback-form__inp-wrapper inp-wrapper inp-wrapper--white">
-            <input 
-              class="callback-form__inp inp inp--white field" 
-              id="callback-email"
-              type="text"
-              name="email"
-              autocomplete="off"
-            >
-            <label class="callback-form__placeholder placeholder italic placeholder--white" for="callback-email">mail @gmail.com</label>
-          </div>
-          <div class="callback-form__texarea-wrapper texarea-wrapper texarea-wrapper--white">
-            <textarea class="callback-form__texarea texarea texarea--white field" id="callback-message" name="message" autocomplete="off"></textarea>
-            <label class="callback-form__placeholder placeholder placeholder--white" for="callback-message">Напишіть, що вас цікавить ...</label>
+          <input type="hidden" name="page" value="Main">
+          <div class="callback-form__fields">
+            <div class="loader loader--white">
+              <span class="loader__text">Завантаження</span>
+              <span class="loader__load"></span>
+            </div>
+            <div class="callback-form__inp-wrapper inp-wrapper inp-wrapper--white">
+              <input 
+                class="callback-form__inp inp inp--white field"
+                id="callback-name"
+                type="text"
+                name="name"
+                autocomplete="off"
+              >
+              <label class="callback-form__placeholder placeholder placeholder--white" for="callback-name">Введіть ваше ім’я *</label>
+            </div>
+            <div class="callback-form__inp-wrapper inp-wrapper inp-wrapper--white">
+              <input 
+                class="callback-form__inp inp inp--white field" 
+                id="callback-phone"
+                type="tel"
+                name="phone"
+                autocomplete="off"
+              >
+              <label class="callback-form__placeholder placeholder placeholder--white" for="callback-phone">+38 (088) 888 88 88 *</label>
+            </div>
+            <div class="callback-form__inp-wrapper inp-wrapper inp-wrapper--white">
+              <input 
+                class="callback-form__inp inp inp--white field" 
+                id="callback-email"
+                type="text"
+                name="email"
+                autocomplete="off"
+              >
+              <label class="callback-form__placeholder placeholder italic placeholder--white" for="callback-email">mail @gmail.com</label>
+            </div>
+            <div class="callback-form__texarea-wrapper texarea-wrapper texarea-wrapper--white">
+              <textarea class="callback-form__texarea texarea texarea--white field" id="callback-message" name="message" autocomplete="off"></textarea>
+              <label class="callback-form__placeholder placeholder placeholder--white" for="callback-message">Напишіть, що вас цікавить ...</label>
+            </div>
           </div>
           <div class="callback-form__btn-wrapper">
             <button class="callback-form__btn btn btn--light" type="submit">зв'язатися з нами</button>

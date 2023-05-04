@@ -141,6 +141,7 @@
   }
   &__inner {
     display: flex;
+    position: relative;
     margin: 0 -8px;
   }
   &__side {
@@ -201,6 +202,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
   }
   &__inp-wrapper {
     max-width: 280px;
@@ -220,9 +222,6 @@
   max-width: 1140px;
   padding: 70px;
   color: $blackColor;
-  .carousel__button.is-close {
-    display: none;
-  }
   &-head {
     display: flex;
     align-items: center;
@@ -255,7 +254,10 @@
     display: flex;
     margin-bottom: 39px;
     &__item {
-      width: 25%;
+      flex: 1 0 25%;
+      &.hide {
+        display: none;
+      }
       &.current {
         .modal-order-progress__num {
           color: $whiteColor;
@@ -274,6 +276,11 @@
         .modal-order-progress__num {
           background: #21B17D;
           border-color: #21B17D;
+          color: transparent;
+          font-size: 0;
+          svg {
+            display: block;
+          }
         }
         .modal-order-progress__line {
           background: #21B17D;
@@ -310,9 +317,13 @@
       position: relative;
       z-index: 10;
       svg {
+        display: none;
         stroke: $blackColor;
         width: 14px;
         height: 8px;
+        position: absolute;
+        left: 50%;
+        top: 50%; transform: translate(-50%, -50%);
       }
     }
     &__line {

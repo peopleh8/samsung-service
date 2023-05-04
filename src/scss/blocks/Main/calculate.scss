@@ -313,6 +313,9 @@
     }
     &-nav {
       margin-top: 24px;
+      .swiper-wrapper {
+        align-items: stretch;
+      }
       &__inner {
         cursor: pointer;
         opacity: .4;
@@ -329,6 +332,10 @@
           }
         }
       }
+      &__inner {
+        height: 100%;
+        border-bottom: 2px solid $whiteColor;
+      }
       &__preview {
         margin-bottom: 14px;
       }
@@ -336,7 +343,6 @@
         line-height: 21px;
         color: $whiteColor;
         padding-bottom: 7px;
-        border-bottom: 2px solid $whiteColor;
         transition: all .2s ease;
       }
     }
@@ -391,6 +397,9 @@
           justify-content: space-between;
           padding-bottom: 8px;
           border-bottom: 1px solid $thirdColor;
+        }
+        &-title {
+          flex: 1;
         }
         &-title,
         &-price {

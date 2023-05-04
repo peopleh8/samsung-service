@@ -24,14 +24,14 @@
             <div class="footer-contacts__social-title footer-title">Ми в Соц мережах:</div>
             <ul class="footer-contacts__social-list">
               <li class="footer-contacts__social-item">
-                <a class="footer-contacts__social-link icon" href="#">
+                <span class="footer-contacts__social-link icon" data-link="https://instagram.com">
                   <svg><use href="./img/icons/sprite.svg#instagram"></use></svg>
-                </a>
+                </ыз>
               </li>
               <li class="footer-contacts__social-item">
-                <a class="footer-contacts__social-link icon" href="#">
+                <span class="footer-contacts__social-link icon" data-link="https://fb.com">
                   <svg><use href="./img/icons/sprite.svg#facebook"></use></svg>
-                </a>
+                </span>
               </li>
             </ul>
           </div>
@@ -224,6 +224,7 @@
 @@include('modals/modal-order.html', {})
 @@include('modals/modal-search.html', {})
 @@include('modals/modal-thx.html', {})
+@@include('modals/modal-err.html', {})
 @@include('coockie.html', {})
 <button data-fancybox data-src="#order">Order</button>
 <button data-fancybox data-src="#thx">Thx</button>

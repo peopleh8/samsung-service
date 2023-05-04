@@ -166,10 +166,10 @@ export const fadeToggle = (target, duration, propery) => {
 }
 
 /* Скролл до якоря */
-export const anchorScroll = (scrolledTarget, scrollToTargetId, duration) => {
+export const anchorScroll = (scrolledTarget, scrollToTargetId, duration, offset = 63) => {
   gsap.to(scrolledTarget, {
     duration: duration,
     ease: "Power2.easeInOut",
-    scrollTo: scrollToTargetId
+    scrollTo: {y: scrollToTargetId, offsetY: offset}
   });
 }

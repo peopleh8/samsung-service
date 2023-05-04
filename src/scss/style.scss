@@ -16,6 +16,7 @@
 @import "other/pagination";
 @import "other/coockie";
 @import "other/phones-panel";
+@import "other/loader";
 
 // blocks
 @import "blocks/header";
@@ -85,6 +86,9 @@
 
 // Error
 @import "blocks/Error/intro";
+
+// Sitemap
+@import "blocks/Sitemap/intro";
 
 // media
 @import "media";

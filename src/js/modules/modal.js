@@ -1,8 +1,8 @@
 import { Fancybox } from '@fancyapps/ui'
 import { getScrollbarWidth } from './functions.js'
 
-const closeBtns = document.querySelectorAll('.close-modal-btn'),
-			container = document.querySelector('.modal-services-list__inner')
+const closeBtns = document.querySelectorAll('.close-modal-btn')
+const container = document.querySelector('.modal-services-list__inner')
 
 Fancybox.bind('[data-fancybox]', {
   dragToClose: false,
