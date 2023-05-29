@@ -5771,6 +5771,21 @@
         width: 28px;
         height: 32px;
       }
+      &__subtitle {
+        margin: 15px 0 20px;
+      }
+      &__err {
+        &-list {
+          margin: 0;
+        }
+        &-item {
+          padding: 0;
+          width: 100%;
+          & + & {
+            margin-top: 15px;
+          }
+        }
+      }
     }
   }
   .repair {

@@ -9,6 +9,8 @@ export const scrollToAnchor = () => {
     if (e.target.closest('.anchor-btn')) {
       e.preventDefault()
 
+      document.body.click()
+
       ScrollTrigger.refresh()
 
       let href = `#${e.target.href.split('#')[1]}`

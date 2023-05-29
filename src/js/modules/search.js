@@ -48,6 +48,7 @@ export const openSearch = () => {
           form.classList.remove('loading')
 
           list.innerHTML = ''
+          list.classList.remove('fluid')
 
           if (data.length !== 0) {
             if (form.classList.contains('calculate-model-search__inp-wrapper')) {
@@ -84,11 +85,82 @@ export const openSearch = () => {
               })
             }
           } else {
-            list.insertAdjacentHTML('beforeend', `<div class="search-dropdown__err">Елементів не знайдено</div>`)
+            list.insertAdjacentHTML('beforeend', `
+              ${typeId || serieId 
+                ? `<a class="search-dropdown__err anchor-btn text-underline text-underline--black" href="#find">
+                    <span>Елементів не знайдено, можливо у вас інша модель</span>
+                  </a>` 
+                : `<div class="search-dropdown__err-wrapper">
+                    <div class="search-dropdown__err">Елементів не знайдено</div>
+                    <div class="search-dropdown__subtitle">Оберіть зі списку:</div>
+                    <ul class="search-dropdown__err-list">
+                      <li class="search-dropdown__err-item">
+                        <a class="search-dropdown__err-link" href="#"></a>
+                        <div class="search-dropdown__err-text text-underline text-underline--black">
+                          <span>Cмартфони</span>
+                        </div>
+                        <div class="search-dropdown__err-icon icon">
+                          <img src="./img/search-moc-1.svg" alt="" />
+                        <div>
+                      </li>
+                      <li class="search-dropdown__err-item">
+                        <a class="search-dropdown__err-link" href="#"></a>
+                        <div class="search-dropdown__err-text text-underline text-underline--black">
+                          <span>Cмартфони</span>
+                        </div>
+                        <div class="search-dropdown__err-icon icon">
+                          <img src="./img/search-moc-1.svg" alt="" />
+                        <div>
+                      </li>
+                      <li class="search-dropdown__err-item">
+                        <a class="search-dropdown__err-link" href="#"></a>
+                        <div class="search-dropdown__err-text text-underline text-underline--black">
+                          <span>Cмартфони</span>
+                        </div>
+                        <div class="search-dropdown__err-icon icon">
+                          <img src="./img/search-moc-1.svg" alt="" />
+                        <div>
+                      </li>
+                      <li class="search-dropdown__err-item">
+                        <a class="search-dropdown__err-link" href="#"></a>
+                        <div class="search-dropdown__err-text text-underline text-underline--black">
+                          <span>Cмартфони</span>
+                        </div>
+                        <div class="search-dropdown__err-icon icon">
+                          <img src="./img/search-moc-1.svg" alt="" />
+                        <div>
+                      </li>
+                      <li class="search-dropdown__err-item">
+                        <a class="search-dropdown__err-link" href="#"></a>
+                        <div class="search-dropdown__err-text text-underline text-underline--black">
+                          <span>Cмартфони</span>
+                        </div>
+                        <div class="search-dropdown__err-icon icon">
+                          <img src="./img/search-moc-1.svg" alt="" />
+                        <div>
+                      </li>
+                      <li class="search-dropdown__err-item">
+                        <a class="search-dropdown__err-link" href="#"></a>
+                        <div class="search-dropdown__err-text text-underline text-underline--black">
+                          <span>Cмартфони</span>
+                        </div>
+                        <div class="search-dropdown__err-icon icon">
+                          <img src="./img/search-moc-1.svg" alt="" />
+                        <div>
+                      </li>
+                    </ul>
+                  </div>`
+              }`
+            )
           }
 
-          const listInstance = new SimpleBar(list, { autoHide: false, })
-          listInstance.recalculate()
+          if (data.length !== 0) {
+            const listInstance = new SimpleBar(list, { autoHide: false, })
+            listInstance.recalculate()
+          } else {
+            list.classList.add('fluid')
+          }
+
 
           overlay && header.classList.add('search-open')
           overlay && overlay.classList.add('visible')

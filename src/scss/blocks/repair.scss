@@ -239,6 +239,9 @@
       }
       &-list {
         max-height: 260px;
+        &.fluid {
+          max-height: 100% !important;
+        }
       }
       &-dropdown {
         top: 95%;

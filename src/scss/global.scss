@@ -937,12 +937,67 @@ body {
   &__err {
     font-weight: 500;
     line-height: 21px;
+    display: block;
   }
   &__title {
     margin-bottom: 16px;
   }
   &__err {
     text-align: center;
+    span {
+      pointer-events: none;
+    }
+    &:hover span {
+      background-size: 100% calc(100% - 0em);
+    }
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -8px;
+    }
+    &-item {
+      width: 50%;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      position: relative;
+      padding: 8px;
+      @media (min-width: 1025px) {
+        &:hover .search-dropdown__err-text span {
+          background-size: 100% calc(100% - 0em);
+        }
+      }
+    }
+    &-link {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &-icon {
+      width: 18px;
+      height: 20px;
+      margin-right: 10px;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-text {
+      flex: 1;
+      span {
+        font-size: 16px;
+        line-height: 21px;
+      }
+    }
+  }
+  &__subtitle {
+    font-weight: 500;
+    line-height: 21px;
+    display: block;
+    margin: 25px 0;
   }
   &__item {
     & + & {
@@ -1278,6 +1333,8 @@ body {
   overflow: hidden;
   border-radius: 10px;
   margin-right: 12px;
+  width: 84px;
+  height: 84px;
   img {
     width: 100%;
     height: 100%;

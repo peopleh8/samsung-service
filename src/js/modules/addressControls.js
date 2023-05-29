@@ -7,13 +7,14 @@ import { locations } from './map/locations.js'
 
 gsap.registerPlugin(Flip)
 
-const accItemsHead = document.querySelectorAll('.addresses-accordion__head:not(.addresses-accordion__head--single)'),
-      infoSection = document.querySelector('.addresses-info'),
-      npBtn = document.querySelector('.addresses-accordion__head--single'),
-      mapSection = document.querySelector('.addresses__map-section'),
-      npSection = document.querySelector('.addresses-np'),
-      openInfoBtn = document.querySelector('.addresses-info__btn'),
-      subAccItemsHead = document.querySelectorAll('.addresses-subaccordion__head')
+const accItemsHead = document.querySelectorAll('.addresses-accordion__head:not(.addresses-accordion__head--single)')
+const infoSection = document.querySelector('.addresses-info')
+const npBtn = document.querySelector('.addresses-accordion__head--single')
+const mapSection = document.querySelector('.addresses__map-section')
+const npSection = document.querySelector('.addresses-np')
+const openInfoBtn = document.querySelector('.addresses-info__btn')
+const openInfoNpBtn = document.querySelector('.addresses-info__head-logo')
+const subAccItemsHead = document.querySelectorAll('.addresses-info__head-logo')
 
 export const setAddressAccrordion = () => {
   accItemsHead.forEach((item, index) => {
@@ -211,6 +212,10 @@ export const toggleAddressInfo = () => {
     slideToggle(openInfoBtn.nextElementSibling.nextElementSibling, 300, 'block')
     openInfoBtn.classList.toggle('active')
     openInfoBtn.parentElement.classList.toggle('open')
+  })
+
+  openInfoNpBtn.addEventListener('click', () => {
+    openInfoBtn.click()
   })
 }
 
